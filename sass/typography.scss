@@ -1,0 +1,244 @@
+@import './_mixins.scss';
+html{
+    font-size: $font-base-size;
+    line-height: $line-height-base;
+    font-family: $lato_bold;
+    color: $gray;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $font-base-size;
+    background-color: $white;
+    font-family: $lato_regular;
+}
+h1,.h1{
+font-size: 3.8rem;
+color: $secondary_color;
+@include respond('xl') {
+    font-size: 3.4rem;
+}
+@include respond('lg') {
+    font-size: 3.2rem;
+}
+@include respond('md') {
+    font-size: 2.8rem !important;
+}
+@include respond('sm') {        
+    font-size: 3.5rem ;
+    line-height: 3.5rem;
+}
+@include respond('xs') {
+          line-height: 3.8rem;
+    font-size: 3.8rem;
+}
+}
+h2,.h2{
+font-size: 2.5rem;
+@include respond('xl') {
+    font-size: 2.2rem;
+}
+@include respond('lg') {
+    font-size: 2rem;
+}
+@include respond('md') {
+    font-size: 1.8rem !important;
+}
+}
+h3,h3{
+font-size: 2rem;
+color: $secondary_color;
+font-family: $lato_bold;
+margin-left: 2rem;
+}
+h4,.h4{
+    font-size: 1.75rem;
+}
+h5,.h5{
+    font-size: 1.5rem;
+    color: $secondary_color;
+    @include respond('lg') {
+        font-size: 1.6rem;
+
+    }
+}
+h6,.h6{
+    font-size: 1.25rem;
+} 
+p{
+    font-size: $font-base-size;
+    line-height: $line-height-base;
+    margin: 1rem 0;
+}
+.p{
+    font-size: 1.1rem;
+    color: $gray_800;
+    font-family: $lato_regular;
+    @include respond('lg') {
+        font-size: 1.2rem !important;
+    }
+    .deliveryhighlight{
+    font-family: $lato_bold;
+    }
+}
+small{
+    font-size: 0.875rem;
+    color: $gray;
+}
+strong{
+    font-weight: bold;
+}
+em{
+    font-style: italic;
+}
+a {
+    color: $font_regular;
+    text-decoration: none;
+  
+    &:hover,
+    &:focus {
+      color: $primary-color;
+      text-decoration:  none;
+    }
+  }
+  input{
+    border: none;
+    outline: none;
+}
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    list-style-type: disc;
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+  }
+  .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+.text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .m-0 {
+    margin: 0;
+  }
+  
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+  .ml_min{
+    margin-left: 1rem;
+}
+.paymentimg{
+    width: 8rem;
+    height: 4rem;
+    @include respond('lg') {width: 6rem;
+        height: 3rem;
+    }
+}
+.min-font-size{
+    font-size: $font-base-size;
+}
+.primary-button {
+    background-color:$primary-color; 
+    color: $white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .secondary-btn{
+    border: 1px solid $primary-color  !important;
+    justify-content: center;
+    font-family: $lato_bold;
+    background-color: transparent;
+  }
+  .b-radius-minimal{
+    border-radius: 4px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-alignitem{
+    align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.absolute{
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.half_width{
+    width: 48%;   
+}
+.b-radius-100{
+    width: 1.4rem;
+    height: 1.4rem;
+    max-width: 1.4rem;
+    max-height: 1.4rem;
+    @include respond('lg') {
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+.innercircleatt{
+    width: 1rem;
+    height: 1rem;
+    max-width: 1rem;
+    max-height: 1rem;
+    top: 3px;
+    left: 3px;
+    @include respond('lg') {
+        max-width: 2rem;
+        max-height: 2rem;
+        width: 2rem;
+        height: 2rem;
+        top: 4px;
+    left: 4px;
+    }
+}
+.circleborder{
+    border: 1px solid $gray_400;
+}
+.uppercase{
+    text-transform: uppercase;
+}

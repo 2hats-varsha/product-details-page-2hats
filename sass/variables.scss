@@ -1,0 +1,32 @@
+// Font
+$font-base-size: 1rem; 
+$line-height-base: 1.5rem;
+// Font family
+$font_light :  'Raleway_light', sans-serif;
+$font_regular: 'Raleway_regular', sans-serif;
+$font_medium: 'Raleway_medium', sans-serif;
+$font_bold:'Raleway_bold', sans-serif;
+$lato_bold:"Lato_bold", sans-serif;
+$lato_regular:'Lato_regular', sans-serif;
+// Color
+$primary-color: #17696A;
+$secondary_color:#1E212C;
+$c_text:#1D1F22;
+$dark_variant:#43464E;
+$gray_800:#424551;
+$gray :#72757E;
+$gray_700:#6F7176;
+$gray_600:#737582;
+$gray_400:#D7DADD;
+$light_gray:#E5E8ED;
+$white:#fff;
+$blue_light :#C0DDED;
+$danger : #E00000;
+$pink:#E0AEA2;
+$yellow_color:#FEDE41;
+// check points
+$breakpoint-xs: 0px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Detail Page</title>
+        <meta name="description" content="Lorem Ipsum es simplemente el texto de relleno de las">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <header>
+                <div class="container flex flex-alignitem">
+                    <nav class="leftnavitem flex">
+                        <a href="#" class="brand" aria-label="Logo" tabindex="1">
+                            <img src="./assets/images/logo.svg" alt="Product Detail Page" class="logo pointer">
+                        </a>
+                        <ul id="menu" class="flex flex-alignitem">
+                            <li>
+                                <a href="#" class="pointer uppercase" aria-label="Women's section" tabindex="2">women</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pointer uppercase" aria-label="Men's section" tabindex="3">men</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pointer uppercase" aria-label="Kids' section" tabindex="4">kids</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="rightnavitem flex flex-alignitem">
+                        <div class="searchitem flex">
+                            <input type="text" placeholder="Search for items" name="search" id="search" tabindex="5" aria-label="Search input field">
+                            <button class="searchbtn .btn" tabindex="6" aria-label="Search button">
+                                <img src="./assets/images/Search.svg" alt="Search Icon" class="searchicon pointer">
+                            </button>
+                        </div>
+                        <button tabindex="7" aria-label="Account button">
+                            <img src="./assets/images/Account.svg" alt="User Icon" class="usericon pointer">
+                        </button>
+                        <button tabindex="8" aria-label="Favorite button">
+                            <img src="./assets/images/favorite.svg" alt="Favorite" class="favoriteicon pointer">
+                        </button>
+                        <button tabindex="9" aria-label="Cart button">
+                            <img src="./assets/images/Empty Cart.svg" alt="Empty Cart" class="carticon pointer">
+                        </button>
+                    </nav>
+                </div>
+            </header>
+            <section class="mainsection">
+                <h1 class="m-0 h1">Basic hooded sweatshirt in pink</h1>
+                <div class="tabs relative">
+                    <a href="#" class="generalinfo" aria-label="General info" tabindex="7">General info</a>
+                    <a href="#" class="generalinfo" aria-label="Product details" tabindex="8">Product details</a>
+                    <a href="#" class="generalinfo" aria-label="Reviews" tabindex="9">Reviews</a>
+                    <span class="reviewcount absolute" aria-label="Number of reviews">12</span>
+                </div>
+                <div class="detailscontainer flex">
+                    <div class="detailsleftsection half_width">
+                        <img src="./assets/images/product.png" alt="Product Name" class="productimage">
+                        <div class="imgsections flex relative">
+                            <a href="" class="imagepart_1 .btn " tabindex="10" aria-label="Image part 1">
+                                <img src="./assets/images/product.png" alt="image part1" class="imagepart1 pointer b-radius-minimal">
+                            </a>
+                            <a href="" class="imagepart_2 .btn" tabindex="11" aria-label="Image part 2">
+                                <img src="./assets/images/imagepart2.png" alt="image part2" class="imagepart2 pointer b-radius-minimal">
+                            </a>
+                            <a href="" class="imagepart_2 .btn" tabindex="12" aria-label="Image part 3"> 
+                                <img src="./assets/images/imagepart3.png" alt="image part3" class="imagepart2 pointer b-radius-minimal" >
+                            </a>
+                            <a href="" class="imagepart_2 .btn" tabindex="13" aria-label="Image part 4">
+                                <img src="./assets/images/imagepart4.png" alt="image part4" class="imagepart2 pointer b-radius-minimal">
+                            </a>
+                            <a href="" class="imagepart_5 .btn" tabindex="14" aria-label="Image part 5 with pause icon">
+                                <div class="imgwithicon relative pointer">
+                                    <img src="./assets/images/imagepart2.png" alt="image part2" class="imagepart5 pointer b-radius-minimal">
+                                    <img src="./assets/images/pause.svg" alt="pause" class="pauseicon absolute">
+                                </div>
+                            </a>
+                            <a href="" class="leftarrow flex absolute pointer" area-label="Left arrow">
+                                <img src="./assets/images/left-arrow.svg" alt="left arrow">
+                            </a>
+                            <a href="" class="rightarrow flex absolute pointer" area-label="Right arrow">
+                                <img src="./assets/images/right-arrow.svg" alt="right arrow">
+                            </a>
+                          </div>
+                    </div>
+                    <div class="detailsrightsection flex-alignitem">
+                        <div class="priceandreview flex">
+                            <div class="price-section flex flex-alignitem">
+                                <span class="price">$15.50</span>
+                                <span class="old-price">$31.00</span>
+                                <span class="discount b-radius-minimal">-50%</span>
+                            </div>
+                            <div class="reviewsecton flex">
+                                <img src="./assets/images/rating.svg" alt="rating" class="ratingimg">
+                                <span>12 reviews</span>
+                            </div>
+                        </div>
+                        <div class="color-selection">
+                            <span>color</span>
+                            <div class="colorsector flex flex-alignitem">
+                                <div class="outercirclepink b-radius-100 relative circleborder">
+                                    <div class="innercirclepink b-radius-100 absolute innercircleatt"></div>
+                                    <span class="colorname">pink</span>
+                                </div>
+                                <div class="outercircleblue b-radius-100 relative circleborder">
+                                    <div class="innercircleblue b-radius-100 absolute innercircleatt"></div>
+                                    <span class="colornameblue">Blue</span>
+                                </div>
+                            
+                                <div class="outercircleyellow b-radius-100 relative circleborder">
+                                    <div class="innercircleyellow b-radius-100 absolute innercircleatt" ></div>
+                                    <span class="colornameyellow">Yellow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="size-selection flex">
+                            <div class="sizesection flex" >
+                                <label for="size" class="size" aria-label="Select your size" aria-required="true">Size</label>
+                                <select id="size" name="size" tabindex="18" class="b-radius-minimal" require disabled>
+                                    <option value="select">Please select</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                </select>
+                            </div>
+                            <div class="sizechart flex" >
+                                <img src="./assets/images/chart.svg" alt="size chart">
+                                <span>Size chart</span>
+                            </div>
+                        </div>
+                        <div class="btnsection flex">
+                            <div class="quantity-section circleborder b-radius-minimal">
+                                <input type="number" id="quantity" name="quantity" min="1" value="1" tabindex="19">
+                            </div>
+                            <button class="add-to-cart b-radius-minimal flex primary-button flex-alignitem .btn" tabindex="20" area-label="Add to cart">
+                                <img src="./assets/images/cart.svg" alt="Cart Icon" class="carticon">
+                                <div class="addtocart" >
+                                    Add to cart
+                                </div>
+                            </button>
+                            <button class=" .btn favoritesection secondary-btn flex b-radius-minimal flex-alignitem flex-alignitem" tabindex="21" area-label="Favourite">
+                                <img src="./assets/images/heart.svg" alt="Heart" class="heart">
+                                <div class="favorite" >
+                                    Favourite
+                                </div>
+                            </button>
+                        </div>
+                        <div class="delivery-section">
+                            <h5 class="h5">Delivery</h5>
+                            <p class="p min-font-size">Free standard shipping on orders <span class="deliveryhighlight"> over $35 </span> before tax, plus free returns.</p>
+                            <table cellspacing="0" cellpadding="8">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>How long</th>
+                                        <th>How much</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Standard delivery</td>
+                                        <td>1-4 business days</td>
+                                        <td>$4.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Express delivery</td>
+                                        <td>1 business day</td>
+                                        <td>$10.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pick up in store</td>
+                                        <td>1-3 business days</td>
+                                        <td>Free</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="return-section">
+                            <h5 class="h5">Return</h5>
+                            <p class="p min-font-size">You have <span class="deliveryhighlight">60 days </span>to return the item(s) using any of the following methods:</p>
+                            <ul>
+                                <li>Free store return</li>
+                                <li>Free returns via USPS Dropoff Service</li>
+                            </ul>
+                        </div>
+                        <div class="sharesection flex ">
+                            <h5 class="h5">share</h5>
+                            <a href="" class=".btn facebook-button" tabindex="22">
+                                <img src="./assets/images/Facebook.svg" alt="facebook" class="facebook ml_min pointer">
+                            </a>
+                            <a href=""class=".btn twitter-button" tabindex="23">
+                                <img src="./assets/images/Twitter.svg" alt="twitter" class="twitter ml_min pointer">
+                            </a>
+                            <a href=""class=".btn pinterest-button" tabindex="24">
+                                <img src="./assets/images/pinterest.svg" alt="pinterest" class="pinterest ml_min pointer">
+                            </a>
+                        </div>
+                        <div class="payment-options flex">
+                            <a href=""class=".btn visa-button" tabindex="25">
+                                <img src="./assets/images/visa.png" alt="Visa" class="visImg paymentimg">
+                            </a>
+                            <a href=""class=".btn mastercard-button" tabindex="26">
+                                <img src="./assets/images/master-card.png" alt="Mastercard" class="Mastercard paymentimg"  >
+                            </a>
+                            <a href=""class=".btn paypal-button" tabindex="27">
+                                <img src="./assets/images/pay-pal.png" alt="PayPal" class="PayPal paymentimg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

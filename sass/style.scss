@@ -1,0 +1,734 @@
+@import './variables.scss';
+@import './font.scss';
+@import './typography.scss';
+@import './_mixins.scss';
+// @import 'mixin';
+
+.wrapper {
+    width: 86vw;
+    // margin: 0 auto;
+    padding: 0 6rem;
+    @include respond('lg') {
+        width: 90vw;
+        padding: 0 3rem;    
+    }
+	header { 
+		.container { 
+            padding: 16px 0;
+            @include respond('xl') {
+                padding: 24px 0;
+            }
+			.leftnavitem {
+                width: 16vw;
+                @include respond('xl') {
+                    width: 24vw;
+                }
+                @include respond('lg') {
+                    width: 29vw;
+                }
+				.brand { 
+					img.logo { 
+                        width: 2.25rem;
+                        height: 2.25rem;
+					}
+                    @include respond('md') {
+                        width: 3.25rem;
+                        height: 3.25rem;
+                    }
+				}
+				#menu {
+                    @include respond('md') {
+                        display: none;
+                    }
+                    li { 
+                        list-style: none !important;
+                        padding-bottom: 16px !important;
+                        width: 5rem;
+                        text-align: center;
+                        border-bottom: 2px solid transparent !important;
+                        a{
+                            color: $c_text;
+                            font-family: $font_regular;
+                            display: inline-block;
+                            transition: color 0.3s ease;
+                            text-decoration: none !important;
+                        }
+                        &:hover {
+                            border-bottom: 2px solid $primary-color !important;
+                            transition: color 0.3s ease;
+                            text-decoration: none !important;
+                            a{
+                                color: $primary-color;
+                                font-family: $font_medium;
+                                text-decoration: none !important;
+                            }
+                        }
+					}
+				}
+			}
+			.rightnavitem { 
+                width: 32rem;
+                @include respond('md') {
+                    display: none;
+                }
+                @include respond('xl') {
+                    width: 33rem;
+                }
+                @include respond('lg') {
+                    width: 30rem;
+                }
+				.searchitem { 
+                    border-bottom: 2px solid $dark_variant;
+					#search { 
+                        width: 20rem;
+                        @include respond('xl') {
+                            width: 19rem;
+                        }
+                        @include respond('lg') {
+                            width: 16rem;
+                        }
+                        &::placeholder{
+                            line-height: 2rem; 
+                            color: $gray;
+                            font-size: 1rem;
+                            font-family: $font_light;
+                        }
+					}
+				}
+                button .usericon,button .favoriteicon,button .carticon{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+			}
+		}
+	}
+	.mainsection { 
+        padding: 4rem 0;
+        @include respond('sm') {
+            padding-top: 2rem;
+
+        }
+		.h1 { 
+            color: $secondary_color;
+            font-family: $font_bold;
+            font-size: 3.4rem;
+		}
+		.tabs { 
+            margin: 3rem 0;
+            border-bottom: 2px solid $light_gray;
+            padding-bottom: 2rem;
+            .generalinfo { 
+                color: $gray_600;
+                padding: .6rem;
+                font-family: $font_bold;
+                border: 2px solid transparent; 
+                transition: all 0.3s ease-in-out;
+                    &:hover{
+                        border: 2px solid $primary-color;
+                        padding: .6rem;
+                        color: $primary-color;
+                        border-radius: 4px;
+                    }
+                }
+			.reviewcount { 
+                bottom: 2.8rem;
+                left: 20.98rem;
+                font-size: .8rem;
+                font-family: $font_bold;
+                color: $gray_600;
+			}
+		}
+		.detailscontainer { 
+           @include respond('lg') {
+            flex-direction: column;
+           }
+			.detailsleftsection { 
+               @include respond('xl') {
+                   width: 48%;
+               }
+               @include respond('lg') {
+                width: 100%;
+                margin: 0 auto 36px;
+                }
+                
+                @include respond('xs') {
+                    margin-bottom: 3rem;
+                }
+				.productimage { 
+                    width: 48rem;
+                    height: 52rem;
+                    @include respond('xl') {
+                        width: 33rem;
+                        height: 38rem;
+                    }
+                    @include respond('lg') {
+                        width: 55.4rem;
+                        height: 60rem;
+                    }
+                    @include respond('md') {
+                        width: 43.2rem;
+                        height: 50rem;
+
+                    }
+                    @include respond('xs') {
+                        width: 32.2rem;
+                        height: 36rem;
+                    }
+				}
+				.imgsections { 
+                    margin-top: 1.6rem;
+                   
+					.imagepart1{
+                        width: 8rem;
+                        height: 8rem;
+                        border: 2px solid transparent;
+                        transition: all 0.3s ease-in-out;
+                         &:hover{
+                            border: 2px solid $primary-color;
+                        } 
+                        @include respond('xl') {
+                            width: 6.4rem;
+                            height: 6.4rem;
+                        }
+                        @include respond('lg') {
+                            width: 9rem;
+                            height: 9rem;
+                        }
+                        @include respond('md') {
+                            width: 8rem;
+        height: 8rem;
+                        }
+                        @include respond('xs') {
+                            width: 6rem;
+        height: 6rem;
+                        }
+                    }
+                    .imagepart2{
+                        width: 8rem;
+                        height: 8rem;
+                        border: 2px solid transparent;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            border: 2px solid $primary-color;
+                        }
+                        @include respond('xl') {
+                            width: 6.4rem;
+                            height: 6.4rem;
+                        }
+                        @include respond('lg') {
+                            width: 9rem;
+                            height: 9rem;
+                        }
+                        @include respond('md') {
+                            width: 8rem;
+        height: 8rem;
+                        }
+                        @include respond('xs') {
+                            width: 6rem;
+        height: 6rem;
+                        }
+                    }
+                    .imagepart5{
+                        width: 8rem;
+                        height: 8rem;
+                        border: 2px solid transparent;
+                        transition: all 0.3s ease-in-out;
+                        position: relative !important;
+                        &:hover{
+                            border: 2px solid $primary-color;
+                        }
+                        @include respond('xl') {
+                            width: 6.4rem;
+                            height: 6.4rem;
+                        }
+                        @include respond('lg') {
+                            width: 9rem;
+                            height: 9rem;
+                        }
+                        @include respond('md') {
+                            width: 8rem;
+        height: 8rem;
+                        }
+                        @include respond('xs') {
+                            width: 6rem;
+        height: 6rem;
+                        }
+                    }
+                    .imgwithicon{
+                        &::after {
+                            content: ''; 
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: rgba(0, 0, 0,0.4); 
+                            opacity: 1; 
+                            transition: opacity 0.3s ease-in-out; 
+                            border-radius: 4px;
+                            z-index: 1; 
+                            width: 8.1rem;
+                            height: 8rem;
+                            @include respond('xl') {
+                                width: 6.4rem;
+                                height: 6.4rem;
+                            }
+                            @include respond('lg') {
+                                width: 9.1rem;
+                                height: 9.1rem;
+                            }
+                            @include respond('md') {
+                                width: 8.1rem;
+        height: 8.1rem;
+                            }
+                            @include respond('xs') {
+                                width: 6.1rem;
+        height: 6.1rem;
+                            }
+                        }
+                    }
+					.pauseicon { 
+                        position: absolute;
+                        top: 64px;
+                        left: 64px;
+                        bottom: 0;
+                        right: 0;
+                        transform: translate(-50%, -50%);
+                        color:$white;
+                        font-size: 2rem; 
+                        z-index: 2; 
+                        @include respond('xl') {
+                            top: 51px;
+                            left: 48px;
+                        }
+                        @include respond('lg') {
+                            top: 73px;
+                            left: 73px;
+                        }
+                        @include respond('md') {
+                            top: 66px;
+        left: 66px;
+                        }
+
+                        @include respond('xs') {
+                            top: 54px;
+                            left: 49px;
+                        }
+					}
+                    .leftarrow{
+                        top: 0;
+                        left: 44px;
+                        border-radius: 100%;
+                        background: #fff;
+                        width: 3rem;
+                        height: 3rem;
+                        align-items: center;
+                        justify-content: center;
+                        transform: translateY(-496px);   
+                        img{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                        @include respond('xl') {
+                            transform: translateY(-366px);
+
+                        }
+                        @include respond('lg') {
+                            transform: translateY(-577px);
+                        }
+                        @include respond('md') {
+                            transform: translateY(-465px);
+
+                        }
+                        @include respond('xs') {
+                            transform: translateY(-348px);
+                        }
+                    }
+                    .rightarrow{
+                        top: 0;
+                        right: 44px;
+                        border-radius: 100%;
+                        background: #fff;
+                        width: 3rem;
+                        height: 3rem;
+                        align-items: center;
+                        justify-content: center;
+                        transform: translateY(-496px);
+                        img{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                        @include respond('xl') {
+                            transform: translateY(-367px);
+                        }
+                        @include respond('lg') {
+                            transform: translateY(-565px);
+
+                        }
+                        @include respond('md') {
+                            transform: translateY(-468px);
+                        }
+                        @include respond('xs') {
+                            transform: translateY(-349px);
+                        }
+                    }
+				}
+			}
+			.detailsrightsection { 
+                width: 42%;
+                @include respond('xl') {
+                    width: 46%;
+                }
+                @include respond('lg') {
+                    width: 100%;
+                }
+				.priceandreview { 
+					.price-section { 
+						.price { 
+                            font-family: $font_medium;
+                            color:$danger;
+                            font-family: $lato_bold;
+                            font-size: 2rem;
+                            margin-right: 1rem;
+                            @include respond('xl') {
+                                font-size: 1.8rem;
+                            }
+                            @include respond('lg') {
+                                font-size: 2rem;
+                            }
+						}
+						.old-price { 
+                            color: $gray_700;
+                            font-family:  $lato_regular;
+                            text-decoration: line-through;
+						}
+						.discount { 
+                            font-family: $lato_bold;
+                            color: $white;
+                            background-color:$danger;
+                            padding: 4px;
+                            margin-left: 2rem;
+                            @include respond('lg') {
+                                padding: 8px;
+                            }
+						}
+					}
+					.reviewsecton { 
+                        flex-direction: column;
+						.ratingimg { 
+                            width: 4rem;
+                            height: 1rem;
+                            @include respond('lg') {
+                                width: 6rem;
+                            }
+						}
+						span { 
+                            color: $gray_700;
+                            font-family:  $lato_regular;
+                            font-size: .9rem;
+						}
+					}
+				}
+				.color-selection { 
+                    margin-top: 1.5rem;
+					span { 
+                        text-transform: capitalize;
+                        color:  $gray_800;
+                        font-size: 1.3rem;
+                        font-family:  $lato_regular;
+					}
+					.colorsector { 
+                        margin-top: 1rem;
+                        width: 8rem;
+						.outercirclepink { 
+                            height: 2rem;
+                            width: 2rem;
+                            background-color: transparent;
+                            border-radius: 100% !important;
+                            
+                            &:hover{
+                                border: 1px solid $primary-color;
+                                .colorname {
+                                    display: block;
+                                }
+                            }
+							.innercirclepink { 
+                            border-radius: 100% !important;
+                                height: 1.5rem;
+                            width: 1.5rem;
+                                background-color: $pink;
+							}
+						}
+						.outercircleblue { 
+                            height: 2rem;
+                            width: 2rem;
+                            background-color: transparent;
+                            border-radius: 100% !important;
+                            &:hover{
+                                border: 1px solid $primary-color;
+                                .colornameblue{
+                                    display: block;
+                                }
+                            }
+							.innercircleblue { 
+                                height: 1.5rem;
+                            width: 1.5rem;
+                            border-radius: 100% !important;
+                                background-color: $blue_light;
+							}
+						}
+						.outercircleyellow { 
+                            height: 2rem;
+                            width: 2rem;
+                            background-color: transparent;
+                            border-radius: 100% !important;
+                            &:hover{
+                                border: 1px solid $primary-color;
+                                .colornameyellow {
+                                    display: block; 
+                                }
+                            }
+							.innercircleyellow { 
+                                height: 1.5rem;
+                            width: 1.5rem;
+                            border-radius: 100% !important;
+
+                                background-color: $yellow_color;
+							}
+						}
+                        .colorname{
+                            display: none;
+                            position: absolute;
+                            top: 7%;
+                            transform: translateX(-50%);
+                            left: 10rem;
+                            color: $gray_600;
+                            font-family: $lato_regular;
+                        }
+                        .colornameblue{
+                            display: none;
+                            position: absolute;
+                            top: 7%;
+                            transform: translateX(-50%);
+                            left: 8rem;
+                            color: $gray_600;
+                            font-family:  $lato_regular;
+                        }
+                        .colornameyellow{
+                            display: none;
+                            position: absolute;
+                            top: 7%;
+                            transform: translateX(-50%);
+                            left: 4rem;
+                            color: $gray_600;
+                            font-family:  $lato_regular;
+                        }
+					}
+				}
+				.size-selection { 
+                    margin-top: 1.4rem;
+                    align-items: end;
+                    @include respond('xs') {
+                        flex-direction: column;
+                    }
+                    .sizesection{
+                       flex-direction: column;
+					label { 
+                        color:  $gray_800;
+                        font-size: 1.3rem;
+                        font-family:  $lato_regular;
+					}
+					#size { 
+                        margin-top: .4rem;
+                        width: 32rem;
+                        border: 2px solid $gray_400;
+                        padding: .6rem;
+                        background-color: transparent;
+                        option {
+                            color: $gray_800;
+                        }
+                        @include respond('xl') {
+                            width: 23rem;
+                        }
+                        @include respond('lg') {
+                            width: 50rem;
+                        }
+                        @include respond('md') {
+                            width: 36rem;
+                        }
+                        @include respond('xs') {
+                            width: 32.5rem;
+                        }
+					}
+                    #size option[value=""]{
+                        color: $gray_600;
+                            font-family:  $lato_regular;
+                    }
+                    #size option:disabled {
+                        color: $gray_700; 
+                      }
+                    }
+                      .sizechart {
+                        font-family: $lato-bold;
+                        color: $gray_800;
+                        align-items: center;
+
+                          img{
+                            width: 1rem;
+                            height: 1rem;
+                          }
+                          span{
+                            margin-left: 4px;
+                          }
+                      }
+				}
+                .btnsection{
+                    margin-top: 1.5rem;
+                    .quantity-section { 
+                        width: 4rem;
+                        padding: 8px;
+                        @include respond('xl') {
+                            width: 3rem;
+                        }
+                       
+                        #quantity { 
+                            width: 3.8rem;
+                            font-family:  $lato_regular;
+                            color:  $gray_800;
+                            @include respond('xl') {
+                                width: 3rem;
+                            }
+                            
+                        }
+                    }
+                    .add-to-cart {   
+                        width: 24rem;
+                        justify-content: center;
+                        @include respond('xl') {
+                            width: 18rem;
+                        }
+                        @include respond('lg') {
+                            width: 44rem;
+                        }
+                        @include respond('md') {
+                            width: 30rem;
+                        }
+                        @include respond('xs') {
+                            width: 20rem;
+                        }
+                        .carticon{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                        .addtocart { 
+                            font-family: $lato_bold;
+                            color: $white;
+                            margin-left: 4px;
+                        }
+                    }
+                    .favoritesection { 
+                        width: 8rem;
+                        justify-content: center;
+                        @include respond('xl') {
+                            width: 6rem;
+                        }
+                        @include respond('lg') {
+                            width: 6rem;
+                        }
+                        .favorite { 
+                            color: $primary-color;
+                            margin-left: 4px;
+                            font-size: .8rem;
+                        }
+                        .heart { 
+                            width: .8rem;
+                            height: .8rem;
+                        }
+                    }
+                }
+				.delivery-section { 
+                    margin-top: 4rem;
+					table { 
+                        width: 100%;
+                        border-collapse: collapse;
+                        text-align: left;
+                       thead{
+                        font-family:  $lato_regular;
+                        color: $gray_700;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                       }
+                        th,td{
+                            border-bottom: 1px solid $gray_400;
+                            padding: 16px;
+                            color: $gray_700;
+                            font-size: $font-base-size;
+                        }
+                        thead th {
+                            border-bottom: 1px solid $gray_400;
+                            font-size: 1rem;
+                          
+                        }
+						tbody { 
+                            font-family:  $lato_regular;
+                            color: $gray_800;
+                            font-size: .8rem;
+						}
+					}
+				}
+				.return-section { 
+                    border-bottom: 1px solid $light_gray;
+                    padding-bottom: 1.5rem;
+					ul { 
+                        list-style: disc;
+                        padding-left: 20px;
+                        margin: 0;
+
+						li { 
+                            color:  $gray_800;
+                            font-family: $lato_regular;
+                            font-size: 1.1rem;
+                            line-height: 1.6;
+                            &::marker{
+                                color: $primary-color;
+                            }
+						}
+					}
+				}
+				.sharesection { 
+                    justify-content: left;
+                    align-items: center;
+					.h3 { 
+                        margin-left: 0;
+					}
+                    .facebook-button{
+                        img.facebook{
+                            width: 2rem !important;
+                            height: 2rem !important;
+                        }
+                    }
+                    .twitter-button{
+                        img.twitter{
+                            width: 2rem !important;
+                            height: 2rem !important;
+                        }
+                    }
+                    .pinterest-button{
+                        img.pinterest{
+                            width: 2rem !important;
+                            height: 2rem !important;
+                        }
+                    }
+				}
+				.payment-options { 
+                    margin-top: 2.75rem;
+                    width: 30rem;
+                    @include respond('lg') {
+                        width: 24rem;
+                        margin: 0 auto;
+                    }
+				    }
+			}
+		}
+	}
+}
