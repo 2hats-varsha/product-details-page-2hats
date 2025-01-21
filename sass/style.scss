@@ -5,26 +5,22 @@
 // @import 'mixin';
 
 .wrapper {
-    width: 86vw;
     margin: 0 auto;
-    // padding: 0 6rem;
-    @include respond('lg') {
-        width: 90vw;
-    }
-    @include respond('sm'){
-        width: 75vw;
+    padding: 0 20rem;
+    @include respond('xl'){
+        padding: 0 6rem;
     }
     @include respond('xs'){
-        width: 78%;
+        padding: 0 2rem;
     }
 	header { 
 		.container { 
-            padding: 16px 0;
+            padding: 28px 0;
             @include respond('xl') {
                 padding: 24px 0;
             }
 			.leftnavitem {
-                width: 16vw;
+                width: 18vw;
                
                 @include respond('xl') {
                     width: 24vw;
@@ -34,8 +30,7 @@
                 }
 				.brand { 
 					img.logo { 
-                        width: 2.25rem;
-                        // height: 2.25rem;
+                        width: 2rem;
 					}
                     @include respond('md') {
                         width: 3.25rem;
@@ -43,6 +38,9 @@
                     }
 				}
 				#menu {
+                    @include respond('lg') {
+                        display: none;
+                    }
                     @include respond('md') {
                         display: none;
                     }
@@ -54,10 +52,10 @@
                     }
                     li { 
                         list-style: none !important;
-                        padding-bottom: 16px !important;
+                        padding-bottom: 24px !important;
                         width: 5rem;
                         text-align: center;
-                        border-bottom: 2px solid transparent !important;
+                        border-bottom: 2px solid transparent ;
                         a{
                             color: $c_text;
                             font-family: $font_regular;
@@ -65,21 +63,17 @@
                             transition: color 0.3s ease;
                             text-decoration: none !important;
                         }
-                        &:hover {
-                            border-bottom: 2px solid $primary-color !important;
-                            transition: color 0.3s ease;
-                            text-decoration: none !important;
-                            a{
-                                color: $primary-color;
-                                font-family: $font_medium;
-                                text-decoration: none !important;
-                            }
+                        .first-active{
+                            font-family: $font_bold;
                         }
 					}
+                    li.active{
+                        border-bottom: 2px solid $primary-color ;
+                    }
 				}
 			}
 			.rightnavitem { 
-                width: 33rem;
+                width: 30rem;
                 @include respond('md') {
                     display: none;
                 }
@@ -87,7 +81,7 @@
                     width: 33rem;
                 }
                 @include respond('lg') {
-                    width: 30rem;
+                    display: none;
                 }
                 @include respond('sm') {
                     display: none;
@@ -98,7 +92,7 @@
 				.searchitem { 
                     border-bottom: 2px solid $dark_variant;
 					#search { 
-                        width: 20rem;
+                        width: 18rem;
                         @include respond('xl') {
                             width: 19rem;
                         }
@@ -112,12 +106,81 @@
                             font-family: $font_light;
                         }
 					}
+                    .searchbtn{
+                        padding-right: 0;
+                        margin-bottom: 4px ;
+                        .searchicon{
+                            font-size: 1rem;
+                            color: $primary-color;
+
+                        }
+                        
+                    }
 				}
-                button .usericon,button .favoriteicon,button .carticon{
-                    width: 1.5rem;
-                    height: 1.5rem;
+                button,button .usericon,button .favoriteicon,button .carticon{
+                    padding: 0 ;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    
                 }
+                
 			}
+            a.hamburger{
+                display: none;
+                width: 3rem;
+                height: 2rem;
+                background-color: $primary-color;
+                border-radius: 4px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @include respond('lg') {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @include respond('md') {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @include respond('xs'){
+                    width: 2.8rem;
+                    height: 1.8rem;
+                }
+                .first-line{
+                    width: 2rem;
+                    height: .2rem;
+                    background-color: $white;
+                    @include respond('xs'){
+                        width: 1rem;
+                        height: 0.2rem;
+                    }
+                    
+                }
+                .second-line{
+                    width: 2rem;
+                    height: 0.2rem;
+                    background-color: #fff;
+                    margin-top: .2rem;
+                    @include respond('xs'){
+                        width: 1rem;
+                        height: 0.2rem;
+                    }
+                }
+                .third-line{
+                    width: 2rem;
+                    height: 0.2rem;
+                    background-color: #fff;
+                    margin-top: .2rem;
+                    @include respond('xs'){
+                        width: 1rem;
+                        height: 0.2rem;
+                    }
+                }
+            }
 		}
 	}
 	.mainsection { 
@@ -147,7 +210,7 @@
             }
             .generalinfo { 
                 color: $gray_600;
-                padding: .6rem;
+                padding: .8rem;
                 font-family: $font_bold;
                 border: 2px solid transparent; 
                 transition: all 0.3s ease-in-out;
@@ -168,8 +231,12 @@
                     }
                     @include respond('xs'){
                         padding: .4rem;
-                        font-size: .9rem;
+                        font-size: 12px;
                     }
+                }
+                .generalinfo.active{
+                    border: 2px solid $primary-color; 
+                    border-radius: 4px;
                 }
 			
 		}
@@ -197,11 +264,8 @@
                 }
 				.productimage { 
                     width: 100%;
-                    
-                    @include respond('xl') {
-                    }
-                    
                     @include respond('lg') {
+                        max-width: 62rem;
                     }
                     @include respond('md') {
 
@@ -223,26 +287,15 @@
                     height: 3rem;
                     align-items: center;
                     justify-content: center;
-                    img{
-                        width: 1.5rem;
-                        height: 1.5rem;
-                        @include respond('xs'){
-                            width: 1rem;
-                            height: 1rem;
-                        }
-                    }
-                    @include respond('lg') {
-                        top: 375px;
-                    }
-                    @include respond('sm') {
-                        top: 205px;
+                    @include respond('sm'){
+                        top: 165px;
+                        left: 27px;
                     }
                     @include respond('xs'){
-                        top: 106px;
-                        left: 12px;
-                        width: 2rem;
-                        height: 2rem;
+                        top: 144px;
+                        left: 16px;
                     }
+
                 }
                 .rightarrow{
                     top: 276px;
@@ -253,40 +306,26 @@
                     height: 3rem;
                     align-items: center;
                     justify-content: center;
-                    img{
-                        width: 1.5rem;
-                        height: 1.5rem;
-                        @include respond('xs'){
-                            width: 1rem;
-                            height: 1rem;
-                        }
-                    }
-                    @include respond('lg') {
-                        top: 375px;
-                    }
-                    @include respond('sm') {
-                        top: 205px;
+                    
+                    @include respond('sm'){
+                        top: 165px;
+                        right: 27px;
                     }
                     @include respond('xs'){
-                        top: 106px;
-                        right: 12px;
-                        width: 2rem;
-                        height: 2rem;
+                        top: 144px;
+                        right: 16px;
                     }
+                    
                 }
 				.imgsections { 
                     margin-top: 1.6rem;
+                    gap: 10px;
                    .imagepart_cover{
                             width: 8rem;
                             height: 100%;
-
-                            // height: 8rem;
-                            
                             @include respond('xl') {
                                 width: 5rem;
                                 height: 100%;
-
-                                // height: 5rem;
                             }
                             @include respond('lg') {
                                 height: 100%;
@@ -408,8 +447,7 @@
                             transition: opacity 0.3s ease-in-out; 
                             border-radius: 4px;
                             z-index: 1; 
-                            width: 8.1rem;
-                            height: 8rem;
+                           height: 6.8rem;
                            
                             @include respond('xl') {
                                 width: 5rem;
@@ -420,12 +458,12 @@
                                 height: 9.1rem;
                             }
                             @include respond('md') {
-                                width: 8.1rem;
-                                height: 8.1rem;
+                                width: 6.7rem;
+                                height: 6.7rem;
                             }
                             @include respond('sm') {
-                                width: 5.1rem;
-                                height: 5.1rem;
+                                width: 4.3rem;
+                                height:4.3rem;
                             }
                             @include respond('xs'){
                                 width: 3.1rem;
@@ -435,33 +473,33 @@
                     }
 					.pauseicon { 
                         position: absolute;
-                        top: 59px;
-                        left: 59px;
+                        top: 64px;
+                        left: 60px;
                         bottom: 0;
                         right: 0;
                         transform: translate(-50%, -50%);
                         color:$white;
                         font-size: 2rem; 
                         z-index: 2; 
-                        width: 2rem;
-                        height: 2rem;
                        @include respond('xl') {
-                        top: 42px;
-                        left: 42px;
+                        top: 44px;
+                        left: 44px;
                        }
                        @include respond('lg') {
-                        top: 71px;
-                        left: 71px;
+                        top: 85px;
+                        left: 85px;
+                       }
+                       @include respond('md'){
+                        top: 63px;
+                        left: 60px;
                        }
                        @include respond('sm') {
-                        top: 40px;
-                        left: 40px;
+                        top: 37px;
+                        left: 34px;
                        }
                        @include respond('xs'){
-                        top: 26px;
-                        left: 26px;
-                        width: 1.5rem;
-                        height: 1.5rem;
+                        top: 22px;
+                        left: 22px;
                        }
 					}
                    
@@ -660,7 +698,7 @@
 					}
 					#size { 
                         margin-top: .4rem;
-                        width: 25rem;
+                        width: 20rem;
                         border: 2px solid $gray_400;
                         padding: .6rem;
                         background-color: transparent;
@@ -669,16 +707,16 @@
                         }
                         
                         @include respond('xl') {
-                            width: 23rem;
+                            width: 21.5rem;
                         }
                         @include respond('lg') {
-                            width: 42rem;
+                            width: 36.5rem;
                         }
                         @include respond('md') {
-                            width: 32rem;
+                            width: 25.2rem;
                         }
                         @include respond('sm') {
-                            width: 23rem;
+                            width: 15.4rem;
                         }
                         @include respond('xs'){
                             width: 19rem;
@@ -696,11 +734,6 @@
                         font-family: $lato-bold;
                         color: $gray_800;
                         align-items: center;
-
-                          img{
-                            width: 1rem;
-                            height: 1rem;
-                          }
                           span{
                             margin-left: 4px;
                           }
@@ -731,9 +764,11 @@
                         }
                     }
                     .add-to-cart {   
-                        width: 24rem;
+                        width: 14rem;
                         justify-content: center;
                         margin-left: 1rem;
+                        border: 2px solid transparent;
+                        
                         @include respond('xl') {
                             width: 18rem;
                         }
@@ -744,16 +779,25 @@
                             width: 30rem;
                         }
                         @include respond('xs') {
-                            width: 13rem;
+                            width: 13.9rem;
                         }
                         .carticon{
-                            width: 1rem;
-                            height: 1rem;
+                            
                         }
                         .addtocart { 
                             font-family: $lato_bold;
                             color: $white;
                             margin-left: 4px;
+                            border: 2px solid transparent;
+
+                        }
+                        &:hover{
+                            background-color: $white;
+                            border: 2px solid $primary-color;
+                            border-radius: 4px;
+                            .addtocart { 
+                                color: $primary-color;
+                            }
                         }
                     }
                     .favoritesection { 
@@ -767,7 +811,7 @@
                             width: 13rem;
                         }
                         @include respond('xs'){
-                            width: 18rem;
+                            width: 19rem;
                             margin: 1rem 0 0 0;
                         }
                         .favorite { 
@@ -776,8 +820,7 @@
                             font-size: .8rem;
                         }
                         .heart { 
-                            width: .8rem;
-                            height: .8rem;
+                           font-size: 1rem;
                         }
                     }
                 }
@@ -841,21 +884,18 @@
                         margin-left: 0;
 					}
                     .facebook-button{
-                        img.facebook{
-                            width: 2rem !important;
-                            height: 2rem !important;
+                        span{
+                            font-size: 2rem;
                         }
                     }
                     .twitter-button{
-                        img.twitter{
-                            width: 2rem !important;
-                            height: 2rem !important;
+                        span{
+                            font-size: 2rem;
                         }
                     }
                     .pinterest-button{
-                        img.pinterest{
-                            width: 2rem !important;
-                            height: 2rem !important;
+                        span{
+                            font-size: 2rem;
                         }
                     }
 				}

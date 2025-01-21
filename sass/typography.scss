@@ -13,7 +13,7 @@ body {
     font-family: $lato_regular;
 }
 h1,.h1{
-font-size: 3.8rem;
+font-size: 3rem;
 line-height: 4rem;
 color: $secondary_color;
 
@@ -165,9 +165,12 @@ a {
     margin-left: 1rem;
 }
 img{
-    // max-width: 37.5rem;
+    max-width: 37.5rem;
     width: 100%;
     height: auto;
+}
+[class^="icon-"], [class*=" icon-"] {
+font-size: 1.25rem;
 }
 .paymentimg{
     width: 8rem;
@@ -267,4 +270,8 @@ img{
 }
 .uppercase{
     text-transform: uppercase;
+}
+.active{
+    color: $primary-color !important;
+  
 }
