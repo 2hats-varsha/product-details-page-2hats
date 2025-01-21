@@ -1,166 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Product Detail Page</title>
-        <meta name="description" content="Lorem Ipsum es simplemente el texto de relleno de las">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="icon" type="image/x-icon" href="./favicon.ico">
-        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/ef8c969ed4/UntitledProject/style.css">
+        <meta
+            name="description"
+            content="Lorem Ipsum es simplemente el texto de relleno de las"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://i.icomoon.io/public/temp/ef8c969ed4/UntitledProject/style.css"
+        />
     </head>
     <body>
-        <main class="wrapper">
-            <header>
-                <div class="container flex flex-alignitem">
-                    <nav class="leftnavitem flex">
-                        <a href="#" class="brand" aria-label="Logo" tabindex="1">
-                            <img src="./assets/images/logo.svg"  width="100" height="100" alt="Product Detail Page" class="logo pointer">
+        <header>
+            <div class="container">
+                <div class="row flex">
+                    <div class="col-4 flex">
+                        <a
+                            href="#"
+                            class="brand"
+                            aria-label="Logo"
+                            tabindex="1"
+                        >
+                            <img
+                                src="./assets/images/logo.svg"
+                                width="100"
+                                height="100"
+                                alt="Product Detail Page"
+                                class="logo pointer"
+                            />
                         </a>
-                        <ul id="menu" class="flex flex-alignitem">
-                            <li class="active">
-                                <a href="#" class="pointer uppercase active first-active" aria-label="Women's section" tabindex="2">women</a>
-                            </li>
-                            <li class="menu-items">
-                                <a href="#" class="pointer uppercase" aria-label="Men's section" tabindex="3">men</a>
-                            </li>
-                            <li class="menu-items">
-                                <a href="#" class="pointer uppercase" aria-label="Kids' section" tabindex="4">kids</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="rightnavitem flex flex-alignitem">
-                        <div class="searchitem flex">
-                            <input type="text" placeholder="Search for items" name="search" id="search" tabindex="5" aria-label="Search input field">
-                            <button class="searchbtn .btn" tabindex="6" aria-label="Search button">
-                                <span class="icon-Search"></span>
+                        <nav class="leftnavitem flex">
+                            <ul id="menu" class="flex flex-alignitem">
+                                <li class="active">
+                                    <a
+                                        href="#"
+                                        class="pointer uppercase first-active"
+                                        aria-label="Women's section"
+                                        tabindex="2"
+                                        >women</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="pointer uppercase"
+                                        aria-label="Men's section"
+                                        tabindex="3"
+                                        >men</a
+                                    >
+                                </li>
+                                <li class="menu-items">
+                                    <a
+                                        href="#"
+                                        class="pointer uppercase"
+                                        aria-label="Kids' section"
+                                        tabindex="4"
+                                        >kids</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-8">
+                        <nav class="rightnavitem flex flex-alignitem">
+                            <div class="searchitem flex">
+                                <input
+                                    type="text"
+                                    placeholder="Search for items"
+                                    name="search"
+                                    id="search"
+                                    tabindex="5"
+                                    aria-label="Search input field"
+                                />
+                                <button
+                                    class="searchbtn .btn"
+                                    tabindex="6"
+                                    aria-label="Search button"
+                                >
+                                    <span class="icon-Search"></span>
+                                </button>
+                            </div>
+                            <button
+                                tabindex="7"
+                                aria-label="Account button"
+                                class="account-user"
+                            >
+                                <span class="icon-Account"></span>
                             </button>
-                        </div>
-                        <button tabindex="7" aria-label="Account button" >
-                            <span class="icon-Account"></span>
-                        </button>
-                        <button tabindex="8" aria-label="Favorite button">
-                            <span class="icon-heart"></span>
-                        </button>
-                        <button tabindex="9" aria-label="Cart button">
-                            <span class="icon-Empty-Cart"></span>
-                        </button>
-                    </nav>
-                  
-                    <a href="" class="hamburger" tabindex="" >
+                            <button tabindex="8" aria-label="Favorite button">
+                                <span class="icon-heart"></span>
+                            </button>
+                            <button tabindex="9" aria-label="Cart button">
+                                <span class="icon-Empty-Cart"></span>
+                            </button>
+                        </nav>
+                    </div>
+                    <a href="" class="hamburger" tabindex="">
                         <div class="first-line"></div>
                         <div class="second-line"></div>
                         <div class="third-line"></div>
                     </a>
                 </div>
-            </header>
+            </div>
+        </header>
+        <main class="container">
             <section class="mainsection">
-                <h1 class="m-0 h1">Basic hooded sweatshirt in pink</h1>
-                <div class="tabs relative">
-                    <a href="#" class="generalinfo active   " aria-label="General info" tabindex="7">General info</a>
-                    <a href="#" class="generalinfo" aria-label="Product details" tabindex="8">Product details</a>
-                    <a href="#" class="generalinfo" aria-label="Reviews" tabindex="9">Reviews
-                        <span class="reviewcount absolute" aria-label="Number of reviews">12</span>
-                    </a>
-                  
+                <h1 class="h1">Basic hooded sweatshirt in pink</h1>
+                <div class="tabs">
+                    <a
+                        href="#"
+                        class="tab active"
+                        aria-label="General Info"
+                        tabindex="7"
+                        >General Info</a
+                    >
+                    <a
+                        href="#"
+                        class="tab"
+                        aria-label="Product Details"
+                        tabindex="8"
+                        >Product Details</a
+                    >
+                    <a
+                        href="#"
+                        class="tab relative"
+                        aria-label="Reviews"
+                        tabindex="9"
+                        >Reviews <span class="reviewcount absolute">12</span></a
+                    >
                 </div>
+                <!-- Product Details -->
                 <div class="detailscontainer flex">
-                    <div class="detailsleftsection half_width relative">
-                        <img src="./assets/images/product.png" width="100" height="100" alt="Product Name" class="productimage " loading="lazy">
-                        <a href="" class="leftarrow flex absolute pointer" area-label="Left arrow">
-                            <span class="icon-left-arrow"></span>
-                        </a>
-                        <a href="" class="rightarrow flex absolute pointer" area-label="Right arrow">
-                            <span class="icon-right-arrow"></span>
-                        </a>
-                        <div class="imgsections flex">
-                            <a href="" class="imagepart_cover .btn " tabindex="10" aria-label="Image part 1">
-                                <img src="./assets/images/product.png" width="100" height="100" alt="image part1" class="imagepart1 pointer b-radius-minimal" loading="lazy">
-                            </a>
-                            <a href="" class="image_cover .btn" tabindex="11" aria-label="Image part 2">
-                                <img src="./assets/images/imagepart2.png" width="100" height="100" alt="image part2" class="imagepart2 pointer b-radius-minimal" loading="lazy">
-                            </a>
-                            <a href="" class="image_cover .btn" tabindex="12" aria-label="Image part 3"> 
-                                <img src="./assets/images/imagepart3.png" width="100" height="100" alt="image part3" class="imagepart2 pointer b-radius-minimal" loading="lazy">
-                            </a>
-                            <a href="" class="image_cover .btn" tabindex="13" aria-label="Image part 4">
-                                <img src="./assets/images/imagepart4.png" width="100" height="100" alt="image part4" class="imagepart2 pointer b-radius-minimal" loading="lazy">
-                            </a>
-                            <a href="" class="image_cover_last .btn" tabindex="14" aria-label="Image part 5 with pause icon">
-                                <div class="imgwithicon relative pointer">
-                                    <img src="./assets/images/imagepart2.png" width="100" height="100" alt="image part2" class="imagepart5 pointer b-radius-minimal" loading="lazy">
-                                    <span class="icon-pause pauseicon absolute"></span>
-                                </div>
-                            </a>
+                    <div class="detailsleftsection">
+                        <div class="image-gallery">
+                            <img
+                                src="./assets/images/product.png"
+                                alt="Product"
+                                class="productimage"
+                                loading="lazy"
+                            />
+                            <div class="img-navigation">
+                                <a
+                                    href="#"
+                                    class="arrow left flex"
+                                    aria-label="Previous Image"
+                                    ><span class="icon-left-arrow"></span
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="arrow right flex"
+                                    aria-label="Next Image"
+                                    ><span class="icon-right-arrow"></span
+                                ></a>
+                            </div>
+                            <div class="thumbnails">
+                                <a href="#" class="thumbnail active-img"
+                                    ><img
+                                        src="./assets/images/product.png"
+                                        alt="Product Thumbnail"
+                                /></a>
+                                <a href="#" class="thumbnail"
+                                    ><img
+                                        src="./assets/images/imagepart2.png"
+                                        alt="Product Thumbnail"
+                                /></a>
+                                <a href="#" class="thumbnail"
+                                    ><img
+                                        src="./assets/images/imagepart3.png"
+                                        alt="Product Thumbnail"
+                                /></a>
+                                <a href="#" class="thumbnail"
+                                    ><img
+                                        src="./assets/images/imagepart4.png"
+                                        alt="Product Thumbnail"
+                                /></a>
+                                <a href="#" class="thumbnail last-thumbnail">
+                                    <img
+                                        src="./assets/images/imagepart2.png"
+                                        alt="Product Thumbnail with Pause Icon"
+                                        class="relative"
+                                    />
+                                    <span class="icon-pause absolute"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="detailsrightsection flex-alignitem">
-                        <div class="priceandreview flex">
+                    <!-- <div class="col-2"></div> -->
+                    <div class="detailsrightsection">
+                        <div class="price-and-reviews flex">
                             <div class="price-section flex flex-alignitem">
                                 <span class="price">$15.50</span>
                                 <span class="old-price">$31.00</span>
-                                <span class="discount b-radius-minimal">-50%</span>
+                                <span class="discount">-50%</span>
                             </div>
-                            <div class="reviewsecton flex">
-                                <img src="./assets/images/rating.svg" width="100" height="100" alt="rating" class="ratingimg">
-                                <span>12 reviews</span>
+                            <div class="reviews flex">
+                                <img
+                                    src="./assets/images/rating.svg"
+                                    alt="Rating"
+                                    class="ratingimg"
+                                />
+                                <span>12 Reviews</span>
                             </div>
                         </div>
+                        <!-- Color Selection -->
                         <div class="color-selection">
-                            <span>color</span>
-                            <div class="colorsector flex flex-alignitem">
-                                <div class="outercirclepink b-radius-100 relative circleborder">
-                                    <div class="innercirclepink b-radius-100 absolute innercircleatt"></div>
+                            <span>Color</span>
+                            <div class="color-options flex flex-alignitem">
+                                <div
+                                    class="color-option outercirclepink b-radius-100 relative circleborder"
+                                >
+                                    <div
+                                        class="innercirclepink b-radius-100 absolute innercircleatt"
+                                    ></div>
                                     <span class="colorname">pink</span>
                                 </div>
-                                <div class="outercircleblue b-radius-100 relative circleborder">
-                                    <div class="innercircleblue b-radius-100 absolute innercircleatt"></div>
+                                <div
+                                    class="color-option outercircleblue b-radius-100 relative circleborder"
+                                >
+                                    <div
+                                        class="innercircleblue b-radius-100 absolute innercircleatt"
+                                    ></div>
                                     <span class="colornameblue">Blue</span>
                                 </div>
-                            
-                                <div class="outercircleyellow b-radius-100 relative circleborder">
-                                    <div class="innercircleyellow b-radius-100 absolute innercircleatt" ></div>
-                                    <span class="colornameyellow">Yellow</span>
+                                <div
+                                    class="color-option outercircleyellow b-radius-100 relative circleborder"
+                                >
+                                    <div
+                                        class="innercircleyellow b-radius-100 absolute innercircleatt"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Size Selection -->
                         <div class="size-selection flex">
-                            <div class="sizesection flex" >
-                                <label for="size" class="size" aria-label="Select your size" aria-required="true">Size</label>
-                                <select id="size" name="size" tabindex="18" class="b-radius-minimal" require disabled>
-                                    <option value="select">Please select</option>
+                            <div class="sizesection flex">
+                                <label for="size" class="size-label"
+                                    >Size</label
+                                >
+                                <select id="size" name="size">
+                                    <option value="select">
+                                        Please Select
+                                    </option>
                                     <option value="s">S</option>
                                     <option value="m">M</option>
                                     <option value="l">L</option>
                                 </select>
                             </div>
-                            <div class="sizechart flex" >
+                            <div class="sizechart flex">
                                 <span class="icon-chart"></span>
                                 <span>Size chart</span>
                             </div>
                         </div>
-                        <div class="btnsection flex">
-                            <div class="quantity-section circleborder b-radius-minimal">
-                                <input type="number" id="quantity" name="quantity" min="1" value="1" tabindex="19">
+                        <!-- Buttons -->
+                        <div class="buttons flex">
+                            <div
+                                class="quantity-section circleborder b-radius-minimal flex"
+                            >
+                                <input
+                                    type="number"
+                                    id="quantity"
+                                    name="quantity"
+                                    value="1"
+                                    min="1"
+                                    step="1"
+                                    tabindex="19"
+                                />
                             </div>
-                            <button class="add-to-cart b-radius-minimal flex primary-button flex-alignitem .btn" tabindex="20" area-label="Add to cart">
+                            <button
+                                class="btn add-to-cart b-radius-minimal flex primary-button flex-alignitem .btn"
+                                aria-label="Add to Cart"
+                            >
                                 <span class="icon-cart carticon"></span>
-                                <div class="addtocart" >
-                                    Add to cart
-                                </div>
+                                Add to Cart
                             </button>
-                            <button class=" .btn favoritesection secondary-btn flex b-radius-minimal flex-alignitem flex-alignitem" tabindex="21" area-label="Favourite">
-                                
-                                <span class="icon-heart heart"></span>
-                                <div class="favorite" >
-                                    Favourite
-                                </div>
+                            <button
+                                class="btn favoritesection secondary-btn flex b-radius-minimal flex-alignitem flex-alignitem"
+                                tabindex="21"
+                                aria-label="Add to Favorites"
+                            >
+                                <span class="icon-heart"></span>
+                                Favorite
                             </button>
                         </div>
+                        <!-- Delivery and Return Information -->
                         <div class="delivery-section">
                             <h5 class="h5">Delivery</h5>
-                            <p class="p min-font-size">Free standard shipping on orders <span class="deliveryhighlight"> over $35 </span> before tax, plus free returns.</p>
-                            <table cellspacing="0" cellpadding="8">
+                            <p class="p">
+                                Free standard shipping on orders over<strong>
+                                    $35</strong
+                                >
+                                before tax, plus free returns.
+                            </p>
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Type</th>
@@ -170,12 +306,12 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Standard delivery</td>
+                                        <td>Standard Delivery</td>
                                         <td>1-4 business days</td>
                                         <td>$4.50</td>
                                     </tr>
                                     <tr>
-                                        <td>Express delivery</td>
+                                        <td>Express Delivery</td>
                                         <td>1 business day</td>
                                         <td>$10.00</td>
                                     </tr>
@@ -189,35 +325,44 @@
                         </div>
                         <div class="return-section">
                             <h5 class="h5">Return</h5>
-                            <p class="p min-font-size">You have <span class="deliveryhighlight">60 days </span>to return the item(s) using any of the following methods:</p>
+                            <p class="p">
+                                You have
+                                <strong>60 days</strong> to return the item(s)
+                                using any of the following methods:
+                            </p>
                             <ul>
                                 <li>Free store return</li>
                                 <li>Free returns via USPS Dropoff Service</li>
                             </ul>
                         </div>
-                        <div class="sharesection flex ">
-                            <h5 class="h5">share</h5>
-                            <a href="" class=".btn facebook-button" tabindex="22">
-                                <span class="icon-Facebook facebook ml_min pointer" ></span>
-                            </a>
-                            <a href=""class=".btn twitter-button" tabindex="23">
-                                <span class="icon-Twitter twitter ml_min pointer"></span>
-                            </a>
-                            <a href=""class=".btn pinterest-button" tabindex="24">
-                                <span class="icon-pinterest pinterest ml_min pointer"></span>
-                            </a>
+                        <!-- Social Sharing -->
+                        <div class="sharesection flex">
+                            <h5 class="h5">Share:</h5>
+                            <a href="#" class="social-button facebook"
+                                ><span class="icon-Facebook"></span
+                            ></a>
+                            <a href="#" class="social-button twitter"
+                                ><span class="icon-Twitter"></span
+                            ></a>
+                            <a href="#" class="social-button pinterest"
+                                ><span class="icon-pinterest"></span
+                            ></a>
                         </div>
+                        <!-- Payment Options -->
                         <div class="payment-options flex">
-                            <a href=""class=".btn visa-button paymentimg" tabindex="25">
-                                <img src="./assets/images/visa.png" width="100" height="100" alt="Visa" class="visImg ">
-                            </a>
-                            <a href=""class=".btn mastercard-button paymentimg" tabindex="26">
-                                <img src="./assets/images/master-card.png" width="100" height="100" alt="Mastercard" class="Mastercard"  >
-                            </a>
-                            <a href=""class=".btn paypal-button paymentimg" tabindex="27">
-                                
-                                <img src="./assets/images/pay-pal.png" width="100" height="100" alt="PayPal" class="PayPal">
-                            </a>
+                            <a href="#" class="payment-option visa"
+                                ><img src="./assets/images/visa.png" alt="Visa"
+                            /></a>
+                            <a href="#" class="payment-option mastercard"
+                                ><img
+                                    src="./assets/images/master-card.png"
+                                    alt="Mastercard"
+                            /></a>
+                            <a href="#" class="payment-option paypal"
+                                ><img
+                                    src="./assets/images/pay-pal.png"
+                                    alt="PayPal"
+                            /></a>
                         </div>
                     </div>
                 </div>

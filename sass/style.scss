@@ -1,131 +1,155 @@
-@import './variables.scss';
-@import './font.scss';
-@import './typography.scss';
-@import './_mixins.scss';
-// @import 'mixin';
+@import "./variables.scss";
+@import "./font.scss";
+@import "./typography.scss";
+@import "./_mixins.scss";
+html {
+    font-size: $font-base-size;
+    line-height: $line-height-base;
+    font-family: $lato_bold;
+    color: $gray;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $font-base-size;
+    background-color: $white;
+    font-family: $lato_regular;
+}
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: auto;
+    @include respond("xl") {
+        width: 82%;
+    }
+}
 
-.wrapper {
-    margin: 0 auto;
-    padding: 0 20rem;
-    @include respond('xl'){
-        padding: 0 6rem;
+// Mixins
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($properties, $duration) {
+    transition: $properties $duration ease;
+}
+// Flexbox Utility
+.flex {
+    display: flex;
+}
+.flex-alignitem {
+    align-items: center;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.pointer {
+    cursor: pointer;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.b-radius-minimal {
+    border-radius: $border-radius;
+}
+.img-with-icon {
+    position: relative;
+    display: inline-block;
+    .icon-pause {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    @include respond('xs'){
-        padding: 0 2rem;
-    }
-	header { 
-		.container { 
-            padding: 28px 0;
-            @include respond('xl') {
-                padding: 24px 0;
-            }
-			.leftnavitem {
-                width: 18vw;
-               
-                @include respond('xl') {
-                    width: 24vw;
-                }
-                @include respond('lg') {
-                    width: 29vw;
-                }
-				.brand { 
-					img.logo { 
+}
+header {
+    .container {
+        padding: 32px 0;
+        .row {
+            .col-4 {
+                .brand {
+                    .logo {
                         width: 2rem;
-					}
-                    @include respond('md') {
-                        width: 3.25rem;
-                        // height: 3.25rem;
                     }
-				}
-				#menu {
-                    @include respond('lg') {
+                }
+                .leftnavitem {
+                    margin-left: 3rem;
+                    @include respond("lg") {
                         display: none;
                     }
-                    @include respond('md') {
-                        display: none;
+                    .flex {
+                        li {
+                            list-style: none !important;
+                            padding-bottom: 24px !important;
+                            width: 5rem;
+                            text-align: center;
+                            border-bottom: 2px solid transparent;
+                            a {
+                                color: $c_text;
+                                font-family: $font_regular;
+                                display: inline-block;
+                                transition: color 0.3s ease;
+                                text-decoration: none !important;
+                            }
+                            .first-active {
+                                font-family: $font_bold;
+                                color: $primary-color;
+                            }
+                            &:hover {
+                                border-bottom: 2px solid $primary-color;
+                            }
+                        }
+                        li.active {
+                            border-bottom: 2px solid $primary-color;
+                        }
                     }
-                    @include respond('sm') {
-                        display: none;
-                    }
-                    @include respond('xs') {
-                        display: none;
-                    }
-                    li { 
-                        list-style: none !important;
-                        padding-bottom: 24px !important;
-                        width: 5rem;
-                        text-align: center;
-                        border-bottom: 2px solid transparent ;
-                        a{
-                            color: $c_text;
-                            font-family: $font_regular;
-                            display: inline-block;
-                            transition: color 0.3s ease;
-                            text-decoration: none !important;
-                        }
-                        .first-active{
-                            font-family: $font_bold;
-                        }
-					}
-                    li.active{
-                        border-bottom: 2px solid $primary-color ;
-                    }
-				}
-			}
-			.rightnavitem { 
-                width: 30rem;
-                @include respond('md') {
-                    display: none;
                 }
-                @include respond('xl') {
-                    width: 33rem;
-                }
-                @include respond('lg') {
-                    display: none;
-                }
-                @include respond('sm') {
-                    display: none;
-                }
-                @include respond('xs') {
-                    display: none;
-                }
-				.searchitem { 
-                    border-bottom: 2px solid $dark_variant;
-					#search { 
-                        width: 18rem;
-                        @include respond('xl') {
-                            width: 19rem;
-                        }
-                        @include respond('lg') {
-                            width: 16rem;
-                        }
-                        &::placeholder{
-                            line-height: 2rem; 
-                            color: $gray;
-                            font-size: 1rem;
-                            font-family: $font_light;
-                        }
-					}
-                    .searchbtn{
-                        padding-right: 0;
-                        margin-bottom: 4px ;
-                        .searchicon{
-                            font-size: 1rem;
-                            color: $primary-color;
+            }
 
-                        }
-                        
+            .col-8 {
+                .rightnavitem {
+                    @include respond("lg") {
+                        display: none;
                     }
-				}
-                button,button .usericon,button .favoriteicon,button .carticon{
-                    padding: 0 ;
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    
+                    .searchitem {
+                        border-bottom: 2px solid $dark_variant;
+
+                        #search {
+                            width: 18rem;
+                            &::placeholder {
+                                line-height: 2rem;
+                                color: $gray;
+                                font-size: 1rem;
+                                font-family: $font_light;
+                            }
+                        }
+
+                        .searchbtn {
+                            padding-right: 0;
+                            margin-bottom: 4px;
+                            .icon-Search {
+                                font-size: 1rem;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+
+                    button {
+                        padding: 0.5rem 0 0.5rem 2rem;
+
+                        .icon-Account {
+                        }
+                    }
+                    .account-user {
+                        margin-left: 1rem;
+                    }
                 }
-                
-			}
-            a.hamburger{
+            }
+            .hamburger {
                 display: none;
                 width: 3rem;
                 height: 2rem;
@@ -134,830 +158,576 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                @include respond('lg') {
+                @include respond("lg") {
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                 }
-                @include respond('md') {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-                @include respond('xs'){
-                    width: 2.8rem;
-                    height: 1.8rem;
-                }
-                .first-line{
+                .first-line {
                     width: 2rem;
-                    height: .2rem;
+                    height: 0.2rem;
                     background-color: $white;
-                    @include respond('xs'){
-                        width: 1rem;
-                        height: 0.2rem;
-                    }
-                    
                 }
-                .second-line{
+
+                .second-line {
                     width: 2rem;
                     height: 0.2rem;
                     background-color: #fff;
-                    margin-top: .2rem;
-                    @include respond('xs'){
-                        width: 1rem;
-                        height: 0.2rem;
-                    }
+                    margin-top: 0.2rem;
                 }
-                .third-line{
+
+                .third-line {
                     width: 2rem;
                     height: 0.2rem;
                     background-color: #fff;
-                    margin-top: .2rem;
-                    @include respond('xs'){
-                        width: 1rem;
-                        height: 0.2rem;
-                    }
+                    margin-top: 0.2rem;
                 }
             }
-		}
-	}
-	.mainsection { 
-        padding: 4rem 0;
-        @include respond('sm') {
-            padding-top: 2rem;
-
         }
-        @include respond('xs') {
-            padding-top: 0;
+    }
+}
+// Tabs
+.mainsection {
+    padding-bottom: 2rem;
+}
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $light_gray;
+    padding-bottom: 2rem;
 
+    .tab {
+        color: $gray_600;
+        padding: 12px 16px;
+        font-family: $font_bold;
+        border: 2px solid transparent;
+        border-radius: $border-radius;
+        margin-right: 10px;
+        text-transform: capitalize;
+        background-color: #fff;
+        @include transition(background-color, 0.3s);
+
+        @include respond("xs") {
+            font-size: 0.9rem;
+            padding: 12px 2px;
         }
-		.h1 { 
-            color: $secondary_color;
+        &.active {
+            border: 2px solid $primary-color;
+            color: $primary-color !important;
+        }
+        .reviewcount {
+            top: -0.1rem;
+            right: 0.1rem;
+            font-size: 0.8rem;
             font-family: $font_bold;
-            
-            
-		}
-		.tabs { 
-            margin: 3rem 0;
-            border-bottom: 2px solid $light_gray;
-            padding-bottom: 2rem;
-            @include respond('sm'){
+            color: $gray_600;
+        }
+    }
+}
+
+// Product Details
+.detailscontainer {
+    margin-top: 30px;
+    @include respond("lg") {
+        flex-direction: column;
+    }
+
+    .detailsleftsection {
+        width: 48%;
+        position: relative;
+        @include respond("lg") {
+            width: 100%;
+        }
+
+        .productimage {
+            width: 100%;
+            height: auto;
+            border-radius: $border-radius;
+        }
+
+        .image-gallery {
+            position: relative;
+            .productimage {
+                @include respond("md") {
+                    width: 100%;
+                }
+            }
+            .img-navigation {
+                position: absolute;
+                top: 43%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: space-between;
+                width: 80%;
+                z-index: 10;
+                @include respond("xs") {
+                    top: 36%;
 
+                    width: 97%;
+                }
+
+                .arrow {
+                    background-color: $white;
+                    color: $white;
+                    padding: 5px;
+                    border-radius: 50%;
+                    width: 3rem;
+                    height: 3rem;
+                    align-items: center;
+                    justify-content: center !important;
+                    @include respond("xs") {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
             }
-            .generalinfo { 
-                color: $gray_600;
-                padding: .8rem;
-                font-family: $font_bold;
-                border: 2px solid transparent; 
-                transition: all 0.3s ease-in-out;
-                position: relative;
-                    &:hover{
-                        border: 2px solid $primary-color;
-                        padding: .6rem;
-                        color: $primary-color;
-                        border-radius: 4px;
-                    }
-                    .reviewcount { 
-                        top:-.5rem;
-                        right: -.2rem;
-                        font-size: .8rem;
-                        font-family: $font_bold;
-                        color: $gray_600;
-                        
-                    }
-                    @include respond('xs'){
-                        padding: .4rem;
-                        font-size: 12px;
-                    }
+
+            .thumbnails {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+                @include respond("xl") {
+                    gap: 1.4rem;
                 }
-                .generalinfo.active{
-                    border: 2px solid $primary-color; 
-                    border-radius: 4px;
-                }
-			
-		}
-		.detailscontainer { 
-            @include respond('lg') {
-                flex-direction: column;
-               }
-            @include respond('md') {
-                flex-direction: column;
-               }
-               @include respond('sm') {
-                flex-direction: column;
-               }
-			.detailsleftsection { 
-               @include respond('xl') {
-                   width: 48%;
-               }
-               @include respond('lg') {
-                width: 100%;
-                margin: 0 auto 36px;
-                }
-                
-                @include respond('xs') {
-                    margin-bottom: 3rem;
-                }
-				.productimage { 
+                @include respond("lg") {
                     width: 100%;
-                    @include respond('lg') {
-                        max-width: 62rem;
-                    }
-                    @include respond('md') {
+                }
+                @include respond("xs") {
+                    gap: 0.8rem;
+                }
 
+                .thumbnail {
+                    width: 6.4rem;
+                    height: 6rem;
+                    border-radius: $border-radius;
+
+                    overflow: hidden;
+                    border: 2px solid $light-gray;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    @include respond("xl") {
+                        width: 5.4rem;
+                        height: 5rem;
                     }
-                    @include respond('sm') {
-                        width: 100%;
+                    @include respond("md") {
+                        width: 6.4rem;
+                        height: 6rem;
                     }
-                    @include respond('xs') {
-                        width: 100%;
+                    @include respond("xs") {
+                        width: 3rem;
+                        height: 3rem;
                     }
-                    
-				}
-                .leftarrow{
-                    top: 276px;
-                    left: 44px;
-                    border-radius: 100%;
-                    background: #fff;
-                    width: 3rem;
-                    height: 3rem;
-                    align-items: center;
-                    justify-content: center;
-                    @include respond('sm'){
-                        top: 165px;
-                        left: 27px;
-                    }
-                    @include respond('xs'){
-                        top: 144px;
-                        left: 16px;
+                    &:hover {
+                        border: 2px solid $primary-color;
                     }
 
-                }
-                .rightarrow{
-                    top: 276px;
-                    right: 48px;
-                    border-radius: 100%;
-                    background: #fff;
-                    width: 3rem;
-                    height: 3rem;
-                    align-items: center;
-                    justify-content: center;
-                    
-                    @include respond('sm'){
-                        top: 165px;
-                        right: 27px;
-                    }
-                    @include respond('xs'){
-                        top: 144px;
-                        right: 16px;
-                    }
-                    
-                }
-				.imgsections { 
-                    margin-top: 1.6rem;
-                    gap: 10px;
-                   .imagepart_cover{
-                            width: 8rem;
-                            height: 100%;
-                            @include respond('xl') {
-                                width: 5rem;
-                                height: 100%;
-                            }
-                            @include respond('lg') {
-                                height: 100%;
-                                width: 9rem;
-                            }
-                            @include respond('md') {
-                                height: 100%;
-                                width: 8rem;
-                            }
-                            @include respond('sm') {
-                                height: 100%;
-                                width: 5rem;
-                            }
-                            @include respond('xs'){
-                                width: 3rem;
-                                height: 3rem;
-                            }
-                        .imagepart1{
-                            width: 100%;
-                            height: 100%;
-                            border: 2px solid transparent;
-                            transition: all 0.3s ease-in-out;
-                            &:hover{
-                                border: 2px solid $primary-color;
-                            } 
-                            @include respond("xs"){
-                                width: 3rem;
-                                height: 100%;
-                            }
-                            
-                        }
-                    }
-					.image_cover{
-                        width: 8rem;
+                    img {
+                        width: 100%;
                         height: 100%;
-                        
-                        @include respond('xl') {
-                            width: 5rem;
-                            height: 100%;
-                        }
-                            @include respond('lg') {
-                                width: 9rem;
-                            }
-                            @include respond('md') {
-                                width: 8rem;
-                                height: 100%;
-                            }
-                            @include respond('sm') {
-                                width: 5rem;
-                                height: 100%;
-                            }
-                            @include respond('xs'){
-                                width: 3rem;
-                                height: 3rem;
-                            }
-                            
-                        .imagepart2{
-                            width:100%;
-                            height:100%;
-                            border: 2px solid transparent;
-                            transition: all 0.3s ease-in-out;
-                            &:hover{
-                                border: 2px solid $primary-color;
-                            }
-                            
-                        }
+                        object-fit: cover;
                     }
-                    .image_cover_last{
-                            width: 8rem;
-                            height: 100%;
-                        @include respond('xl') {
-                            width: 5rem;
-                            height: 100%;
-                        }
-                        @include respond('lg') {
-                            width: 9rem;
-                            height: 100%;
-                        }
-                        @include respond('md') {
-                            width: 8rem;
-                            height: 100%;
-                        }
-                        @include respond('sm') {
-                            width: 5rem;
-                            height: 100%;
-                        }
-                        @include respond('xs'){
-                            width: 3rem;
-                            height: 3rem;
-                        }
-                        .imgwithicon{
-                            width: 100%;
-                            height: 100%;
-                      
-                            .imagepart5{
-                                width: 100%;
-                                height: 100%;
-                                border: 2px solid transparent;
-                                transition: all 0.3s ease-in-out;
-                                position: relative !important;
-                                &:hover{
-                                    border: 2px solid $primary-color;
-                                }
-                                
-                            }
-                        }
-                    }
-                    
-                    .imgwithicon{
+
+                    &.last-thumbnail {
+                        position: relative;
                         &::after {
-                            content: ''; 
+                            content: "";
                             position: absolute;
                             top: 0;
                             left: 0;
                             right: 0;
                             bottom: 0;
-                            background: rgba(0, 0, 0,0.4); 
-                            opacity: 1; 
-                            transition: opacity 0.3s ease-in-out; 
+                            background: rgba(0, 0, 0, 0.4);
+                            opacity: 1;
+                            transition: opacity 0.3s ease-in-out;
                             border-radius: 4px;
-                            z-index: 1; 
-                           height: 6.8rem;
-                           
-                            @include respond('xl') {
-                                width: 5rem;
-                                height: 5rem;
-                            }
-                            @include respond('lg') {
-                                width: 9.1rem;
-                                height: 9.1rem;
-                            }
-                            @include respond('md') {
-                                width: 6.7rem;
-                                height: 6.7rem;
-                            }
-                            @include respond('sm') {
-                                width: 4.3rem;
-                                height:4.3rem;
-                            }
-                            @include respond('xs'){
-                                width: 3.1rem;
-                                height: 3.1rem;
-                            }
+                            z-index: 1;
+                            height: 6.8rem;
                         }
                     }
-					.pauseicon { 
-                        position: absolute;
-                        top: 64px;
-                        left: 60px;
-                        bottom: 0;
-                        right: 0;
-                        transform: translate(-50%, -50%);
-                        color:$white;
-                        font-size: 2rem; 
-                        z-index: 2; 
-                       @include respond('xl') {
-                        top: 44px;
-                        left: 44px;
-                       }
-                       @include respond('lg') {
-                        top: 85px;
-                        left: 85px;
-                       }
-                       @include respond('md'){
-                        top: 63px;
-                        left: 60px;
-                       }
-                       @include respond('sm') {
+                    .icon-pause {
                         top: 37px;
-                        left: 34px;
-                       }
-                       @include respond('xs'){
-                        top: 22px;
-                        left: 22px;
-                       }
-					}
-                   
-				}
-			}
-			.detailsrightsection { 
-                width: 42%;
-                @include respond('xl') {
-                    width: 46%;
-                }
-                @include respond('lg') {
-                    width: 100%;
-                }
-                @include respond('md') {
-                    margin-top: 3rem;
-                    width: 100%;
-                }
-                @include respond('sm') {
-                    margin-top: 3rem;
-                    width: 100%;
-                }
-                @include respond('xs') {
-                    margin-top: 1rem;
-                }
-				.priceandreview { 
-                    @include respond('xs'){
-                        
+                        left: 41px;
+                        bottom: 50px;
+                        right: 50px;
+                        transform: translate(-50%, -50%);
+                        color: $white;
+                        font-size: 2rem;
+                        z-index: 2;
+                        @include respond("xl") {
+                            top: 27px;
+                            left: 21px;
+                        }
+                        @include respond("md") {
+                            top: 36px;
+                            left: 39px;
+                        }
+                        @include respond("sm") {
+                            top: 34px;
+                            left: 20px;
+                        }
+                        @include respond("xs") {
+                            top: 9px;
+                            left: 8px;
+                        }
                     }
-					.price-section { 
-						.price { 
-                            font-family: $font_medium;
-                            color:$danger;
-                            font-family: $lato_bold;
-                            font-size: 2rem;
-                            margin-right: 1rem;
-                            @include respond('xl') {
-                                font-size: 1.8rem;
-                            }
-                            @include respond('lg') {
-                                font-size: 2rem;
-                            }
-                            @include respond('xs'){
-                                font-size: 1.5rem;
-                            }
-						}
-						.old-price { 
-                            color: $gray_700;
-                            font-family:  $lato_regular;
-                            text-decoration: line-through;
-                            @include respond('xs'){
-                                font-size: 1rem;
-                            }
-						}
-						.discount { 
-                            font-family: $lato_bold;
-                            color: $white;
-                            background-color:$danger;
-                            padding: 4px;
-                            margin-left: 2rem;
-                            @include respond('lg') {
-                                padding: 8px;
-                            }
-                            @include respond('xs'){
-                                padding: 6px;
-                                margin-left: 1rem;
-                            }
-						}
-					}
-					.reviewsecton { 
-                        flex-direction: column;
-						.ratingimg { 
-                            width: 4rem;
-                            height: 1rem;
-                            @include respond('lg') {
-                                width: 6rem;
-                            }
-                            @include respond('xs'){
-                                width: 4rem;
-                            }
-						}
-						span { 
-                            color: $gray_700;
-                            font-family:  $lato_regular;
-                            font-size: .9rem;
-						}
-					}
-				}
-				.color-selection { 
-                    margin-top: 1.5rem;
-					span { 
-                        text-transform: capitalize;
-                        color:  $gray_800;
-                        font-size: 1.3rem;
-                        font-family:  $lato_regular;
-					}
-					.colorsector { 
-                        margin-top: 1rem;
-                        width: 8rem;
-						.outercirclepink { 
-                            height: 2rem;
-                            width: 2rem;
-                            background-color: transparent;
-                            border-radius: 100% !important;
-                            
-                            &:hover{
-                                border: 1px solid $primary-color;
-                                .colorname {
-                                    display: block;
-                                }
-                            }
-							.innercirclepink { 
-                            border-radius: 100% !important;
-                                height: 1.5rem;
-                            width: 1.5rem;
-                                background-color: $pink;
-							}
-						}
-						.outercircleblue { 
-                            height: 2rem;
-                            width: 2rem;
-                            background-color: transparent;
-                            border-radius: 100% !important;
-                            &:hover{
-                                border: 1px solid $primary-color;
-                                .colornameblue{
-                                    display: block;
-                                }
-                            }
-							.innercircleblue { 
-                                height: 1.5rem;
-                            width: 1.5rem;
-                            border-radius: 100% !important;
-                                background-color: $blue_light;
-							}
-						}
-						.outercircleyellow { 
-                            height: 2rem;
-                            width: 2rem;
-                            background-color: transparent;
-                            border-radius: 100% !important;
-                            &:hover{
-                                border: 1px solid $primary-color;
-                                .colornameyellow {
-                                    display: block; 
-                                }
-                            }
-							.innercircleyellow { 
-                                height: 1.5rem;
-                            width: 1.5rem;
-                            border-radius: 100% !important;
+                }
+                .active-img {
+                    border: 2px solid $primary-color;
+                }
+            }
+        }
+    }
 
-                                background-color: $yellow_color;
-							}
-						}
-                        .colorname{
-                            display: none;
-                            position: absolute;
-                            top: 7%;
-                            transform: translateX(-50%);
-                            left: 10rem;
-                            color: $gray_600;
-                            font-family: $lato_regular;
-                        }
-                        .colornameblue{
-                            display: none;
-                            position: absolute;
-                            top: 7%;
-                            transform: translateX(-50%);
-                            left: 8rem;
-                            color: $gray_600;
-                            font-family:  $lato_regular;
-                        }
-                        .colornameyellow{
-                            display: none;
-                            position: absolute;
-                            top: 7%;
-                            transform: translateX(-50%);
-                            left: 4rem;
-                            color: $gray_600;
-                            font-family:  $lato_regular;
-                        }
-					}
-				}
-				.size-selection { 
-                    margin-top: 1.4rem;
-                    align-items: end;
-                    @include respond('xs') {
-                        flex-direction: column;
+    .detailsrightsection {
+        width: 44%;
+        @include respond("md") {
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .price-and-reviews {
+            justify-content: space-between;
+            margin-bottom: 20px;
+            @include respond("xs") {
+                flex-direction: column;
+                align-items: flex-end;
+                width: 100%;
+            }
+            .price-section {
+                @include respond("xs") {
+                    margin-bottom: 1rem;
+
+                    width: 100%;
+                }
+                .price {
+                    font-size: 2rem;
+                    font-family: $lato-bold;
+                    color: $danger;
+                }
+
+                .old-price {
+                    text-decoration: line-through;
+                    margin-left: 10px;
+                    font-family: $lato_regular;
+
+                    color: $gray_700;
+                }
+
+                .discount {
+                    font-family: $lato_bold;
+                    background-color: $danger;
+                    padding: 4px 8px;
+                    margin-left: 2.5rem;
+                    border-radius: $border-radius;
+                    font-weight: bold;
+                    color: $white;
+                }
+            }
+
+            .reviews {
+                align-items: center;
+                flex-direction: column;
+
+                .ratingimg {
+                    width: 5rem;
+                    height: 1rem;
+                    margin-right: 5px;
+                }
+
+                span {
+                    color: $gray_700;
+                    font-family: $lato_regular;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .color-selection {
+            margin-top: 1rem;
+            .color-options {
+                justify-content: flex-start !important;
+                margin-top: 1rem;
+
+                .color-option {
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 2px solid $light-gray;
+                    position: relative;
+                    background-color: transparent;
+                    border: 1px solid $gray_700;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                    .innercirclepink {
+                        border-radius: 100% !important;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        background-color: $pink;
                     }
-                    .sizesection{
-                       flex-direction: column;
-					label { 
-                        color:  $gray_800;
-                        font-size: 1.3rem;
-                        font-family:  $lato_regular;
-					}
-					#size { 
-                        margin-top: .4rem;
-                        width: 20rem;
-                        border: 2px solid $gray_400;
-                        padding: .6rem;
-                        background-color: transparent;
-                        option {
-                            color: $gray_800;
+                    .innercircleblue {
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        border-radius: 100% !important;
+                        background-color: $blue_light;
+                    }
+                    .innercircleyellow {
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        border-radius: 100% !important;
+
+                        background-color: $yellow_color;
+                    }
+
+                    &:hover {
+                        border: 1px solid $primary-color;
+                        .colorname {
+                            display: block;
                         }
-                        
-                        @include respond('xl') {
-                            width: 21.5rem;
-                        }
-                        @include respond('lg') {
-                            width: 36.5rem;
-                        }
-                        @include respond('md') {
-                            width: 25.2rem;
-                        }
-                        @include respond('sm') {
-                            width: 15.4rem;
-                        }
-                        @include respond('xs'){
-                            width: 19rem;
-                        }
-					}
-                    #size option[value=""]{
+                    }
+
+                    .colorname {
+                        display: none;
+                        position: absolute;
+                        top: 7%;
+                        transform: translateX(-100%);
+                        left: 10rem;
                         color: $gray_600;
-                            font-family:  $lato_regular;
+                        font-size: 1rem;
+                        font-family: $lato_regular;
                     }
-                    #size option:disabled {
-                        color: $gray_700; 
-                      }
-                    }
-                      .sizechart {
-                        font-family: $lato-bold;
-                        color: $gray_800;
-                        align-items: center;
-                          span{
-                            margin-left: 4px;
-                          }
-                      }
-				}
-                .btnsection{
-                    margin-top: 1.5rem;
-                    justify-content: flex-start;
-                    @include respond('xs'){
-                        justify-content: flex-start;
-                        flex-wrap: wrap;
-                    }
-                    .quantity-section { 
-                        width: 4rem;
-                        padding: 8px;
-                        @include respond('xl') {
-                            width: 3rem;
-                        }
-                       
-                        #quantity { 
-                            width: 3.8rem;
-                            font-family:  $lato_regular;
-                            color:  $gray_800;
-                            @include respond('xl') {
-                                width: 3rem;
-                            }
-                            
-                        }
-                    }
-                    .add-to-cart {   
-                        width: 14rem;
-                        justify-content: center;
-                        margin-left: 1rem;
-                        border: 2px solid transparent;
-                        
-                        @include respond('xl') {
-                            width: 18rem;
-                        }
-                        @include respond('lg') {
-                            width: 36rem;
-                        }
-                        @include respond('md') {
-                            width: 30rem;
-                        }
-                        @include respond('xs') {
-                            width: 13.9rem;
-                        }
-                        .carticon{
-                            
-                        }
-                        .addtocart { 
-                            font-family: $lato_bold;
-                            color: $white;
-                            margin-left: 4px;
-                            border: 2px solid transparent;
-
-                        }
-                        &:hover{
-                            background-color: $white;
-                            border: 2px solid $primary-color;
-                            border-radius: 4px;
-                            .addtocart { 
-                                color: $primary-color;
-                            }
-                        }
-                    }
-                    .favoritesection { 
-                        width: 10rem;
-                        justify-content: center;
-                        margin-left: 1rem;
-                        @include respond('xl') {
-                            width: 6rem;
-                        }
-                        @include respond('lg') {
-                            width: 13rem;
-                        }
-                        @include respond('xs'){
-                            width: 19rem;
-                            margin: 1rem 0 0 0;
-                        }
-                        .favorite { 
-                            color: $primary-color;
-                            margin-left: 4px;
-                            font-size: .8rem;
-                        }
-                        .heart { 
-                           font-size: 1rem;
-                        }
+                    .colornameblue {
+                        display: none;
+                        position: absolute;
+                        top: 7%;
+                        transform: translateX(-50%);
+                        left: 8rem;
+                        color: $gray_600;
+                        font-family: $lato_regular;
                     }
                 }
-				.delivery-section { 
-                    margin-top: 4rem;
-					table { 
-                        width: 100%;
-                        border-collapse: collapse;
-                        text-align: left;
-                       thead{
-                        font-family:  $lato_regular;
-                        color: $gray_700;
-                        font-size: .8rem;
-                        text-transform: uppercase;
-                       }
-                        th,td{
-                            border-bottom: 1px solid $gray_400;
-                            padding: 16px;
-                            color: $gray_700;
-                            font-size: $font-base-size;
-                        }
-                        thead th {
-                            border-bottom: 1px solid $gray_400;
-                            font-size: 1rem;
-                            @include respond('xs'){
-                                font-size: .9rem;
-                                padding: 12px
-                            }
-                          
-                        }
-						tbody { 
-                            font-family:  $lato_regular;
-                            color: $gray_800;
-                            font-size: .8rem;
-						}
-					}
-				}
-				.return-section { 
-                    border-bottom: 1px solid $light_gray;
-                    padding-bottom: 1.5rem;
-					ul { 
-                        list-style: disc;
-                        padding-left: 20px;
-                        margin: 0;
+            }
+            text-transform: capitalize;
+            color: $gray_800;
+            font-size: 1.3rem;
+            font-family: $lato_regular;
+        }
 
-						li { 
-                            color:  $gray_800;
-                            font-family: $lato_regular;
-                            font-size: 1.1rem;
-                            line-height: 1.6;
-                            &::marker{
-                                color: $primary-color;
-                            }
-						}
-					}
-				}
-				.sharesection { 
-                    justify-content: left;
-                    align-items: center;
-					.h3 { 
-                        margin-left: 0;
-					}
-                    .facebook-button{
-                        span{
-                            font-size: 2rem;
-                        }
-                    }
-                    .twitter-button{
-                        span{
-                            font-size: 2rem;
-                        }
-                    }
-                    .pinterest-button{
-                        span{
-                            font-size: 2rem;
-                        }
-                    }
-				}
-				.payment-options { 
-                    margin-top: 2.75rem;
-                    width: 30rem;
-                    a.visa-button{
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    a.mastercard-button{
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                        @include respond('md') {
-                            margin-left: 2rem;
-                        }
-                        @include respond('sm') {
-                            margin-left: 2rem;
-                        }
-                        @include respond('xs') {
-                            margin-left: 0;
-                        }
-                    }
-                    a.paypal-button{
-                        @include respond('md') {
-                            margin-left: 2rem;
-                        }
-                        @include respond('sm') {
-                            margin-left: 2rem;
-                        }
-                        @include respond('xs') {
-                            margin-left: 0;
-                        }
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    @include respond('xl') {
-                        justify-content: center;
-                    }
-                    @include respond('lg') {
-                        width: 24rem;
-                        margin: 0 auto;
-                    }
-                    @include respond('md') {    
-                        justify-content: center;
-                        width: 100%;
-				    }
-                    @include respond('sm') {    
-                        justify-content: center;
-                        width: 100%;
-				    }
-                    @include respond('xs') {
-                       justify-content: space-between;
+        .size-selection {
+            margin-bottom: 1.4rem;
+            margin-top: 1.4rem;
+            align-items: end;
+            @include respond("lg") {
+                width: 100%;
+                flex-direction: column;
+            }
+            .sizesection {
+                flex-direction: column;
+                @include respond("lg") {
+                    width: 100%;
+                }
+                label {
+                    color: $gray_800;
+                    font-size: 1.2rem;
+                    font-family: $lato_regular;
+                }
+            }
+            select {
+                margin-top: 0.25rem;
+                width: 22rem;
+                padding: 10px;
+                border-radius: $border-radius;
+                border: 1px solid $light-gray;
+                font-size: 14px;
+                @include respond("xl") {
+                    width: 19rem;
+                }
+                @include respond("lg") {
+                    width: 100%;
+                }
+            }
+
+            .sizechart {
+                font-family: $lato-bold;
+                margin-top: 10px;
+                font-size: 14px;
+                color: $gray_800;
+                align-items: center;
+                cursor: pointer;
+                span {
+                    margin-left: 0.6rem;
+                }
+            }
+        }
+
+        .buttons {
+            margin-top: 20px;
+            @include respond("lg") {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .quantity-section {
+                justify-content: center;
+                align-items: center;
+                @include respond("xs") {
+                    width: 100%;
+                    padding: 1rem;
+                }
+                input {
+                    width: 4rem;
+                    border: 1px solid transparent;
+                    border-radius: 50px;
+                    text-align: center;
+                }
+            }
+
+            .add-to-cart {
+                padding: 0.8rem 5rem;
+                align-items: center;
+                justify-content: center;
+                font-family: $lato_bold;
+                color: $white;
+                border: 2px solid transparent;
+                @include respond("xl") {
+                    padding: 0.8rem 2rem;
+                }
+                @include respond("lg") {
+                    padding: 0.8rem 4rem;
+                    margin-left: 2.3rem;
+                }
+                @include respond("md") {
+                    padding: 0.8rem 12.5rem;
+                    margin-left: 2rem;
+                }
+                @include respond("sm") {
+                    padding: 0.8rem 7.5rem;
+                }
+                @include respond("sm") {
+                    margin-left: 0;
+                    margin-top: 1rem;
+                    padding: 0.8rem 6rem;
+                    font-size: 0.9rem;
+                    width: 100%;
+                }
+                .carticon {
+                    margin-right: 0.4rem;
+                }
+                &:hover {
+                    background-color: $white;
+                    border: 2px solid $primary-color;
+                    border-radius: 4px;
+                    color: $primary-color;
+
+                    .icon-cart:before {
+                        color: $primary-color !important;
                     }
                 }
-			}
-		}
-	}
+            }
+            .favoritesection {
+                padding: 0.8rem 2rem;
+                justify-content: center;
+                color: $primary-color;
+                .icon-heart {
+                    margin-right: 0.6rem;
+                }
+                @include respond("lg") {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        .delivery-section,
+        .return-section {
+            margin-top: 4rem;
+            h5 {
+                padding-left: 2rem;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+                li {
+                    color: $gray_800;
+                    font-family: $lato_regular;
+                    font-size: 1.1rem;
+                    line-height: 1.6;
+                    &::marker {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: left;
+                thead {
+                    font-family: $lato_regular;
+                    color: $gray_700;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                }
+                th,
+                td {
+                    border-bottom: 1px solid $gray_400;
+                    padding: 1rem;
+                    text-align: left;
+                    color: $gray_700;
+                    font-size: $font-base-size;
+                    @include respond("xl") {
+                        padding: 0.8rem;
+                    }
+                }
+
+                th {
+                    border-bottom: 1px solid $gray_400;
+                    font-size: 1rem;
+                }
+
+                td {
+                    border-top: 1px solid $light-gray;
+                }
+            }
+        }
+
+        .sharesection {
+            margin-top: 2rem;
+            justify-content: left;
+            align-items: center;
+
+            a {
+                margin-left: 1rem;
+                margin-right: 1rem;
+                display: inline-block;
+
+                .icon-Facebook,
+                .icon-Twitter,
+                .icon-pinterest {
+                    font-size: 2rem;
+                    color: $gray_600;
+                }
+            }
+        }
+
+        .payment-options {
+            margin-top: 2rem;
+            width: 30rem;
+            @include respond("lg") {
+                width: 18rem;
+                gap: 10px;
+                width: 18rem;
+                gap: 10px;
+            }
+            @include respond("md") {
+                margin: auto;
+            }
+            a {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
 }

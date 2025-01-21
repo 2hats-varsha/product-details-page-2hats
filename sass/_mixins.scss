@@ -1,30 +1,3 @@
-// @mixin respond($breakpoint) {
-//     @if $breakpoint <= 'xs' {
-//       @media (max-width: 575px) {
-//         @content;
-//       }
-//     } @else if $breakpoint == 'sm' {
-//       @media (max-width: 767px) {
-//         @content;
-//       }
-//     } @else if $breakpoint == 'md' {
-//       @media (max-width: 991px) {
-//         @content;
-//       }
-//     } @else if $breakpoint == 'lg' {
-//       @media (max-width: 1199px) {
-//         @content;
-//       }
-//     } @else if $breakpoint == 'xl' {
-//       @media (max-width: 1599px) { 
-//         @content;
-//       }
-//     } 
-//     @else {
-      
-//     }
-//   }
-
 @mixin respond($breakpoint) {
   @if $breakpoint == 'xs' {
     @media (max-width:24rem) {

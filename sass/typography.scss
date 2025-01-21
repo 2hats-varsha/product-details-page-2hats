@@ -1,17 +1,5 @@
 @import './_mixins.scss';
-html{
-    font-size: $font-base-size;
-    line-height: $line-height-base;
-    font-family: $lato_bold;
-    color: $gray;
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-size: $font-base-size;
-    background-color: $white;
-    font-family: $lato_regular;
-}
+
 h1,.h1{
 font-size: 3rem;
 line-height: 4rem;
@@ -59,7 +47,7 @@ h4,.h4{
     font-size: 1.75rem;
 }
 h5,.h5{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $secondary_color;
     @include respond('lg') {
         font-size: 1.6rem;
@@ -165,7 +153,7 @@ a {
     margin-left: 1rem;
 }
 img{
-    max-width: 37.5rem;
+    max-width: 38.5rem;
     width: 100%;
     height: auto;
 }
@@ -209,9 +197,9 @@ font-size: 1.25rem;
     font-family: $lato_bold;
     background-color: transparent;
   }
-  .b-radius-minimal{
-    border-radius: 4px;
-}
+  .b-radius-minimal {
+    border-radius: $border-radius;
+  }
 .flex{
     display: flex;
     justify-content: space-between;
