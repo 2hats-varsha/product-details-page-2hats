@@ -14,7 +14,9 @@ body {
 }
 h1,.h1{
 font-size: 3.8rem;
+line-height: 4rem;
 color: $secondary_color;
+
 @include respond('xl') {
     font-size: 3.4rem;
 }
@@ -22,15 +24,17 @@ color: $secondary_color;
     font-size: 3.2rem;
 }
 @include respond('md') {
-    font-size: 2.8rem !important;
+    font-size: 4rem ;
+    line-height: 5rem;
 }
 @include respond('sm') {        
-    font-size: 3.5rem ;
+    font-size: 3rem ;
     line-height: 3.5rem;
 }
 @include respond('xs') {
-          line-height: 3.8rem;
-    font-size: 3.8rem;
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 3rem;
 }
 }
 h2,.h2{
@@ -59,7 +63,6 @@ h5,.h5{
     color: $secondary_color;
     @include respond('lg') {
         font-size: 1.6rem;
-
     }
 }
 h6,.h6{
@@ -161,11 +164,28 @@ a {
   .ml_min{
     margin-left: 1rem;
 }
+img{
+    // max-width: 37.5rem;
+    width: 100%;
+    height: auto;
+}
 .paymentimg{
     width: 8rem;
     height: 4rem;
+    @include respond('xl') {
+        width: 6rem;
+        height: 3rem;
+        margin-left: 2rem;
+    }
     @include respond('lg') {width: 6rem;
         height: 3rem;
+    }
+    @include respond('sm') {  
+        height: 3rem;
+        width: 5rem;
+    }
+    @include respond('xs') {
+        margin-left: 0;
     }
 }
 .min-font-size{
@@ -207,6 +227,12 @@ a {
 }
 .half_width{
     width: 48%;   
+    @include respond('md') {
+        width: 100%;
+    }
+    @include respond('sm') {
+        width: 100%;
+    }
 }
 .b-radius-100{
     width: 1.4rem;

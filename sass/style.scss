@@ -6,11 +6,16 @@
 
 .wrapper {
     width: 86vw;
-    // margin: 0 auto;
-    padding: 0 6rem;
+    margin: 0 auto;
+    // padding: 0 6rem;
     @include respond('lg') {
         width: 90vw;
-        padding: 0 3rem;    
+    }
+    @include respond('sm'){
+        width: 75vw;
+    }
+    @include respond('xs'){
+        width: 80%;
     }
 	header { 
 		.container { 
@@ -20,6 +25,7 @@
             }
 			.leftnavitem {
                 width: 16vw;
+               
                 @include respond('xl') {
                     width: 24vw;
                 }
@@ -29,15 +35,21 @@
 				.brand { 
 					img.logo { 
                         width: 2.25rem;
-                        height: 2.25rem;
+                        // height: 2.25rem;
 					}
                     @include respond('md') {
                         width: 3.25rem;
-                        height: 3.25rem;
+                        // height: 3.25rem;
                     }
 				}
 				#menu {
                     @include respond('md') {
+                        display: none;
+                    }
+                    @include respond('sm') {
+                        display: none;
+                    }
+                    @include respond('xs') {
                         display: none;
                     }
                     li { 
@@ -67,7 +79,7 @@
 				}
 			}
 			.rightnavitem { 
-                width: 32rem;
+                width: 33rem;
                 @include respond('md') {
                     display: none;
                 }
@@ -76,6 +88,12 @@
                 }
                 @include respond('lg') {
                     width: 30rem;
+                }
+                @include respond('sm') {
+                    display: none;
+                }
+                @include respond('xs') {
+                    display: none;
                 }
 				.searchitem { 
                     border-bottom: 2px solid $dark_variant;
@@ -108,40 +126,63 @@
             padding-top: 2rem;
 
         }
+        @include respond('xs') {
+            padding-top: 0;
+
+        }
 		.h1 { 
             color: $secondary_color;
             font-family: $font_bold;
-            font-size: 3.4rem;
+            
+            
 		}
 		.tabs { 
             margin: 3rem 0;
             border-bottom: 2px solid $light_gray;
             padding-bottom: 2rem;
+            @include respond('sm'){
+                display: flex;
+                justify-content: space-between;
+
+            }
             .generalinfo { 
                 color: $gray_600;
                 padding: .6rem;
                 font-family: $font_bold;
                 border: 2px solid transparent; 
                 transition: all 0.3s ease-in-out;
+                position: relative;
                     &:hover{
                         border: 2px solid $primary-color;
                         padding: .6rem;
                         color: $primary-color;
                         border-radius: 4px;
                     }
+                    .reviewcount { 
+                        top:-.5rem;
+                        right: -.2rem;
+                        font-size: .8rem;
+                        font-family: $font_bold;
+                        color: $gray_600;
+                        
+                    }
+                    @include respond('xs'){
+                        padding: .4rem;
+                        font-size: .9rem;
+                    }
                 }
-			.reviewcount { 
-                bottom: 2.8rem;
-                left: 20.98rem;
-                font-size: .8rem;
-                font-family: $font_bold;
-                color: $gray_600;
-			}
+			
 		}
 		.detailscontainer { 
-           @include respond('lg') {
-            flex-direction: column;
-           }
+            @include respond('lg') {
+                flex-direction: column;
+               }
+            @include respond('md') {
+                flex-direction: column;
+               }
+               @include respond('sm') {
+                flex-direction: column;
+               }
 			.detailsleftsection { 
                @include respond('xl') {
                    width: 48%;
@@ -155,105 +196,205 @@
                     margin-bottom: 3rem;
                 }
 				.productimage { 
-                    width: 48rem;
-                    height: 52rem;
+                    width: 100%;
+                    
                     @include respond('xl') {
-                        width: 33rem;
-                        height: 38rem;
                     }
+                    
                     @include respond('lg') {
-                        width: 55.4rem;
-                        height: 60rem;
                     }
                     @include respond('md') {
-                        width: 43.2rem;
-                        height: 50rem;
 
                     }
-                    @include respond('xs') {
-                        width: 32.2rem;
-                        height: 36rem;
+                    @include respond('sm') {
+                        width: 100%;
                     }
+                    @include respond('xs') {
+                        width: 100%;
+                    }
+                    
 				}
+                .leftarrow{
+                    top: 276px;
+                    left: 44px;
+                    border-radius: 100%;
+                    background: #fff;
+                    width: 3rem;
+                    height: 3rem;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        @include respond('xs'){
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                    @include respond('lg') {
+                        top: 375px;
+                    }
+                    @include respond('sm') {
+                        top: 205px;
+                    }
+                    @include respond('xs'){
+                        top: 106px;
+                        left: 12px;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                .rightarrow{
+                    top: 276px;
+                    right: 48px;
+                    border-radius: 100%;
+                    background: #fff;
+                    width: 3rem;
+                    height: 3rem;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        @include respond('xs'){
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                    @include respond('lg') {
+                        top: 375px;
+                    }
+                    @include respond('sm') {
+                        top: 205px;
+                    }
+                    @include respond('xs'){
+                        top: 106px;
+                        right: 12px;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
 				.imgsections { 
                     margin-top: 1.6rem;
-                   
-					.imagepart1{
+                   .imagepart_cover{
+                            width: 8rem;
+                            height: 100%;
+
+                            // height: 8rem;
+                            
+                            @include respond('xl') {
+                                width: 5rem;
+                                height: 100%;
+
+                                // height: 5rem;
+                            }
+                            @include respond('lg') {
+                                height: 100%;
+                                width: 9rem;
+                            }
+                            @include respond('md') {
+                                height: 100%;
+                                width: 8rem;
+                            }
+                            @include respond('sm') {
+                                height: 100%;
+                                width: 5rem;
+                            }
+                            @include respond('xs'){
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        .imagepart1{
+                            width: 100%;
+                            height: 100%;
+                            border: 2px solid transparent;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                border: 2px solid $primary-color;
+                            } 
+                            @include respond("xs"){
+                                width: 3rem;
+                                height: 100%;
+                            }
+                            
+                        }
+                    }
+					.image_cover{
                         width: 8rem;
-                        height: 8rem;
-                        border: 2px solid transparent;
-                        transition: all 0.3s ease-in-out;
-                         &:hover{
-                            border: 2px solid $primary-color;
-                        } 
+                        height: 100%;
+                        
                         @include respond('xl') {
-                            width: 6.4rem;
-                            height: 6.4rem;
+                            width: 5rem;
+                            height: 100%;
+                        }
+                            @include respond('lg') {
+                                width: 9rem;
+                            }
+                            @include respond('md') {
+                                width: 8rem;
+                                height: 100%;
+                            }
+                            @include respond('sm') {
+                                width: 5rem;
+                                height: 100%;
+                            }
+                            @include respond('xs'){
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                            
+                        .imagepart2{
+                            width:100%;
+                            height:100%;
+                            border: 2px solid transparent;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                border: 2px solid $primary-color;
+                            }
+                            
+                        }
+                    }
+                    .image_cover_last{
+                            width: 8rem;
+                            height: 100%;
+                        @include respond('xl') {
+                            width: 5rem;
+                            height: 100%;
                         }
                         @include respond('lg') {
                             width: 9rem;
-                            height: 9rem;
+                            height: 100%;
                         }
                         @include respond('md') {
                             width: 8rem;
-        height: 8rem;
+                            height: 100%;
                         }
-                        @include respond('xs') {
-                            width: 6rem;
-        height: 6rem;
+                        @include respond('sm') {
+                            width: 5rem;
+                            height: 100%;
                         }
-                    }
-                    .imagepart2{
-                        width: 8rem;
-                        height: 8rem;
-                        border: 2px solid transparent;
-                        transition: all 0.3s ease-in-out;
-                        &:hover{
-                            border: 2px solid $primary-color;
+                        @include respond('xs'){
+                            width: 3rem;
+                            height: 3rem;
                         }
-                        @include respond('xl') {
-                            width: 6.4rem;
-                            height: 6.4rem;
-                        }
-                        @include respond('lg') {
-                            width: 9rem;
-                            height: 9rem;
-                        }
-                        @include respond('md') {
-                            width: 8rem;
-        height: 8rem;
-                        }
-                        @include respond('xs') {
-                            width: 6rem;
-        height: 6rem;
+                        .imgwithicon{
+                            width: 100%;
+                            height: 100%;
+                      
+                            .imagepart5{
+                                width: 100%;
+                                height: 100%;
+                                border: 2px solid transparent;
+                                transition: all 0.3s ease-in-out;
+                                position: relative !important;
+                                &:hover{
+                                    border: 2px solid $primary-color;
+                                }
+                                
+                            }
                         }
                     }
-                    .imagepart5{
-                        width: 8rem;
-                        height: 8rem;
-                        border: 2px solid transparent;
-                        transition: all 0.3s ease-in-out;
-                        position: relative !important;
-                        &:hover{
-                            border: 2px solid $primary-color;
-                        }
-                        @include respond('xl') {
-                            width: 6.4rem;
-                            height: 6.4rem;
-                        }
-                        @include respond('lg') {
-                            width: 9rem;
-                            height: 9rem;
-                        }
-                        @include respond('md') {
-                            width: 8rem;
-        height: 8rem;
-                        }
-                        @include respond('xs') {
-                            width: 6rem;
-        height: 6rem;
-                        }
-                    }
+                    
                     .imgwithicon{
                         &::after {
                             content: ''; 
@@ -269,9 +410,10 @@
                             z-index: 1; 
                             width: 8.1rem;
                             height: 8rem;
+                           
                             @include respond('xl') {
-                                width: 6.4rem;
-                                height: 6.4rem;
+                                width: 5rem;
+                                height: 5rem;
                             }
                             @include respond('lg') {
                                 width: 9.1rem;
@@ -279,99 +421,50 @@
                             }
                             @include respond('md') {
                                 width: 8.1rem;
-        height: 8.1rem;
+                                height: 8.1rem;
                             }
-                            @include respond('xs') {
-                                width: 6.1rem;
-        height: 6.1rem;
+                            @include respond('sm') {
+                                width: 5.1rem;
+                                height: 5.1rem;
+                            }
+                            @include respond('xs'){
+                                width: 3.1rem;
+                                height: 3.1rem;
                             }
                         }
                     }
 					.pauseicon { 
                         position: absolute;
-                        top: 64px;
-                        left: 64px;
+                        top: 59px;
+                        left: 59px;
                         bottom: 0;
                         right: 0;
                         transform: translate(-50%, -50%);
                         color:$white;
                         font-size: 2rem; 
                         z-index: 2; 
-                        @include respond('xl') {
-                            top: 51px;
-                            left: 48px;
-                        }
-                        @include respond('lg') {
-                            top: 73px;
-                            left: 73px;
-                        }
-                        @include respond('md') {
-                            top: 66px;
-        left: 66px;
-                        }
-
-                        @include respond('xs') {
-                            top: 54px;
-                            left: 49px;
-                        }
+                        width: 2rem;
+                        height: 2rem;
+                       @include respond('xl') {
+                        top: 42px;
+                        left: 42px;
+                       }
+                       @include respond('lg') {
+                        top: 71px;
+                        left: 71px;
+                       }
+                       @include respond('sm') {
+                        top: 40px;
+                        left: 40px;
+                       }
+                       @include respond('xs'){
+                        top: 26px;
+                        left: 26px;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                       }
 					}
-                    .leftarrow{
-                        top: 0;
-                        left: 44px;
-                        border-radius: 100%;
-                        background: #fff;
-                        width: 3rem;
-                        height: 3rem;
-                        align-items: center;
-                        justify-content: center;
-                        transform: translateY(-496px);   
-                        img{
-                            width: 1.5rem;
-                            height: 1.5rem;
-                        }
-                        @include respond('xl') {
-                            transform: translateY(-366px);
-
-                        }
-                        @include respond('lg') {
-                            transform: translateY(-577px);
-                        }
-                        @include respond('md') {
-                            transform: translateY(-465px);
-
-                        }
-                        @include respond('xs') {
-                            transform: translateY(-348px);
-                        }
-                    }
-                    .rightarrow{
-                        top: 0;
-                        right: 44px;
-                        border-radius: 100%;
-                        background: #fff;
-                        width: 3rem;
-                        height: 3rem;
-                        align-items: center;
-                        justify-content: center;
-                        transform: translateY(-496px);
-                        img{
-                            width: 1.5rem;
-                            height: 1.5rem;
-                        }
-                        @include respond('xl') {
-                            transform: translateY(-367px);
-                        }
-                        @include respond('lg') {
-                            transform: translateY(-565px);
-
-                        }
-                        @include respond('md') {
-                            transform: translateY(-468px);
-                        }
-                        @include respond('xs') {
-                            transform: translateY(-349px);
-                        }
-                    }
+                   
 				}
 			}
 			.detailsrightsection { 
@@ -382,7 +475,21 @@
                 @include respond('lg') {
                     width: 100%;
                 }
+                @include respond('md') {
+                    margin-top: 3rem;
+                    width: 100%;
+                }
+                @include respond('sm') {
+                    margin-top: 3rem;
+                    width: 100%;
+                }
+                @include respond('xs') {
+                    margin-top: 1rem;
+                }
 				.priceandreview { 
+                    @include respond('xs'){
+                        
+                    }
 					.price-section { 
 						.price { 
                             font-family: $font_medium;
@@ -396,11 +503,17 @@
                             @include respond('lg') {
                                 font-size: 2rem;
                             }
+                            @include respond('xs'){
+                                font-size: 1.5rem;
+                            }
 						}
 						.old-price { 
                             color: $gray_700;
                             font-family:  $lato_regular;
                             text-decoration: line-through;
+                            @include respond('xs'){
+                                font-size: 1rem;
+                            }
 						}
 						.discount { 
                             font-family: $lato_bold;
@@ -411,6 +524,10 @@
                             @include respond('lg') {
                                 padding: 8px;
                             }
+                            @include respond('xs'){
+                                padding: 6px;
+                                margin-left: 1rem;
+                            }
 						}
 					}
 					.reviewsecton { 
@@ -420,6 +537,9 @@
                             height: 1rem;
                             @include respond('lg') {
                                 width: 6rem;
+                            }
+                            @include respond('xs'){
+                                width: 4rem;
                             }
 						}
 						span { 
@@ -540,24 +660,28 @@
 					}
 					#size { 
                         margin-top: .4rem;
-                        width: 32rem;
+                        width: 25rem;
                         border: 2px solid $gray_400;
                         padding: .6rem;
                         background-color: transparent;
                         option {
                             color: $gray_800;
                         }
+                        
                         @include respond('xl') {
                             width: 23rem;
                         }
                         @include respond('lg') {
-                            width: 50rem;
+                            width: 42rem;
                         }
                         @include respond('md') {
-                            width: 36rem;
+                            width: 32rem;
                         }
-                        @include respond('xs') {
-                            width: 32.5rem;
+                        @include respond('sm') {
+                            width: 23rem;
+                        }
+                        @include respond('xs'){
+                            width: 19rem;
                         }
 					}
                     #size option[value=""]{
@@ -584,6 +708,11 @@
 				}
                 .btnsection{
                     margin-top: 1.5rem;
+                    justify-content: flex-start;
+                    @include respond('xs'){
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                    }
                     .quantity-section { 
                         width: 4rem;
                         padding: 8px;
@@ -604,17 +733,18 @@
                     .add-to-cart {   
                         width: 24rem;
                         justify-content: center;
+                        margin-left: 1rem;
                         @include respond('xl') {
                             width: 18rem;
                         }
                         @include respond('lg') {
-                            width: 44rem;
+                            width: 36rem;
                         }
                         @include respond('md') {
                             width: 30rem;
                         }
                         @include respond('xs') {
-                            width: 20rem;
+                            width: 13rem;
                         }
                         .carticon{
                             width: 1rem;
@@ -627,13 +757,18 @@
                         }
                     }
                     .favoritesection { 
-                        width: 8rem;
+                        width: 10rem;
                         justify-content: center;
+                        margin-left: 1rem;
                         @include respond('xl') {
                             width: 6rem;
                         }
                         @include respond('lg') {
-                            width: 6rem;
+                            width: 13rem;
+                        }
+                        @include respond('xs'){
+                            width: 18rem;
+                            margin: 1rem 0 0 0;
                         }
                         .favorite { 
                             color: $primary-color;
@@ -667,6 +802,10 @@
                         thead th {
                             border-bottom: 1px solid $gray_400;
                             font-size: 1rem;
+                            @include respond('xs'){
+                                font-size: .9rem;
+                                padding: 12px
+                            }
                           
                         }
 						tbody { 
@@ -723,11 +862,61 @@
 				.payment-options { 
                     margin-top: 2.75rem;
                     width: 30rem;
+                    a.visa-button{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    a.mastercard-button{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        @include respond('md') {
+                            margin-left: 2rem;
+                        }
+                        @include respond('sm') {
+                            margin-left: 2rem;
+                        }
+                        @include respond('xs') {
+                            margin-left: 0;
+                        }
+                    }
+                    a.paypal-button{
+                        @include respond('md') {
+                            margin-left: 2rem;
+                        }
+                        @include respond('sm') {
+                            margin-left: 2rem;
+                        }
+                        @include respond('xs') {
+                            margin-left: 0;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    @include respond('xl') {
+                        justify-content: center;
+                    }
                     @include respond('lg') {
                         width: 24rem;
                         margin: 0 auto;
                     }
+                    @include respond('md') {    
+                        justify-content: center;
+                        width: 100%;
 				    }
+                    @include respond('sm') {    
+                        justify-content: center;
+                        width: 100%;
+				    }
+                    @include respond('xs') {
+                       justify-content: space-between;
+                    }
+                }
 			}
 		}
 	}
