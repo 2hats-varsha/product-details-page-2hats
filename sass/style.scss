@@ -2,6 +2,15 @@
 @import "./font.scss";
 @import "./typography.scss";
 @import "./_mixins.scss";
+// Mixins
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transition($properties, $duration) {
+    transition: $properties $duration ease;
+}
 html {
     font-size: $font-base-size;
     line-height: $line-height-base;
@@ -22,15 +31,6 @@ body {
     @include respond("xl") {
         width: 82%;
     }
-}
-// Mixins
-@mixin center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin transition($properties, $duration) {
-    transition: $properties $duration ease;
 }
 // Flexbox Utility
 .flex {
@@ -53,16 +53,6 @@ body {
 }
 .b-radius-minimal {
     border-radius: $border-radius;
-}
-.img-with-icon {
-    position: relative;
-    display: inline-block;
-    .icon-pause {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 header {
     .container {
@@ -134,8 +124,6 @@ header {
                     }
                     button {
                         padding: 0.5rem 0 0.5rem 2rem;
-                        .icon-Account {
-                        }
                     }
                     .account-user {
                         margin-left: 1rem;
@@ -149,7 +137,6 @@ header {
                 background-color: $primary-color;
                 border-radius: 4px;
                 flex-direction: column;
-                align-items: center;
                 justify-content: center;
                 @include respond("lg") {
                     display: flex;
@@ -199,7 +186,8 @@ header {
             padding: 12px 5px;
         }
         @include respond("xs") {
-            font-size: 0.9rem;
+            margin-right: 0;
+            font-size: 0.8rem;
             padding: 12px 2px;
         }
         &.active {
@@ -235,9 +223,11 @@ header {
         .image-gallery {
             position: relative;
             .productimage {
-                @include respond("md") {
+                @include respond("lg") {
+                    max-width: 42rem !important;
                     width: 100%;
                 }
+                
             }
             .img-navigation {
                 position: absolute;
@@ -354,8 +344,8 @@ header {
                             left: 16px;
                         }
                         @include respond("xs") {
-                            top: 9px;
-                            left: 8px;
+                            top: 7px;
+                            left: 4px;
                         }
                     }
                 }
@@ -515,7 +505,7 @@ header {
                 border: 1px solid $light-gray;
                 font-size: 14px;
                 @include respond("xl") {
-                    width: 19rem;
+                    width: 16rem;
                 }
                 @include respond("lg") {
                     width: 100%;
@@ -534,7 +524,16 @@ header {
             }
         }
         .buttons {
+            width: 100%;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
             margin-top: 20px;
+            @include respond("xl") {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-left: 0;
+            }
             @include respond("lg") {
                 justify-content: flex-start;
                 flex-wrap: wrap;
@@ -542,6 +541,10 @@ header {
             .quantity-section {
                 justify-content: center;
                 align-items: center;
+                @include respond("xl") {
+                    width: 100% !important;
+                    padding: .8rem;
+                }
                 @include respond("md") {
                     width: 100% !important;
                     padding: 1rem;
@@ -558,32 +561,32 @@ header {
                 }
             }
             .add-to-cart {
-                padding: 0.8rem 5rem;
+                width: 18rem;
                 align-items: center;
                 justify-content: center;
                 font-family: $lato_bold;
                 color: $white;
                 border: 2px solid transparent;
                 @include respond("xl") {
-                    padding: 0.8rem 2rem;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
                 }
                 @include respond("lg") {
                     padding: 0.8rem 4rem;
-                    margin-left: 2.3rem;
                 }
                 @include respond("md") {
                     width: 100%;
-                    padding: 0.8rem 12.5rem;
-                    margin-left: 0rem;
-                    margin-top: 1rem;
-                }
-                @include respond("sm") {
+                    padding: 0.8rem 12.5rem !important;
                     margin-left: 0;
                     margin-top: 1rem;
-                    padding: 0.8rem 6rem;
-                    font-size: 0.9rem;
-                    width: 100%;
+
                 }
+                @include respond("sm") {
+                    padding: .9rem 0 !important;
+                    font-size: 0.9rem;
+                }
+                
                 .carticon {
                     margin-right: 0.4rem;
                 }
@@ -598,14 +601,15 @@ header {
                 }
             }
             .favoritesection {
-                padding: 0.8rem 2rem;
                 justify-content: center;
                 color: $primary-color;
                 .icon-heart {
                     margin-right: 0.6rem;
                 }
+                @include respond("xl") {
+                    width: 100%;
+                }
                 @include respond("lg") {
-                    margin-top: 1rem;
                     width: 100%;
                 }
             }
@@ -680,15 +684,18 @@ header {
         .payment-options {
             margin-top: 2rem;
             width: 30rem;
+            @include respond('xl'){
+                width: 23rem;
+            }
             @include respond("lg") {
                 width: 18rem;
                 gap: 10px;
-                width: 18rem;
-                gap: 10px;
-            }
-            @include respond("md") {
                 margin: auto;
             }
+            @include respond("xs") {
+                width: 15rem;
+            }
+
             a {
                 img {
                     width: 100%;
