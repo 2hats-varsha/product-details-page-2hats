@@ -219,7 +219,6 @@ header {
             width: 100%;
             margin-top: 2rem;
         }
-        
         .productimage {
             width: 100%;
             height: auto;
@@ -232,7 +231,6 @@ header {
                     max-width: 42rem !important;
                     width: 100%;
                 }
-                
             }
             .img-navigation {
                 position: absolute;
@@ -267,8 +265,7 @@ header {
                 justify-content: space-between;
                 margin-top: 1rem;
                 @include respond("xl") {
-                    gap: 1.4rem;
-                    
+                    gap: 1.4rem; 
                 }
                 @include respond("lg") {
                     width: 100%;
@@ -289,7 +286,7 @@ header {
                     border: 2px solid transparent;
                     @include respond("xl") {
                         width: 7.4rem;
-        height: 7rem;
+                        height: 7rem;
                     }
                     @include respond("md") {
                         width: 6.4rem;
@@ -329,33 +326,29 @@ header {
                         }
                     }
                     .icon-pause {
-                        top: 37px;
-                        left: 41px;
-                        bottom: 50px;
-                        right: 50px;
-                        transform: translate(-50%, -50%);
+                        top: 30px;
+                        left: 30px;
+                        bottom: 0px;
+                        right: 0px;
                         color: $white;
                         font-size: 2rem;
                         z-index: 2;
                         @include respond("xl") {
-                            top: 46px;
-        left: 47px;
-                        }
-                        @include respond('lg'){
-                            top: 27px;
-                            left: 30px;
+                            top: 36px;
+                            left: 40px;
                         }
                         @include respond("md") {
-                            top: 36px;
-                            left: 39px;
+                            top: 31px;
+                            left: 34px;
                         }
                         @include respond("sm") {
-                            top: 17px;
-                            left: 16px;
+                            top: 18px;
+                            left: 14px;
                         }
                         @include respond("xs") {
-                            top: 7px;
-                            left: 4px;
+                            top: 12px;
+                            left: 7px;
+                            font-size: 1.5rem;
                         }
                     }
                 }
@@ -420,7 +413,6 @@ header {
                     height: 1rem;
                     margin-right: 5px;
                 }
-
                 span {
                     color: $gray_700;
                     font-family: $lato_regular;

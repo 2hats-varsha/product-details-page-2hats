@@ -741,43 +741,37 @@ header .container .row .hamburger .third-line {
   height: 6.8rem;
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-  top: 37px;
-  left: 41px;
-  bottom: 50px;
-  right: 50px;
-  transform: translate(-50%, -50%);
+  top: 30px;
+  left: 30px;
+  bottom: 0px;
+  right: 0px;
   color: #fff;
   font-size: 2rem;
   z-index: 2;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 46px;
-    left: 47px;
-  }
-}
-@media (max-width: 62rem) {
-  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 27px;
-    left: 30px;
+    top: 36px;
+    left: 40px;
   }
 }
 @media (max-width: 48rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 36px;
-    left: 39px;
+    top: 31px;
+    left: 34px;
   }
 }
 @media (max-width: 36rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 17px;
-    left: 16px;
+    top: 18px;
+    left: 14px;
   }
 }
 @media (max-width: 24rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 7px;
-    left: 4px;
+    top: 12px;
+    left: 7px;
+    font-size: 1.5rem;
   }
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .active-img {
