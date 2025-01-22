@@ -1026,6 +1026,11 @@ header .container .row .hamburger .third-line {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .buttons .add-to-cart {
+    padding: 0.9rem 0 !important;
+  }
+}
 .detailscontainer .detailsrightsection .buttons .add-to-cart .carticon {
   margin-right: 0.4rem;
 }

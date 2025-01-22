@@ -580,11 +580,13 @@ header {
                     padding: 0.8rem 12.5rem !important;
                     margin-left: 0;
                     margin-top: 1rem;
-
                 }
                 @include respond("sm") {
                     padding: .9rem 0 !important;
                     font-size: 0.9rem;
+                }
+                @include respond("xs") {
+                    padding: .9rem 0 !important;
                 }
                 
                 .carticon {
@@ -695,7 +697,6 @@ header {
             @include respond("xs") {
                 width: 15rem;
             }
-
             a {
                 img {
                     width: 100%;
