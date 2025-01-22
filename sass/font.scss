@@ -26,6 +26,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Raleway_semi_bold';
+    src: url('../assets/fonts/Raleway-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Lato_regular';
     src: url('../assets/fonts/Lato-Regular.woff2') format('woff2');
     font-weight: 400;
@@ -35,5 +41,11 @@
     font-family: 'Lato_bold';
     src: url('../assets/fonts/Lato-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato_black';
+    src: url('../assets/fonts/Lato-Black.woff2') format('woff2');
+    font-weight: 900;
     font-style: normal;
 }

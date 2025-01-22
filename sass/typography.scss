@@ -1,9 +1,10 @@
 @import './_mixins.scss';
 
 h1,.h1{
-font-size: 3rem;
+font-size: 2.875rem;
 line-height: 4rem;
 color: $secondary_color;
+font-family:$lato_black;
 
 @include respond('xl') {
     font-size: 3.4rem;
@@ -26,7 +27,7 @@ color: $secondary_color;
 }
 }
 h2,.h2{
-font-size: 2.5rem;
+font-size: 1rem;
 @include respond('xl') {
     font-size: 2.2rem;
 }
@@ -47,7 +48,7 @@ h4,.h4{
     font-size: 1.75rem;
 }
 h5,.h5{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $secondary_color;
     @include respond('lg') {
         font-size: 1.6rem;

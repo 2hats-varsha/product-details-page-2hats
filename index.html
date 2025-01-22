@@ -10,10 +10,7 @@
         />
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-        <link
-            rel="stylesheet"
-            href="https://i.icomoon.io/public/temp/ef8c969ed4/UntitledProject/style.css"
-        />
+        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/d1c676dbd5/UntitledProject/style.css">
     </head>
     <body>
         <header>
@@ -213,42 +210,39 @@
                                 <span>12 Reviews</span>
                             </div>
                         </div>
-                        <!-- Color Selection -->
-                        <div class="color-selection">
-                            <span>Color</span>
-                            <div class="color-options flex flex-alignitem">
-                                <div
-                                    class="color-option outercirclepink b-radius-100 relative circleborder"
-                                >
-                                    <div
-                                        class="innercirclepink b-radius-100 absolute innercircleatt"
-                                    ></div>
-                                    <span class="colorname">pink</span>
+                         <div class="color-selection">
+                             <span>Color</span>
+                             <div class="color-options flex flex-alignitem">
+                                <div class="color-option outercirclepink b-radius-100 relative active">
+                                    <input type="radio" name="color" id="pink" value="pink" aria-label="pink" class="pink"/>
+                                    <label for="pink">
+                                        <span class="pink">pink
+                                        </span>
+                                    </label>
                                 </div>
-                                <div
-                                    class="color-option outercircleblue b-radius-100 relative circleborder"
-                                >
-                                    <div
-                                        class="innercircleblue b-radius-100 absolute innercircleatt"
-                                    ></div>
-                                    <span class="colornameblue">Blue</span>
+
+                                <div class="color-option outercirclepink b-radius-100 relative ">
+                                    <input type="radio" name="color" id="blue" value="blue" aria-label="blue" class="blue"/>
+                                    <label for="blue">
+                                        <span class="blue">Blue
+                                        </span>
+                                    </label>
                                 </div>
-                                <div
-                                    class="color-option outercircleyellow b-radius-100 relative circleborder"
-                                >
-                                    <div
-                                        class="innercircleyellow b-radius-100 absolute innercircleatt"
-                                    ></div>
+                                <div class="color-option outercirclepink b-radius-100 relative ">
+                                    <input type="radio" name="color" id="yellow" value="yellow" aria-label="yellow" class="yellow"/>
+                                    <label for="yellow">
+                                        <span class="yellow">Yellow
+                                        </span>
+                                    </label>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Size Selection -->
+                             </div>
+                         </div>
                         <div class="size-selection flex">
                             <div class="sizesection flex">
                                 <label for="size" class="size-label"
                                     >Size</label
                                 >
-                                <select id="size" name="size">
+                                <select id="size" name="size" value="" data-placeholder="Please Select">
                                     <option value="select">
                                         Please Select
                                     </option>
@@ -272,7 +266,7 @@
                                     id="quantity"
                                     name="quantity"
                                     value="1"
-                                    min="1"
+                                    min="0"
                                     step="1"
                                     tabindex="14"
                                     aria-label="quantity size"

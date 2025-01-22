@@ -68,19 +68,20 @@ header {
             .col-4 {
                 .brand {
                     .logo {
-                        width: 2rem;
+                        width: 3rem;
+                        height: 2.1rem;
                     }
                 }
                 .leftnavitem {
-                    margin-left: 3rem;
+                    margin-left: 2.5rem;
                     @include respond("lg") {
                         display: none;
                     }
                     .flex {
+                        width: 14.5rem;
                         li {
                             list-style: none !important;
-                            padding-bottom: 24px !important;
-                            width: 5rem;
+                            padding: 0 16px 24px 16px;
                             text-align: center;
                             border-bottom: 2px solid transparent;
                             a {
@@ -91,7 +92,7 @@ header {
                                 text-decoration: none !important;
                             }
                             .first-active {
-                                font-family: $font_bold;
+                                font-family: $Raleway_semi_bold;
                                 color: $primary-color;
                             }
                             &:hover {
@@ -100,6 +101,7 @@ header {
                         }
                         li.active {
                             border-bottom: 2px solid $primary-color;
+                            padding: 0 16px 24px 16px;
                         }
                     }
                 }
@@ -112,29 +114,28 @@ header {
                     .searchitem {
                         border-bottom: 2px solid $dark_variant;
                         #search {
-                            width: 18rem;
+                            width: 16.5rem;
                             background-color: transparent;
+                            font-size: .875rem;
                             &::placeholder {
-                                line-height: 2rem;
+                                line-height: 1.4rem;
                                 color: $gray;
-                                font-size: 1rem;
+                                font-size: .875rem;
                                 font-family: $font_light;
                             }
                         }
                         .searchbtn {
                             padding-right: 0;
-                            margin-bottom: 4px;
+                            padding-bottom: .2rem;
+                           
                             .icon-Search {
-                                font-size: 1rem;
+                                font-size: 1.2rem;
                                 color: $primary-color;
                             }
                         }
                     }
                     button {
-                        padding: 0.5rem 0 0.5rem 2rem;
-                    }
-                    .account-user {
-                        margin-left: 1rem;
+                        padding: 0.5rem 0 0.5rem 2.2rem;
                     }
                 }
             }
@@ -174,21 +175,25 @@ header {
 .mainsection {
     padding-bottom: 2rem;
     padding-top: 8rem;
+    .h1{
+        margin-bottom: 2rem;
+    }
 }
 .tabs {
     display: flex;
     margin-bottom: 20px;
     border-bottom: 2px solid $light_gray;
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
     .tab {
         color: $gray_600;
         padding: 12px 16px;
-        font-family: $font_bold;
+        font-family: $lato-bold;
         border: 2px solid transparent;
         border-radius: $border-radius;
-        margin-right: 10px;
+        margin-right: 12px;
         text-transform: capitalize;
         background-color: #fff;
+        font-size: 1rem;
         @include transition(background-color, 0.3s);
         @include respond("sm") {
             font-size: 0.9rem;
@@ -200,7 +205,7 @@ header {
             padding: 12px 2px;
         }
         &.active {
-            border: 2px solid $primary-color;
+            border: 1px solid $primary-color;
             color: $primary-color !important;
         }
         .reviewcount {
@@ -243,12 +248,12 @@ header {
             }
             .img-navigation {
                 position: absolute;
-                top: 43%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: space-between;
-                width: 80%;
+                width: 88%;
                 z-index: 0;
                 @include respond("xs") {
                     top: 36%;
@@ -259,13 +264,16 @@ header {
                     color: $white;
                     padding: 5px;
                     border-radius: 50%;
-                    width: 3rem;
-                    height: 3rem;
+                    width: 2.7rem;
+                    height: 2.7rem;
                     align-items: center;
                     justify-content: center !important;
                     @include respond("xs") {
                         width: 2rem;
                         height: 2rem;
+                    }
+                    span{
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -286,8 +294,8 @@ header {
                     gap: 0.8rem;
                 }
                 .thumbnail {
-                    width: 6.4rem;
-                    height: 6rem;
+                    width: 6.5rem;
+                    height: 6.5rem;
                     border-radius: $border-radius;
                     overflow: hidden;
                     border: 2px solid $light-gray;
@@ -333,10 +341,13 @@ header {
                             z-index: 1;
                             height: 6.8rem;
                         }
+                        span{
+                            font-size: 1.875rem;
+                        }
                     }
                     .icon-pause {
-                        top: 30px;
-                        left: 30px;
+                        top: 36px;
+                        left: 36px;
                         bottom: 0px;
                         right: 0px;
                         color: $white;
@@ -368,7 +379,7 @@ header {
         }
     }
     .detailsrightsection {
-        width: 44%;
+        width: 43%;
         @include respond("xl") {
             width: 100%;
             margin-top: 2rem;
@@ -394,21 +405,22 @@ header {
                     width: 100%;
                 }
                 .price {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     font-family: $lato-bold;
                     color: $danger;
                 }
                 .old-price {
                     text-decoration: line-through;
-                    margin-left: 10px;
+                    margin-left: 12px;
                     font-family: $lato_regular;
                     color: $gray_700;
+                    font-size: 1.125rem;
                 }
                 .discount {
                     font-family: $lato_bold;
                     background-color: $danger;
-                    padding: 4px 8px;
-                    margin-left: 2.5rem;
+                    padding: 4px 10px;
+                    margin-left: 2.2rem;
                     border-radius: $border-radius;
                     font-weight: bold;
                     color: $white;
@@ -431,63 +443,81 @@ header {
         }
         .color-selection {
             margin-top: 1rem;
+            span{
+                font-family: $lato_regular;
+                font-size: 0.875rem;
+            }
             .color-options {
                 justify-content: flex-start !important;
                 margin-top: 1rem;
-                .color-option {
-                    height: 2rem;
-                    width: 2rem;
+                .color-option{
+                    border: 1px solid $gray_400;
                     border-radius: 50%;
-                    background-color: transparent;
-                    border: 2px solid $light-gray;
-                    position: relative;
-                    background-color: transparent;
-                    border: 1px solid $gray_700;
-                    margin-right: 1rem;
-                    cursor: pointer;
-                    .innercirclepink {
-                        border-radius: 100% !important;
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        background-color: $pink;
-                    }
-                    .innercircleblue {
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        border-radius: 100% !important;
-                        background-color: $blue_light;
-                    }
-                    .innercircleyellow {
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        border-radius: 100% !important;
-
-                        background-color: $yellow_color;
-                    }
-                    &:hover {
-                        border: 1px solid $primary-color;
-                        .colorname {
-                            display: block;
-                        }
-                    }
-                    .colorname {
-                        display: none;
+                    margin-right: .5rem;
+                
+                    input[type='radio'] {
+                        border-radius: 50%;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
                         position: absolute;
-                        top: 7%;
-                        transform: translateX(-100%);
-                        left: 10rem;
-                        color: $gray_600;
-                        font-size: 1rem;
-                        font-family: $lato_regular;
-                    }
-                    .colornameblue {
-                        display: none;
+                        top: 1px;
+                        left: -2px;
+                        right: -2px;
+                        bottom: 7px;
+                    }   
+                    
+                
+                    input.pink[type='radio']:checked {
                         position: absolute;
-                        top: 7%;
-                        transform: translateX(-50%);
-                        left: 8rem;
-                        color: $gray_600;
-                        font-family: $lato_regular;
+                            top: 0px;
+                            left: -2px;
+                            right: -2px;
+                            bottom: 7px;
+                            width: 1rem;
+                            background-color: $pink;
+                            height: 1rem;
+                        
+                    }
+                    input.blue[type='radio']:checked {
+                        position: absolute;
+                            top: 0px;
+                            left: -2px;
+                            right: -2px;
+                            bottom: 7px;
+                            width: 1rem;
+                            background-color: $blue_light;
+                            height: 1rem;
+                        
+                    }
+                    input.yellow[type='radio']:checked {
+                        position: absolute;
+                            top: 0px;
+                            left: -2px;
+                            right: -2px;
+                            bottom: 7px;
+                            width: 1rem;
+                            background-color: $yellow_color;
+                            height: 1rem;
+                        
+                    }
+                    span{
+                        display: none;
+                    }
+                    input.pink[type="radio"]:checked + label span {
+                        color: $gray; 
+                        display: block;
+                        transform: translateX(106px);
+                    }
+                    input.blue[type="radio"]:checked + label span {
+                        color: $gray; 
+                        display: block;
+                        transform: translateX(72px);
+                    }
+                    input.yellow[type="radio"]:checked + label span {
+                        color: $gray; 
+                        display: block;
+                        transform: translateX(41px);
                     }
                 }
             }
@@ -511,24 +541,37 @@ header {
                 }
                 label {
                     color: $gray_800;
-                    font-size: 1.2rem;
+                    font-size: .875rem;
+                    margin-bottom: .2rem;
                     font-family: $lato_regular;
                 }
             }
             select {
                 margin-top: 0.25rem;
                 width: 22rem;
-                padding: 10px;
                 border-radius: $border-radius;
-                border: 1px solid $light-gray;
+                border: 1px solid $gray_400;
                 font-size: 14px;
+                padding: .75rem 1rem;
+                background: transparent;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                    appearance: none;
+                    background-image: url('../assets/images/dropdown.svg');
+                    background-repeat: no-repeat;
+                    background-position: right 20px center; 
+                    background-size: 12px; 
+                    padding-right: 10px; 
                 @include respond("xl") {
                     width: 16rem;
                 }
                 @include respond("lg") {
                     width: 100%;
                 }
+                
             }
+            
+            
             .sizechart {
                 font-family: $lato-bold;
                 margin-top: 10px;
@@ -538,14 +581,14 @@ header {
                 cursor: pointer;
                 span {
                     margin-left: 0.6rem;
+                    font-size: 1rem;
                 }
             }
         }
         .buttons {
             width: 100%;
-            margin-left: 1rem;
             margin-bottom: 1rem;
-            margin-top: 20px;
+            margin-top:2rem;
             @include respond("xl") {
                 justify-content: flex-start;
                 flex-wrap: wrap;
@@ -557,6 +600,8 @@ header {
                 flex-wrap: wrap;
             }
             .quantity-section {
+                width: 5rem;
+                height: 2.75rem;
                 justify-content: center;
                 align-items: center;
                 @include respond("xl") {
@@ -577,14 +622,18 @@ header {
                         width: 100% !important;
                     }
                 }
+                
             }
             .add-to-cart {
-                width: 18rem;
+                width: 15.25rem;
+                height: 2.75rem;
                 align-items: center;
                 justify-content: center;
                 font-family: $lato_bold;
                 color: $white;
+                text-align: center;
                 border: 2px solid transparent;
+                font-size: 0.875rem;
                 @include respond("xl") {
                     width: 100%;
                     margin-bottom: 1rem;
@@ -621,9 +670,15 @@ header {
                 }
             }
             .favoritesection {
+                width: 9.5625rem;
                 justify-content: center;
-                color: $primary-color;
+                color: #17696A;
+                height: 2.75rem;
+                text-align: center;
+                font-family: $lato-bold;
+                font-size: 0.875rem;
                 .icon-heart {
+                   font-size: 1rem;
                     margin-right: 0.6rem;
                 }
                 @include respond("xl") {
@@ -634,13 +689,22 @@ header {
                 }
             }
         }
+        .return-section{
+            margin-top: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $gray_400;
+        }
         .delivery-section,
         .return-section {
-            margin-top: 4rem;
-            h5 {
+            margin-top: 3rem;
+            h2 {
                 padding-left: 2rem;
                 margin-bottom: 10px;
-                font-size: 18px;
+                font-size: 1rem;
+            }
+            p{
+                font-family: $lato_regular;
+                font-size: 0.875rem;
             }
             ul {
                 list-style: disc;
@@ -648,13 +712,14 @@ header {
                 li {
                     color: $gray_800;
                     font-family: $lato_regular;
-                    font-size: 1.1rem;
+                    font-size: 0.875rem;
                     line-height: 1.6;
                     &::marker {
                         color: $primary-color;
                     }
                 }
             }
+            
             table {
                 width: 100%;
                 border-collapse: collapse;
@@ -662,25 +727,33 @@ header {
                 thead {
                     font-family: $lato_regular;
                     color: $gray_700;
-                    font-size: 0.8rem;
+                    font-size: 0.75rem;
                     text-transform: uppercase;
+                }
+                tr{
+
                 }
                 th,
                 td {
                     border-bottom: 1px solid $gray_400;
-                    padding: 1rem;
+                    padding: .7rem;
                     text-align: left;
-                    color: $gray_700;
-                    font-size: $font-base-size;
+                    color: $gray;
+                    font-size: 0.75rem;
+                    font-family:$lato_regular;
                     @include respond("xl") {
                         padding: 0.8rem;
                     }
                 }
                 th {
                     border-bottom: 1px solid $gray_400;
-                    font-size: 1rem;
+                    font-size: 0.75rem;
+                    font-family: $lato_regular;
+                    color: $gray_600;
                 }
                 td {
+                    font-size: 0.875rem;
+                    color: $gray_800;
                     border-top: 1px solid $light-gray;
                 }
             }
@@ -691,19 +764,18 @@ header {
             align-items: center;
             a {
                 margin-left: 1rem;
-                margin-right: 1rem;
                 display: inline-block;
                 .icon-Facebook,
                 .icon-Twitter,
                 .icon-pinterest {
-                    font-size: 2rem;
+                   font-size: 1.3rem;
                     color: $gray_600;
                 }
             }
         }
         .payment-options {
             margin-top: 2rem;
-            width: 30rem;
+            width: 25.5rem;
             @include respond('xl'){
                 width: 23rem;
                 margin: auto;

@@ -23,6 +23,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Raleway_semi_bold";
+  src: url("../assets/fonts/Raleway-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
   font-family: "Lato_regular";
   src: url("../assets/fonts/Lato-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -34,10 +40,17 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Lato_black";
+  src: url("../assets/fonts/Lato-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
 h1, .h1 {
-  font-size: 3rem;
+  font-size: 2.875rem;
   line-height: 4rem;
   color: #1E212C;
+  font-family: "Lato_black";
 }
 @media (max-width: 75rem) {
   h1, .h1 {
@@ -70,7 +83,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 @media (max-width: 75rem) {
   h2, .h2 {
@@ -100,7 +113,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #1E212C;
 }
 @media (max-width: 62rem) {
@@ -454,20 +467,23 @@ header .container {
   padding: 32px 0;
 }
 header .container .row .col-4 .brand .logo {
-  width: 2rem;
+  width: 3rem;
+  height: 2.1rem;
 }
 header .container .row .col-4 .leftnavitem {
-  margin-left: 3rem;
+  margin-left: 2.5rem;
 }
 @media (max-width: 62rem) {
   header .container .row .col-4 .leftnavitem {
     display: none;
   }
 }
+header .container .row .col-4 .leftnavitem .flex {
+  width: 14.5rem;
+}
 header .container .row .col-4 .leftnavitem .flex li {
   list-style: none !important;
-  padding-bottom: 24px !important;
-  width: 5rem;
+  padding: 0 16px 24px 16px;
   text-align: center;
   border-bottom: 2px solid transparent;
 }
@@ -479,7 +495,7 @@ header .container .row .col-4 .leftnavitem .flex li a {
   text-decoration: none !important;
 }
 header .container .row .col-4 .leftnavitem .flex li .first-active {
-  font-family: "Raleway_bold", sans-serif;
+  font-family: "Raleway_semi_bold";
   color: #17696A;
 }
 header .container .row .col-4 .leftnavitem .flex li:hover {
@@ -487,6 +503,7 @@ header .container .row .col-4 .leftnavitem .flex li:hover {
 }
 header .container .row .col-4 .leftnavitem .flex li.active {
   border-bottom: 2px solid #17696A;
+  padding: 0 16px 24px 16px;
 }
 @media (max-width: 62rem) {
   header .container .row .col-8 .rightnavitem {
@@ -497,28 +514,26 @@ header .container .row .col-8 .rightnavitem .searchitem {
   border-bottom: 2px solid #43464E;
 }
 header .container .row .col-8 .rightnavitem .searchitem #search {
-  width: 18rem;
+  width: 16.5rem;
   background-color: transparent;
+  font-size: 0.875rem;
 }
 header .container .row .col-8 .rightnavitem .searchitem #search::placeholder {
-  line-height: 2rem;
+  line-height: 1.4rem;
   color: #72757E;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: "Raleway_light", sans-serif;
 }
 header .container .row .col-8 .rightnavitem .searchitem .searchbtn {
   padding-right: 0;
-  margin-bottom: 4px;
+  padding-bottom: 0.2rem;
 }
 header .container .row .col-8 .rightnavitem .searchitem .searchbtn .icon-Search {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #17696A;
 }
 header .container .row .col-8 .rightnavitem button {
-  padding: 0.5rem 0 0.5rem 2rem;
-}
-header .container .row .col-8 .rightnavitem .account-user {
-  margin-left: 1rem;
+  padding: 0.5rem 0 0.5rem 2.2rem;
 }
 header .container .row .hamburger {
   display: none;
@@ -556,22 +571,26 @@ header .container .row .hamburger .third-line {
   padding-bottom: 2rem;
   padding-top: 8rem;
 }
+.mainsection .h1 {
+  margin-bottom: 2rem;
+}
 
 .tabs {
   display: flex;
   margin-bottom: 20px;
   border-bottom: 2px solid #E5E8ED;
-  padding-bottom: 2rem;
+  padding-bottom: 1.2rem;
 }
 .tabs .tab {
   color: #737582;
   padding: 12px 16px;
-  font-family: "Raleway_bold", sans-serif;
+  font-family: "Lato_bold", sans-serif;
   border: 2px solid transparent;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-right: 12px;
   text-transform: capitalize;
   background-color: #fff;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 @media (max-width: 36rem) {
@@ -588,7 +607,7 @@ header .container .row .hamburger .third-line {
   }
 }
 .tabs .tab.active {
-  border: 2px solid #17696A;
+  border: 1px solid #17696A;
   color: #17696A !important;
 }
 .tabs .tab .reviewcount {
@@ -638,12 +657,12 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsleftsection .image-gallery .img-navigation {
   position: absolute;
-  top: 43%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 88%;
   z-index: 0;
 }
 @media (max-width: 24rem) {
@@ -657,8 +676,8 @@ header .container .row .hamburger .third-line {
   color: #fff;
   padding: 5px;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   align-items: center;
   justify-content: center !important;
 }
@@ -667,6 +686,9 @@ header .container .row .hamburger .third-line {
     width: 2rem;
     height: 2rem;
   }
+}
+.detailscontainer .detailsleftsection .image-gallery .img-navigation .arrow span {
+  font-size: 1.2rem;
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails {
   display: flex;
@@ -694,8 +716,8 @@ header .container .row .hamburger .third-line {
   }
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
-  width: 6.4rem;
-  height: 6rem;
+  width: 6.5rem;
+  height: 6.5rem;
   border-radius: 4px;
   overflow: hidden;
   border: 2px solid #E5E8ED;
@@ -751,9 +773,12 @@ header .container .row .hamburger .third-line {
   z-index: 1;
   height: 6.8rem;
 }
+.detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail.last-thumbnail span {
+  font-size: 1.875rem;
+}
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-  top: 30px;
-  left: 30px;
+  top: 36px;
+  left: 36px;
   bottom: 0px;
   right: 0px;
   color: #fff;
@@ -789,7 +814,7 @@ header .container .row .hamburger .third-line {
   border: 2px solid #17696A;
 }
 .detailscontainer .detailsrightsection {
-  width: 44%;
+  width: 43%;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection {
@@ -821,21 +846,22 @@ header .container .row .hamburger .third-line {
   }
 }
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .price {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Lato_bold", sans-serif;
   color: #E00000;
 }
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .old-price {
   text-decoration: line-through;
-  margin-left: 10px;
+  margin-left: 12px;
   font-family: "Lato_regular", sans-serif;
   color: #6F7176;
+  font-size: 1.125rem;
 }
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .discount {
   font-family: "Lato_bold", sans-serif;
   background-color: #E00000;
-  padding: 4px 8px;
-  margin-left: 2.5rem;
+  padding: 4px 10px;
+  margin-left: 2.2rem;
   border-radius: 4px;
   font-weight: bold;
   color: #fff;
@@ -861,64 +887,77 @@ header .container .row .hamburger .third-line {
   font-size: 1.3rem;
   font-family: "Lato_regular", sans-serif;
 }
+.detailscontainer .detailsrightsection .color-selection span {
+  font-family: "Lato_regular", sans-serif;
+  font-size: 0.875rem;
+}
 .detailscontainer .detailsrightsection .color-selection .color-options {
   justify-content: flex-start !important;
   margin-top: 1rem;
 }
 .detailscontainer .detailsrightsection .color-selection .color-options .color-option {
-  height: 2rem;
-  width: 2rem;
+  border: 1px solid #D7DADD;
   border-radius: 50%;
-  background-color: transparent;
-  border: 2px solid #E5E8ED;
-  position: relative;
-  background-color: transparent;
-  border: 1px solid #6F7176;
-  margin-right: 1rem;
-  cursor: pointer;
+  margin-right: 0.5rem;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option .innercirclepink {
-  border-radius: 100% !important;
-  height: 1.5rem;
-  width: 1.5rem;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input[type=radio] {
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  top: 1px;
+  left: -2px;
+  right: -2px;
+  bottom: 7px;
+}
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.pink[type=radio]:checked {
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  right: -2px;
+  bottom: 7px;
+  width: 1rem;
   background-color: #E0AEA2;
+  height: 1rem;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option .innercircleblue {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100% !important;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.blue[type=radio]:checked {
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  right: -2px;
+  bottom: 7px;
+  width: 1rem;
   background-color: #C0DDED;
+  height: 1rem;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option .innercircleyellow {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100% !important;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.yellow[type=radio]:checked {
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  right: -2px;
+  bottom: 7px;
+  width: 1rem;
   background-color: #FEDE41;
+  height: 1rem;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option:hover {
-  border: 1px solid #17696A;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option span {
+  display: none;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option:hover .colorname {
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.pink[type=radio]:checked + label span {
+  color: #72757E;
   display: block;
+  transform: translateX(106px);
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option .colorname {
-  display: none;
-  position: absolute;
-  top: 7%;
-  transform: translateX(-100%);
-  left: 10rem;
-  color: #737582;
-  font-size: 1rem;
-  font-family: "Lato_regular", sans-serif;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.blue[type=radio]:checked + label span {
+  color: #72757E;
+  display: block;
+  transform: translateX(72px);
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option .colornameblue {
-  display: none;
-  position: absolute;
-  top: 7%;
-  transform: translateX(-50%);
-  left: 8rem;
-  color: #737582;
-  font-family: "Lato_regular", sans-serif;
+.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.yellow[type=radio]:checked + label span {
+  color: #72757E;
+  display: block;
+  transform: translateX(41px);
 }
 .detailscontainer .detailsrightsection .size-selection {
   margin-bottom: 1.4rem;
@@ -941,16 +980,26 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection .size-selection .sizesection label {
   color: #424551;
-  font-size: 1.2rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.2rem;
   font-family: "Lato_regular", sans-serif;
 }
 .detailscontainer .detailsrightsection .size-selection select {
   margin-top: 0.25rem;
   width: 22rem;
-  padding: 10px;
   border-radius: 4px;
-  border: 1px solid #E5E8ED;
+  border: 1px solid #D7DADD;
   font-size: 14px;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../assets/images/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 12px;
+  padding-right: 10px;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .size-selection select {
@@ -972,12 +1021,12 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection .size-selection .sizechart span {
   margin-left: 0.6rem;
+  font-size: 1rem;
 }
 .detailscontainer .detailsrightsection .buttons {
   width: 100%;
-  margin-left: 1rem;
   margin-bottom: 1rem;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .buttons {
@@ -994,6 +1043,8 @@ header .container .row .hamburger .third-line {
   }
 }
 .detailscontainer .detailsrightsection .buttons .quantity-section {
+  width: 5rem;
+  height: 2.75rem;
   justify-content: center;
   align-items: center;
 }
@@ -1021,12 +1072,15 @@ header .container .row .hamburger .third-line {
   }
 }
 .detailscontainer .detailsrightsection .buttons .add-to-cart {
-  width: 18rem;
+  width: 15.25rem;
+  height: 2.75rem;
   align-items: center;
   justify-content: center;
   font-family: "Lato_bold", sans-serif;
   color: #fff;
+  text-align: center;
   border: 2px solid transparent;
+  font-size: 0.875rem;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .buttons .add-to-cart {
@@ -1072,10 +1126,16 @@ header .container .row .hamburger .third-line {
   color: #17696A !important;
 }
 .detailscontainer .detailsrightsection .buttons .favoritesection {
+  width: 9.5625rem;
   justify-content: center;
   color: #17696A;
+  height: 2.75rem;
+  text-align: center;
+  font-family: "Lato_bold", sans-serif;
+  font-size: 0.875rem;
 }
 .detailscontainer .detailsrightsection .buttons .favoritesection .icon-heart {
+  font-size: 1rem;
   margin-right: 0.6rem;
 }
 @media (max-width: 75rem) {
@@ -1088,15 +1148,25 @@ header .container .row .hamburger .third-line {
     width: 100%;
   }
 }
+.detailscontainer .detailsrightsection .return-section {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D7DADD;
+}
 .detailscontainer .detailsrightsection .delivery-section,
 .detailscontainer .detailsrightsection .return-section {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
-.detailscontainer .detailsrightsection .delivery-section h5,
-.detailscontainer .detailsrightsection .return-section h5 {
+.detailscontainer .detailsrightsection .delivery-section h2,
+.detailscontainer .detailsrightsection .return-section h2 {
   padding-left: 2rem;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 1rem;
+}
+.detailscontainer .detailsrightsection .delivery-section p,
+.detailscontainer .detailsrightsection .return-section p {
+  font-family: "Lato_regular", sans-serif;
+  font-size: 0.875rem;
 }
 .detailscontainer .detailsrightsection .delivery-section ul,
 .detailscontainer .detailsrightsection .return-section ul {
@@ -1107,7 +1177,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .return-section ul li {
   color: #424551;
   font-family: "Lato_regular", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 .detailscontainer .detailsrightsection .delivery-section ul li::marker,
@@ -1124,7 +1194,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .return-section table thead {
   font-family: "Lato_regular", sans-serif;
   color: #6F7176;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 .detailscontainer .detailsrightsection .delivery-section table th,
@@ -1132,10 +1202,11 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .return-section table th,
 .detailscontainer .detailsrightsection .return-section table td {
   border-bottom: 1px solid #D7DADD;
-  padding: 1rem;
+  padding: 0.7rem;
   text-align: left;
-  color: #6F7176;
-  font-size: 1rem;
+  color: #72757E;
+  font-size: 0.75rem;
+  font-family: "Lato_regular", sans-serif;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .delivery-section table th,
@@ -1148,10 +1219,14 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .delivery-section table th,
 .detailscontainer .detailsrightsection .return-section table th {
   border-bottom: 1px solid #D7DADD;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  font-family: "Lato_regular", sans-serif;
+  color: #737582;
 }
 .detailscontainer .detailsrightsection .delivery-section table td,
 .detailscontainer .detailsrightsection .return-section table td {
+  font-size: 0.875rem;
+  color: #424551;
   border-top: 1px solid #E5E8ED;
 }
 .detailscontainer .detailsrightsection .sharesection {
@@ -1161,18 +1236,17 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection .sharesection a {
   margin-left: 1rem;
-  margin-right: 1rem;
   display: inline-block;
 }
 .detailscontainer .detailsrightsection .sharesection a .icon-Facebook,
 .detailscontainer .detailsrightsection .sharesection a .icon-Twitter,
 .detailscontainer .detailsrightsection .sharesection a .icon-pinterest {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #737582;
 }
 .detailscontainer .detailsrightsection .payment-options {
   margin-top: 2rem;
-  width: 30rem;
+  width: 25.5rem;
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .payment-options {
