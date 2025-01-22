@@ -219,14 +219,14 @@ header {
             width: 100%;
             margin-top: 2rem;
         }
-        .productimage {
-            width: 100%;
-            height: auto;
-            border-radius: $border-radius;
-        }
+        
         .image-gallery {
             position: relative;
             .productimage {
+                width: 100%;
+                height: auto;
+                border-radius: $border-radius;
+            
                 @include respond("lg") {
                     max-width: 42rem !important;
                     width: 100%;
