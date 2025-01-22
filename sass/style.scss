@@ -55,6 +55,13 @@ body {
     border-radius: $border-radius;
 }
 header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    background-color: $white;
     .container {
         padding: 32px 0;
         .row {
@@ -106,6 +113,7 @@ header {
                         border-bottom: 2px solid $dark_variant;
                         #search {
                             width: 18rem;
+                            background-color: transparent;
                             &::placeholder {
                                 line-height: 2rem;
                                 color: $gray;
@@ -165,6 +173,7 @@ header {
 // Tabs
 .mainsection {
     padding-bottom: 2rem;
+    padding-top: 8rem;
 }
 .tabs {
     display: flex;
@@ -240,7 +249,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 width: 80%;
-                z-index: 10;
+                z-index: 0;
                 @include respond("xs") {
                     top: 36%;
                     width: 97%;
