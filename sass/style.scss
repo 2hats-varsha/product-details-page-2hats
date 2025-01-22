@@ -542,15 +542,19 @@ header {
             .quantity-section {
                 justify-content: center;
                 align-items: center;
-                @include respond("xm") {
-                    width: 100%;
+                @include respond("md") {
+                    width: 100% !important;
                     padding: 1rem;
                 }
+
                 input {
                     width: 4rem;
                     border: 1px solid transparent;
                     border-radius: 50px;
                     text-align: center;
+                    @include respond("md") {
+                        width: 100% !important;
+                    }
                 }
             }
             .add-to-cart {

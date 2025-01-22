@@ -958,11 +958,22 @@ header .container .row .hamburger .third-line {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 48rem) {
+  .detailscontainer .detailsrightsection .buttons .quantity-section {
+    width: 100% !important;
+    padding: 1rem;
+  }
+}
 .detailscontainer .detailsrightsection .buttons .quantity-section input {
   width: 4rem;
   border: 1px solid transparent;
   border-radius: 50px;
   text-align: center;
+}
+@media (max-width: 48rem) {
+  .detailscontainer .detailsrightsection .buttons .quantity-section input {
+    width: 100% !important;
+  }
 }
 .detailscontainer .detailsrightsection .buttons .add-to-cart {
   padding: 0.8rem 5rem;
