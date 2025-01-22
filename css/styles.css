@@ -560,6 +560,12 @@ header .container .row .hamburger .third-line {
   background-color: #fff;
   transition: background-color 0.3s ease;
 }
+@media (max-width: 36rem) {
+  .tabs .tab {
+    font-size: 0.9rem;
+    padding: 12px 5px;
+  }
+}
 @media (max-width: 24rem) {
   .tabs .tab {
     font-size: 0.9rem;
@@ -655,6 +661,11 @@ header .container .row .hamburger .third-line {
     width: 100%;
   }
 }
+@media (max-width: 36rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails {
+    gap: 0.4rem;
+  }
+}
 @media (max-width: 24rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails {
     gap: 0.8rem;
@@ -679,6 +690,12 @@ header .container .row .hamburger .third-line {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
     width: 6.4rem;
     height: 6rem;
+  }
+}
+@media (max-width: 36rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
+    width: 4rem;
+    height: 4rem;
   }
 }
 @media (max-width: 24rem) {
@@ -736,8 +753,8 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 36rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 34px;
-    left: 20px;
+    top: 17px;
+    left: 16px;
   }
 }
 @media (max-width: 24rem) {
@@ -941,12 +958,6 @@ header .container .row .hamburger .third-line {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 24rem) {
-  .detailscontainer .detailsrightsection .buttons .quantity-section {
-    width: 100%;
-    padding: 1rem;
-  }
-}
 .detailscontainer .detailsrightsection .buttons .quantity-section input {
   width: 4rem;
   border: 1px solid transparent;
@@ -974,13 +985,10 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 48rem) {
   .detailscontainer .detailsrightsection .buttons .add-to-cart {
+    width: 100%;
     padding: 0.8rem 12.5rem;
-    margin-left: 2rem;
-  }
-}
-@media (max-width: 36rem) {
-  .detailscontainer .detailsrightsection .buttons .add-to-cart {
-    padding: 0.8rem 7.5rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
   }
 }
 @media (max-width: 36rem) {

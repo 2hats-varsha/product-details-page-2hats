@@ -204,7 +204,10 @@ header {
         text-transform: capitalize;
         background-color: #fff;
         @include transition(background-color, 0.3s);
-
+        @include respond("sm") {
+            font-size: 0.9rem;
+            padding: 12px 5px;
+        }
         @include respond("xs") {
             font-size: 0.9rem;
             padding: 12px 2px;
@@ -291,6 +294,9 @@ header {
                 @include respond("lg") {
                     width: 100%;
                 }
+                @include respond("sm") {
+                    gap: 0.4rem;
+                }
                 @include respond("xs") {
                     gap: 0.8rem;
                 }
@@ -311,6 +317,10 @@ header {
                     @include respond("md") {
                         width: 6.4rem;
                         height: 6rem;
+                    }
+                    @include respond("sm") {
+                        width: 4rem;
+                        height: 4rem;
                     }
                     @include respond("xs") {
                         width: 3rem;
@@ -361,8 +371,8 @@ header {
                             left: 39px;
                         }
                         @include respond("sm") {
-                            top: 34px;
-                            left: 20px;
+                            top: 17px;
+                            left: 16px;
                         }
                         @include respond("xs") {
                             top: 9px;
@@ -567,7 +577,7 @@ header {
             .quantity-section {
                 justify-content: center;
                 align-items: center;
-                @include respond("xs") {
+                @include respond("xm") {
                     width: 100%;
                     padding: 1rem;
                 }
@@ -594,12 +604,12 @@ header {
                     margin-left: 2.3rem;
                 }
                 @include respond("md") {
+                    width: 100%;
                     padding: 0.8rem 12.5rem;
-                    margin-left: 2rem;
+                    margin-left: 0rem;
+                    margin-top: 1rem;
                 }
-                @include respond("sm") {
-                    padding: 0.8rem 7.5rem;
-                }
+
                 @include respond("sm") {
                     margin-left: 0;
                     margin-top: 1rem;
