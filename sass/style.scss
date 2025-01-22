@@ -23,14 +23,12 @@ body {
         width: 82%;
     }
 }
-
 // Mixins
 @mixin center-flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 @mixin transition($properties, $duration) {
     transition: $properties $duration ease;
 }
@@ -109,7 +107,6 @@ header {
                     }
                 }
             }
-
             .col-8 {
                 .rightnavitem {
                     @include respond("lg") {
@@ -117,7 +114,6 @@ header {
                     }
                     .searchitem {
                         border-bottom: 2px solid $dark_variant;
-
                         #search {
                             width: 18rem;
                             &::placeholder {
@@ -127,7 +123,6 @@ header {
                                 font-family: $font_light;
                             }
                         }
-
                         .searchbtn {
                             padding-right: 0;
                             margin-bottom: 4px;
@@ -137,10 +132,8 @@ header {
                             }
                         }
                     }
-
                     button {
                         padding: 0.5rem 0 0.5rem 2rem;
-
                         .icon-Account {
                         }
                     }
@@ -166,14 +159,12 @@ header {
                     height: 0.2rem;
                     background-color: $white;
                 }
-
                 .second-line {
                     width: 2rem;
                     height: 0.2rem;
                     background-color: #fff;
                     margin-top: 0.2rem;
                 }
-
                 .third-line {
                     width: 2rem;
                     height: 0.2rem;
@@ -193,7 +184,6 @@ header {
     margin-bottom: 20px;
     border-bottom: 2px solid $light_gray;
     padding-bottom: 2rem;
-
     .tab {
         color: $gray_600;
         padding: 12px 16px;
@@ -225,27 +215,23 @@ header {
         }
     }
 }
-
 // Product Details
 .detailscontainer {
     margin-top: 30px;
     @include respond("lg") {
         flex-direction: column;
     }
-
     .detailsleftsection {
         width: 48%;
         position: relative;
         @include respond("lg") {
             width: 100%;
         }
-
         .productimage {
             width: 100%;
             height: auto;
             border-radius: $border-radius;
         }
-
         .image-gallery {
             position: relative;
             .productimage {
@@ -264,10 +250,8 @@ header {
                 z-index: 10;
                 @include respond("xs") {
                     top: 36%;
-
                     width: 97%;
                 }
-
                 .arrow {
                     background-color: $white;
                     color: $white;
@@ -283,7 +267,6 @@ header {
                     }
                 }
             }
-
             .thumbnails {
                 display: flex;
                 justify-content: space-between;
@@ -300,12 +283,10 @@ header {
                 @include respond("xs") {
                     gap: 0.8rem;
                 }
-
                 .thumbnail {
                     width: 6.4rem;
                     height: 6rem;
                     border-radius: $border-radius;
-
                     overflow: hidden;
                     border: 2px solid $light-gray;
                     cursor: pointer;
@@ -329,13 +310,11 @@ header {
                     &:hover {
                         border: 2px solid $primary-color;
                     }
-
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
-
                     &.last-thumbnail {
                         position: relative;
                         &::after {
@@ -386,7 +365,6 @@ header {
             }
         }
     }
-
     .detailsrightsection {
         width: 44%;
         @include respond("md") {
@@ -404,7 +382,6 @@ header {
             .price-section {
                 @include respond("xs") {
                     margin-bottom: 1rem;
-
                     width: 100%;
                 }
                 .price {
@@ -412,15 +389,12 @@ header {
                     font-family: $lato-bold;
                     color: $danger;
                 }
-
                 .old-price {
                     text-decoration: line-through;
                     margin-left: 10px;
                     font-family: $lato_regular;
-
                     color: $gray_700;
                 }
-
                 .discount {
                     font-family: $lato_bold;
                     background-color: $danger;
@@ -431,11 +405,9 @@ header {
                     color: $white;
                 }
             }
-
             .reviews {
                 align-items: center;
                 flex-direction: column;
-
                 .ratingimg {
                     width: 5rem;
                     height: 1rem;
@@ -449,13 +421,11 @@ header {
                 }
             }
         }
-
         .color-selection {
             margin-top: 1rem;
             .color-options {
                 justify-content: flex-start !important;
                 margin-top: 1rem;
-
                 .color-option {
                     height: 2rem;
                     width: 2rem;
@@ -486,14 +456,12 @@ header {
 
                         background-color: $yellow_color;
                     }
-
                     &:hover {
                         border: 1px solid $primary-color;
                         .colorname {
                             display: block;
                         }
                     }
-
                     .colorname {
                         display: none;
                         position: absolute;
@@ -520,7 +488,6 @@ header {
             font-size: 1.3rem;
             font-family: $lato_regular;
         }
-
         .size-selection {
             margin-bottom: 1.4rem;
             margin-top: 1.4rem;
@@ -554,7 +521,6 @@ header {
                     width: 100%;
                 }
             }
-
             .sizechart {
                 font-family: $lato-bold;
                 margin-top: 10px;
@@ -567,7 +533,6 @@ header {
                 }
             }
         }
-
         .buttons {
             margin-top: 20px;
             @include respond("lg") {
@@ -588,7 +553,6 @@ header {
                     text-align: center;
                 }
             }
-
             .add-to-cart {
                 padding: 0.8rem 5rem;
                 align-items: center;
@@ -609,7 +573,6 @@ header {
                     margin-left: 0rem;
                     margin-top: 1rem;
                 }
-
                 @include respond("sm") {
                     margin-left: 0;
                     margin-top: 1rem;
@@ -625,7 +588,6 @@ header {
                     border: 2px solid $primary-color;
                     border-radius: 4px;
                     color: $primary-color;
-
                     .icon-cart:before {
                         color: $primary-color !important;
                     }
@@ -644,7 +606,6 @@ header {
                 }
             }
         }
-
         .delivery-section,
         .return-section {
             margin-top: 4rem;
@@ -653,7 +614,6 @@ header {
                 margin-bottom: 10px;
                 font-size: 18px;
             }
-
             ul {
                 list-style: disc;
                 margin-left: 20px;
@@ -667,7 +627,6 @@ header {
                     }
                 }
             }
-
             table {
                 width: 100%;
                 border-collapse: collapse;
@@ -689,28 +648,23 @@ header {
                         padding: 0.8rem;
                     }
                 }
-
                 th {
                     border-bottom: 1px solid $gray_400;
                     font-size: 1rem;
                 }
-
                 td {
                     border-top: 1px solid $light-gray;
                 }
             }
         }
-
         .sharesection {
             margin-top: 2rem;
             justify-content: left;
             align-items: center;
-
             a {
                 margin-left: 1rem;
                 margin-right: 1rem;
                 display: inline-block;
-
                 .icon-Facebook,
                 .icon-Twitter,
                 .icon-pinterest {
@@ -719,7 +673,6 @@ header {
                 }
             }
         }
-
         .payment-options {
             margin-top: 2rem;
             width: 30rem;
