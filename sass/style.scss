@@ -206,15 +206,20 @@ header {
 // Product Details
 .detailscontainer {
     margin-top: 30px;
+    @include respond("xl") {
+        flex-direction: column;
+    }
     @include respond("lg") {
         flex-direction: column;
     }
     .detailsleftsection {
         width: 48%;
         position: relative;
-        @include respond("lg") {
+        @include respond("xl") {
             width: 100%;
+            margin-top: 2rem;
         }
+        
         .productimage {
             width: 100%;
             height: auto;
@@ -263,6 +268,7 @@ header {
                 margin-top: 1rem;
                 @include respond("xl") {
                     gap: 1.4rem;
+                    
                 }
                 @include respond("lg") {
                     width: 100%;
@@ -282,8 +288,8 @@ header {
                     cursor: pointer;
                     border: 2px solid transparent;
                     @include respond("xl") {
-                        width: 5.4rem;
-                        height: 5rem;
+                        width: 7.4rem;
+        height: 7rem;
                     }
                     @include respond("md") {
                         width: 6.4rem;
@@ -332,8 +338,12 @@ header {
                         font-size: 2rem;
                         z-index: 2;
                         @include respond("xl") {
+                            top: 46px;
+        left: 47px;
+                        }
+                        @include respond('lg'){
                             top: 27px;
-                            left: 21px;
+                            left: 30px;
                         }
                         @include respond("md") {
                             top: 36px;
@@ -357,9 +367,16 @@ header {
     }
     .detailsrightsection {
         width: 44%;
-        @include respond("md") {
+        @include respond("xl") {
             width: 100%;
             margin-top: 2rem;
+        }
+        @include respond("lg") {
+            width: 100%;
+            margin-top: 2rem;
+        }
+        @include respond("md") {
+           
         }
         .price-and-reviews {
             justify-content: space-between;
@@ -688,11 +705,11 @@ header {
             width: 30rem;
             @include respond('xl'){
                 width: 23rem;
+                margin: auto;
             }
             @include respond("lg") {
                 width: 18rem;
                 gap: 10px;
-                margin: auto;
             }
             @include respond("xs") {
                 width: 15rem;

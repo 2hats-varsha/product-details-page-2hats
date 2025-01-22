@@ -162,6 +162,9 @@ img{
     max-width: 38.5rem;
     width: 100%;
     height: auto;
+    @include respond('xl'){
+        max-width: 51.5rem;
+    }
 }
 [class^="icon-"], [class*=" icon-"] {
 font-size: 1.25rem;

@@ -242,6 +242,11 @@ img {
   width: 100%;
   height: auto;
 }
+@media (max-width: 75rem) {
+  img {
+    max-width: 51.5rem;
+  }
+}
 
 [class^=icon-], [class*=" icon-"] {
   font-size: 1.25rem;
@@ -586,6 +591,11 @@ header .container .row .hamburger .third-line {
 .detailscontainer {
   margin-top: 30px;
 }
+@media (max-width: 75rem) {
+  .detailscontainer {
+    flex-direction: column;
+  }
+}
 @media (max-width: 62rem) {
   .detailscontainer {
     flex-direction: column;
@@ -595,9 +605,10 @@ header .container .row .hamburger .third-line {
   width: 48%;
   position: relative;
 }
-@media (max-width: 62rem) {
+@media (max-width: 75rem) {
   .detailscontainer .detailsleftsection {
     width: 100%;
+    margin-top: 2rem;
   }
 }
 .detailscontainer .detailsleftsection .productimage {
@@ -682,8 +693,8 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
-    width: 5.4rem;
-    height: 5rem;
+    width: 7.4rem;
+    height: 7rem;
   }
 }
 @media (max-width: 48rem) {
@@ -741,8 +752,14 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
+    top: 46px;
+    left: 47px;
+  }
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
     top: 27px;
-    left: 21px;
+    left: 30px;
   }
 }
 @media (max-width: 48rem) {
@@ -769,7 +786,13 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection {
   width: 44%;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
+  .detailscontainer .detailsrightsection {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 62rem) {
   .detailscontainer .detailsrightsection {
     width: 100%;
     margin-top: 2rem;
@@ -1149,13 +1172,13 @@ header .container .row .hamburger .third-line {
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection .payment-options {
     width: 23rem;
+    margin: auto;
   }
 }
 @media (max-width: 62rem) {
   .detailscontainer .detailsrightsection .payment-options {
     width: 18rem;
     gap: 10px;
-    margin: auto;
   }
 }
 @media (max-width: 24rem) {
