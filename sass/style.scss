@@ -786,6 +786,9 @@ header {
                     @include respond("xl") {
                         padding: 0.8rem;
                     }
+                    @include respond("xs") {
+                        padding-left: 0rem;
+                    }
                 }
                 th {
                     font-size: 0.75rem;

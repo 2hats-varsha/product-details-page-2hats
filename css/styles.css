@@ -1259,6 +1259,14 @@ header .container .row .hamburger .third-line {
     padding: 0.8rem;
   }
 }
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .delivery-section table th,
+  .detailscontainer .detailsrightsection .delivery-section table td,
+  .detailscontainer .detailsrightsection .return-section table th,
+  .detailscontainer .detailsrightsection .return-section table td {
+    padding-left: 0rem;
+  }
+}
 .detailscontainer .detailsrightsection .delivery-section table th,
 .detailscontainer .detailsrightsection .return-section table th {
   font-size: 0.75rem;
