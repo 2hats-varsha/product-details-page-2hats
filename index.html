@@ -21,7 +21,7 @@
                             href="#"
                             class="brand"
                             aria-label="Logo"
-                            tabindex="1"
+                            
                         >
                             <img
                                 src="./assets/images/logo.svg"
@@ -38,7 +38,6 @@
                                         href="#"
                                         class="pointer uppercase first-active"
                                         aria-label="Women's section"
-                                        tabindex="1"
                                         >women</a
                                     >
                                 </li>
@@ -47,7 +46,6 @@
                                         href="#"
                                         class="pointer uppercase"
                                         aria-label="Men's section"
-                                        tabindex="1"
                                         >men</a
                                     >
                                 </li>
@@ -56,7 +54,6 @@
                                         href="#"
                                         class="pointer uppercase"
                                         aria-label="Kids' section"
-                                        tabindex="1"
                                         >kids</a
                                     >
                                 </li>
@@ -71,28 +68,27 @@
                                     placeholder="Search for items"
                                     name="search"
                                     id="search"
-                                    tabindex="5"
                                     aria-label="Search input field"
+                                    tabindex="0"
                                 />
                                 <button
                                     class="searchbtn .btn"
-                                    tabindex="6"
                                     aria-label="Search button"
+                                    tabindex="1"
                                 >
                                     <span class="icon-Search"></span>
                                 </button>
                             </div>
                             <button
-                                tabindex="7"
                                 aria-label="Account button"
                                 class="account-user"
                             >
                                 <span class="icon-Account"></span>
                             </button>
-                            <button tabindex="8" aria-label="Favorite button">
+                            <button aria-label="Favorite button">
                                 <span class="icon-heart"></span>
                             </button>
-                            <button tabindex="9" aria-label="Cart button">
+                            <button aria-label="Cart button">
                                 <span class="icon-Empty-Cart"></span>
                             </button>
                         </nav>
@@ -113,7 +109,6 @@
                         href="#"
                         class="tab active"
                         aria-label="General Info"
-                        tabindex="10"
                         aria-label="General Info"
                         >General Info</a
                     >
@@ -121,7 +116,6 @@
                         href="#"
                         class="tab"
                         aria-label="Product Details"
-                        tabindex="11"
                         aria-label="Product details"
                         >Product Details</a
                     >
@@ -129,7 +123,6 @@
                         href="#"
                         class="tab relative"
                         aria-label="Reviews"
-                        tabindex="12"
                         >Reviews <span class="reviewcount absolute">12</span></a
                     >
                 </div>
@@ -149,18 +142,18 @@
                                 <a
                                     href="#"
                                     class="arrow left flex"
-                                    aria-label="Previous Image" tabindex="13"
+                                    aria-label="Previous Image"
                                     ><span class="icon-left-arrow"></span
                                 ></a>
                                 <a
                                     href="#"
                                     class="arrow right flex"
-                                    aria-label="Next Image" tabindex="14"
+                                    aria-label="Next Image" 
                                     ><span class="icon-right-arrow"></span
                                 ></a>
                             </div>
                             <div class="thumbnails">
-                                <a href="#" class="thumbnail active-img" tabindex="15" aria-label="Product"
+                                <a href="#" class="thumbnail active-img"  aria-label="Product"
                                     ><img
                                         src="./assets/images/product.webp"
                                         alt="Product Thumbnail"
@@ -168,7 +161,7 @@
                                         height="104"
                                         width="104"
                                 /></a>
-                                <a href="#" class="thumbnail"  aria-label="Product-image" tabindex="16"
+                                <a href="#" class="thumbnail"  aria-label="Product-image" 
                                     ><img
                                         src="./assets/images/imagepart2.webp"
                                         alt="Product Thumbnail"
@@ -176,7 +169,7 @@
                                         height="104"
                                         width="104"
                                 /></a>
-                                <a href="#" class="thumbnail" aria-label="Product-image" tabindex="17"
+                                <a href="#" class="thumbnail" aria-label="Product-image" 
                                     ><img 
                                         src="./assets/images/imagepart3.webp"
                                         alt="Product Thumbnail"
@@ -184,7 +177,7 @@
                                         height="104"
                                         width="104"
                                 /></a>
-                                <a href="#" class="thumbnail" aria-label="Product-image" tabindex="18"
+                                <a href="#" class="thumbnail" aria-label="Product-image" 
                                     ><img
                                         src="./assets/images/imagepart4.webp"
                                         alt="Product Thumbnail"
@@ -192,7 +185,7 @@
                                         height="104"
                                         width="104"
                                 /></a>
-                                <a href="#" class="thumbnail last-thumbnail" aria-label="Product-image" tabindex="19">
+                                <a href="#" class="thumbnail last-thumbnail" aria-label="Product-image" >
                                     <img
                                         src="./assets/images/imagepart2.webp"
                                         alt="Product Thumbnail with Pause Icon"
@@ -237,15 +230,15 @@
                              <span>Color</span>
                              <div class="color-options flex flex-alignitem">
                                 <label class="flex pointer">
-                                    <input type="radio" name="color" id="pink" value="pink" aria-label="pink" class="pink" tabindex="20"/>
+                                    <input type="radio" name="color" id="pink" value="pink" aria-label="pink" class="pink" />
                                     <span class="circle pink"></span>
                                 </label>
                                 <label class="flex pointer">
-                                    <input type="radio" name="color" id="blue" value="blue" aria-label="blue" class="blue" tabindex="21"/>
+                                    <input type="radio" name="color" id="blue" value="blue" aria-label="blue" class="blue" />
                                         <span class="circle blue"></span>
                                 </label>
                                 <label class="flex pointer">
-                                    <input type="radio" name="color" id="yellow" value="yellow" aria-label="yellow" class="yellow" tabindex="22"/>
+                                    <input type="radio" name="color" id="yellow" value="yellow" aria-label="yellow" class="yellow" />
                                         <span class="circle yellow"></span>
                                 </label>
                             <div class="selected-color">
@@ -258,7 +251,7 @@
                                 <label for="size" class="size-label"
                                     >Size</label
                                 >
-                                <select id="size" name="size" value="" data-placeholder="Please Select" tabindex="23" aria-label="Size">
+                                <select id="size" name="size" value="" data-placeholder="Please Select"  aria-label="Size">
                                     <option value="select">
                                         Please Select
                                     </option>
@@ -347,20 +340,18 @@
                                     value="1"
                                     min="0"
                                     step="1"
-                                    tabindex="24"
                                     aria-label="quantity size"
                                 />
                             </div>
                             <button
                                 class="btn add-to-cart b-radius-minimal flex primary-button flex-alignitem .btn"
-                                aria-label="Add to Cart" tabindex="25"
+                                aria-label="Add to Cart" 
                             >
                                 <span class="icon-cart carticon"></span>
                                 Add to cart
                             </button>
                             <button
                                 class="btn favoritesection secondary-btn flex b-radius-minimal flex-alignitem flex-alignitem"
-                                tabindex="26"
                                 aria-label="Add to Favorites" 
                             >
                                 <span class="icon-heart"></span>
@@ -418,27 +409,27 @@
                         <!-- Social Sharing -->
                         <div class="sharesection flex">
                             <h2 class="h5">Share:</h2>
-                            <a href="#" class="social-button facebook" target="_blank" aria-label="facebook" tabindex="27"
+                            <a href="#" class="social-button facebook" target="_blank" aria-label="facebook" 
                                 ><span class="icon-Facebook"></span
                             ></a>
-                            <a href="#" class="social-button twitter" target="_blank" aria-label="twitter" tabindex="28"
+                            <a href="#" class="social-button twitter" target="_blank" aria-label="twitter" 
                                 ><span class="icon-Twitter"></span
                             ></a>
-                            <a href="#" class="social-button pinterest" target="_blank" aria-label="pinterest" tabindex="29"
+                            <a href="#" class="social-button pinterest" target="_blank" aria-label="pinterest" 
                                 ><span class="icon-pinterest"></span
                             ></a>
                         </div>
                         <!-- Payment Options -->
                         <div class="payment-options flex">
-                            <a href="#" class="payment-option visa" target="_blank" aria-label="Visa" tabindex="30">
+                            <a href="#" class="payment-option visa" target="_blank" aria-label="Visa" >
                                 <img src="./assets/images/visa.png" alt="Visa" height="64" width="120" loading="lazy"
                             /></a>
-                            <a href="#" class="payment-option mastercard" target="_blank" aria-label="Mastercar" tabindex="31"
+                            <a href="#" class="payment-option mastercard" target="_blank" aria-label="Mastercar" 
                                 ><img
                                     src="./assets/images/master-card.png"
                                     alt="Mastercard" height="64" width="120" loading="lazy"
                             /></a>
-                            <a href="#" class="payment-option paypal" target="_blank" aria-label="Paypal" tabindex="32"
+                            <a href="#" class="payment-option paypal" target="_blank" aria-label="Paypal" 
                                 ><img
                                     src="./assets/images/pay-pal.png"
                                     alt="PayPal" height="64" width="120"
