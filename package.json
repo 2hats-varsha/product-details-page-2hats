@@ -2,11 +2,11 @@
   "name": "product",
   "version": "1.0.0",
   "main": "index.js",
-    "scripts": {
-      "sass": "sass --watch ./sass/style.scss ./css/styles.css --style=compressed",
-      "server": "live-server --watch=./css/styles.css",
-      "start": "npx concurrently \"npm run sass\" \"npm run server\""
-    },
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss ./css/styles.css --style=compressed",
+    "server": "live-server --watch=./css/styles.css",
+    "start": "npx concurrently \"npm run sass\" \"npm run server\""
+  },
   "author": "",
   "license": "ISC",
   "keywords": [],

@@ -88,7 +88,9 @@ a {
   }
   input{
     border: none;
-    outline: none;
+    &:focus {
+        outline: none;
+    }
 }
   ul, ol {
     list-style: none;
@@ -110,7 +112,7 @@ a {
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
-    outline: none;
+    // outline: none;
   }
   table{
     width: 100%;
@@ -164,7 +166,6 @@ border-bottom: 1px solid $gray_400;
   .m-0 {
     margin: 0;
   }
-  
   .mt-1 {
     margin-top: 0.25rem;
   }

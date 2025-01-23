@@ -22,3 +22,15 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+const search = document.querySelector('icon-Search');
+document.addEventListener('keydown', function(event) {
+    
+    if (event.key === 'Enter' || event.key === 'F') {
+    console.log("dd");
+
+const searchInput = document.getElementById('search');
+searchInput.focus(); 
+searchInput.select(); 
+    }})
+    
+   

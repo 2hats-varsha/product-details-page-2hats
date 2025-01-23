@@ -134,6 +134,9 @@ header {
                                 font-size: .875rem;
                                 font-family: $font_light;
                             }
+                    &:focus {
+                        outline: none;
+                    }
                         }
                         .searchbtn {
                             padding-right: 0;
@@ -560,12 +563,15 @@ header {
                 background: transparent;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                    appearance: none;
-                    background-image: url('../assets/images/dropdown.svg');
-                    background-repeat: no-repeat;
-                    background-position: right 20px center; 
-                    background-size: 12px; 
-                    padding-right: 10px; 
+                appearance: none;
+                background-image: url('../assets/images/dropdown.svg');
+                background-repeat: no-repeat;
+                background-position: right 20px center; 
+                background-size: 12px; 
+                padding-right: 10px; 
+                &:focus {
+                    outline: none;
+                }
                 @include respond("xl") {
                     width: 16rem;
                 }
