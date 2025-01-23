@@ -5,8 +5,6 @@ radioButton.forEach((radio) => {
         selectedColorSpan.textContent = event.target.value;
     });
   });
-
-  // Select elements
 const sizeChartButton = document.getElementById("sizeChartButton");
 const modal = document.getElementById("popup");
 const closeModalButton = document.getElementById("closeModalButton");
@@ -24,10 +22,8 @@ window.addEventListener("click", (event) => {
 });
 const search = document.querySelector('icon-Search');
 document.addEventListener('keydown', function(event) {
-    
     if (event.key === 'Enter' || event.key === 'F') {
     console.log("dd");
-
 const searchInput = document.getElementById('search');
 searchInput.focus(); 
 searchInput.select(); 
