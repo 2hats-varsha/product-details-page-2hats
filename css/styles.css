@@ -76,8 +76,7 @@ h1, .h1 {
 }
 @media (max-width: 24rem) {
   h1, .h1 {
-    text-align: center;
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     line-height: 3rem;
   }
 }
@@ -93,11 +92,6 @@ h2, .h2 {
 @media (max-width: 62rem) {
   h2, .h2 {
     font-size: 2rem;
-  }
-}
-@media (max-width: 48rem) {
-  h2, .h2 {
-    font-size: 1.8rem !important;
   }
 }
 
@@ -116,21 +110,6 @@ h5, .h5 {
   font-size: 1rem;
   color: #1E212C;
 }
-@media (max-width: 62rem) {
-  h5, .h5 {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 48rem) {
-  h5, .h5 {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 36rem) {
-  h5, .h5 {
-    font-size: 1rem;
-  }
-}
 
 h6, .h6 {
   font-size: 1.25rem;
@@ -146,11 +125,6 @@ p {
   font-size: 1.1rem;
   color: #424551;
   font-family: "Lato_regular", sans-serif;
-}
-@media (max-width: 62rem) {
-  .p {
-    font-size: 1.2rem !important;
-  }
 }
 .p .deliveryhighlight {
   font-family: "Lato_bold", sans-serif;
@@ -251,14 +225,9 @@ button {
 }
 
 img {
-  max-width: 38.5rem;
+  max-width: 100%;
   width: 100%;
   height: auto;
-}
-@media (max-width: 75rem) {
-  img {
-    max-width: 51.5rem;
-  }
 }
 
 [class^=icon-], [class*=" icon-"] {
@@ -355,18 +324,10 @@ img {
 }
 
 .b-radius-100 {
-  width: 1.4rem;
-  height: 1.4rem;
-  max-width: 1.4rem;
-  max-height: 1.4rem;
-}
-@media (max-width: 62rem) {
-  .b-radius-100 {
-    max-width: 2.5rem;
-    max-height: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
+  width: 1.5rem;
+  height: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
 }
 
 .innercircleatt {
@@ -423,6 +384,11 @@ body {
 @media (max-width: 75rem) {
   .container {
     width: 82%;
+  }
+}
+@media (max-width: 24rem) {
+  .container {
+    width: 90%;
   }
 }
 
@@ -581,8 +547,14 @@ header .container .row .hamburger .third-line {
   border-bottom: 2px solid #E5E8ED;
   padding-bottom: 1.2rem;
 }
+@media (max-width: 24rem) {
+  .tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 .tabs .tab {
-  color: #737582;
+  color: #787A80;
   padding: 12px 16px;
   font-family: "Lato_bold", sans-serif;
   border: 2px solid transparent;
@@ -603,7 +575,7 @@ header .container .row .hamburger .third-line {
   .tabs .tab {
     margin-right: 0;
     font-size: 0.8rem;
-    padding: 12px 2px;
+    padding: 12px 12px;
   }
 }
 .tabs .tab.active {
@@ -615,16 +587,11 @@ header .container .row .hamburger .third-line {
   right: 0.1rem;
   font-size: 0.8rem;
   font-family: "Raleway_bold", sans-serif;
-  color: #737582;
+  color: #787A80;
 }
 
 .detailscontainer {
   margin-top: 30px;
-}
-@media (max-width: 75rem) {
-  .detailscontainer {
-    flex-direction: column;
-  }
 }
 @media (max-width: 62rem) {
   .detailscontainer {
@@ -637,8 +604,17 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection {
-    width: 100%;
     margin-top: 2rem;
+  }
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsleftsection {
+    width: 100%;
+  }
+}
+@media (max-width: 48rem) {
+  .detailscontainer .detailsleftsection {
+    margin-top: 0rem;
   }
 }
 .detailscontainer .detailsleftsection .image-gallery {
@@ -648,12 +624,6 @@ header .container .row .hamburger .third-line {
   width: 100%;
   height: auto;
   border-radius: 4px;
-}
-@media (max-width: 62rem) {
-  .detailscontainer .detailsleftsection .image-gallery .productimage {
-    max-width: 42rem !important;
-    width: 100%;
-  }
 }
 .detailscontainer .detailsleftsection .image-gallery .img-navigation {
   position: absolute;
@@ -668,7 +638,6 @@ header .container .row .hamburger .third-line {
 @media (max-width: 24rem) {
   .detailscontainer .detailsleftsection .image-gallery .img-navigation {
     top: 36%;
-    width: 97%;
   }
 }
 .detailscontainer .detailsleftsection .image-gallery .img-navigation .arrow {
@@ -703,11 +672,13 @@ header .container .row .hamburger .third-line {
 @media (max-width: 62rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails {
     width: 100%;
+    margin-top: 1.4rem;
   }
 }
 @media (max-width: 36rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails {
     gap: 0.4rem;
+    margin-top: 0.4rem;
   }
 }
 @media (max-width: 24rem) {
@@ -726,8 +697,14 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
-    width: 7.4rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
+    width: 8rem;
+    height: 8rem;
   }
 }
 @media (max-width: 48rem) {
@@ -738,8 +715,8 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 36rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media (max-width: 24rem) {
@@ -771,10 +748,14 @@ header .container .row .hamburger .third-line {
   transition: opacity 0.3s ease-in-out;
   border-radius: 4px;
   z-index: 1;
-  height: 6.8rem;
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail.last-thumbnail span {
   font-size: 1.875rem;
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail.last-thumbnail span {
+    font-size: 1.5rem;
+  }
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
   top: 36px;
@@ -787,8 +768,14 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 36px;
-    left: 40px;
+    top: 23px;
+    left: 23px;
+  }
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
+    top: 48px;
+    left: 48px;
   }
 }
 @media (max-width: 48rem) {
@@ -805,9 +792,8 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 24rem) {
   .detailscontainer .detailsleftsection .image-gallery .thumbnails .thumbnail .icon-pause {
-    top: 12px;
-    left: 7px;
-    font-size: 1.5rem;
+    top: 13px;
+    left: 11px;
   }
 }
 .detailscontainer .detailsleftsection .image-gallery .thumbnails .active-img {
@@ -818,7 +804,6 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 75rem) {
   .detailscontainer .detailsrightsection {
-    width: 100%;
     margin-top: 2rem;
   }
 }
@@ -834,7 +819,6 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 24rem) {
   .detailscontainer .detailsrightsection .price-and-reviews {
-    flex-direction: column;
     align-items: flex-end;
     width: 100%;
   }
@@ -842,7 +826,7 @@ header .container .row .hamburger .third-line {
 @media (max-width: 24rem) {
   .detailscontainer .detailsrightsection .price-and-reviews .price-section {
     margin-bottom: 1rem;
-    width: 100%;
+    width: 14rem;
   }
 }
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .price {
@@ -850,12 +834,22 @@ header .container .row .hamburger .third-line {
   font-family: "Lato_bold", sans-serif;
   color: #E00000;
 }
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .price-and-reviews .price-section .price {
+    margin-left: 0;
+  }
+}
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .old-price {
   text-decoration: line-through;
   margin-left: 12px;
   font-family: "Lato_regular", sans-serif;
   color: #6F7176;
   font-size: 1.125rem;
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .price-and-reviews .price-section .old-price {
+    margin-left: 0;
+  }
 }
 .detailscontainer .detailsrightsection .price-and-reviews .price-section .discount {
   font-family: "Lato_bold", sans-serif;
@@ -865,6 +859,11 @@ header .container .row .hamburger .third-line {
   border-radius: 4px;
   font-weight: bold;
   color: #fff;
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .price-and-reviews .price-section .discount {
+    margin-left: 0;
+  }
 }
 .detailscontainer .detailsrightsection .price-and-reviews .reviews {
   align-items: center;
@@ -892,72 +891,37 @@ header .container .row .hamburger .third-line {
   font-size: 0.875rem;
 }
 .detailscontainer .detailsrightsection .color-selection .color-options {
-  justify-content: flex-start !important;
+  gap: 10px;
   margin-top: 1rem;
+  justify-content: flex-start;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option {
-  border: 1px solid #D7DADD;
-  border-radius: 50%;
-  margin-right: 0.5rem;
+.detailscontainer .detailsrightsection .color-selection .color-options label {
+  align-items: center;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input[type=radio] {
-  border-radius: 50%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: absolute;
-  top: 1px;
-  left: -2px;
-  right: -2px;
-  bottom: 7px;
-}
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.pink[type=radio]:checked {
-  position: absolute;
-  top: 0px;
-  left: -2px;
-  right: -2px;
-  bottom: 7px;
-  width: 1rem;
-  background-color: #E0AEA2;
-  height: 1rem;
-}
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.blue[type=radio]:checked {
-  position: absolute;
-  top: 0px;
-  left: -2px;
-  right: -2px;
-  bottom: 7px;
-  width: 1rem;
-  background-color: #C0DDED;
-  height: 1rem;
-}
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.yellow[type=radio]:checked {
-  position: absolute;
-  top: 0px;
-  left: -2px;
-  right: -2px;
-  bottom: 7px;
-  width: 1rem;
-  background-color: #FEDE41;
-  height: 1rem;
-}
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option span {
+.detailscontainer .detailsrightsection .color-selection .color-options input[type=radio] {
   display: none;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.pink[type=radio]:checked + label span {
-  color: #72757E;
-  display: block;
-  transform: translateX(106px);
+.detailscontainer .detailsrightsection .color-selection .color-options .circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #D7DADD;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.blue[type=radio]:checked + label span {
-  color: #72757E;
-  display: block;
-  transform: translateX(72px);
+.detailscontainer .detailsrightsection .color-selection .color-options .circle.pink {
+  background-color: #f4c2c2;
 }
-.detailscontainer .detailsrightsection .color-selection .color-options .color-option input.yellow[type=radio]:checked + label span {
-  color: #72757E;
-  display: block;
-  transform: translateX(41px);
+.detailscontainer .detailsrightsection .color-selection .color-options .circle.blue {
+  background-color: #b2d8f4;
+}
+.detailscontainer .detailsrightsection .color-selection .color-options .circle.yellow {
+  background-color: #ffe066;
+}
+.detailscontainer .detailsrightsection .color-selection .color-options input[type=radio]:checked + .circle {
+  border-color: #008080;
+  box-shadow: 1px 1px 1px #fff;
 }
 .detailscontainer .detailsrightsection .size-selection {
   margin-bottom: 1.4rem;
@@ -967,6 +931,10 @@ header .container .row .hamburger .third-line {
 @media (max-width: 62rem) {
   .detailscontainer .detailsrightsection .size-selection {
     width: 100%;
+  }
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .size-selection {
     flex-direction: column;
   }
 }
@@ -986,11 +954,11 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection .size-selection select {
   margin-top: 0.25rem;
-  width: 22rem;
+  width: 21.75rem;
   border-radius: 4px;
   border: 1px solid #D7DADD;
   font-size: 14px;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   background: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1008,19 +976,46 @@ header .container .row .hamburger .third-line {
 }
 @media (max-width: 62rem) {
   .detailscontainer .detailsrightsection .size-selection select {
+    width: 28rem;
+  }
+}
+@media (max-width: 36rem) {
+  .detailscontainer .detailsrightsection .size-selection select {
+    width: 18rem;
+  }
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .size-selection select {
     width: 100%;
   }
 }
 .detailscontainer .detailsrightsection .size-selection .sizechart {
   font-family: "Lato_bold", sans-serif;
   margin-top: 10px;
-  font-size: 14px;
   color: #424551;
   align-items: center;
   cursor: pointer;
 }
-.detailscontainer .detailsrightsection .size-selection .sizechart span {
-  margin-left: 0.6rem;
+@media (max-width: 62rem) {
+  .detailscontainer .detailsrightsection .size-selection .sizechart {
+    width: 6rem;
+  }
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .size-selection .sizechart {
+    width: 5.4rem;
+  }
+}
+.detailscontainer .detailsrightsection .size-selection .sizechart .chart {
+  margin-left: 0.4rem;
+  font-size: 0.875rem;
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsrightsection .size-selection .sizechart .chart {
+    margin-left: 0;
+  }
+}
+.detailscontainer .detailsrightsection .size-selection .sizechart .icon-chart {
   font-size: 1rem;
 }
 .detailscontainer .detailsrightsection .buttons {
@@ -1052,12 +1047,25 @@ header .container .row .hamburger .third-line {
   .detailscontainer .detailsrightsection .buttons .quantity-section {
     width: 100% !important;
     padding: 0.8rem;
+    height: auto;
+  }
+}
+@media (max-width: 62rem) {
+  .detailscontainer .detailsrightsection .buttons .quantity-section {
+    width: 12% !important;
+    padding: 0.8rem;
+    height: 1rem;
   }
 }
 @media (max-width: 48rem) {
   .detailscontainer .detailsrightsection .buttons .quantity-section {
     width: 100% !important;
     padding: 1rem;
+  }
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .buttons .quantity-section {
+    padding: 0.75rem 1rem;
   }
 }
 .detailscontainer .detailsrightsection .buttons .quantity-section input {
@@ -1092,6 +1100,9 @@ header .container .row .hamburger .third-line {
 @media (max-width: 62rem) {
   .detailscontainer .detailsrightsection .buttons .add-to-cart {
     padding: 0.8rem 4rem;
+    margin-top: 0;
+    width: 80%;
+    margin-left: 2rem;
   }
 }
 @media (max-width: 48rem) {
@@ -1167,6 +1178,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .return-section p {
   font-family: "Lato_regular", sans-serif;
   font-size: 0.875rem;
+  color: #424551;
 }
 .detailscontainer .detailsrightsection .delivery-section ul,
 .detailscontainer .detailsrightsection .return-section ul {
@@ -1187,7 +1199,8 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .delivery-section table,
 .detailscontainer .detailsrightsection .return-section table {
   width: 100%;
-  border-collapse: collapse;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D7DADD;
   text-align: left;
 }
 .detailscontainer .detailsrightsection .delivery-section table thead,
@@ -1201,7 +1214,6 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .delivery-section table td,
 .detailscontainer .detailsrightsection .return-section table th,
 .detailscontainer .detailsrightsection .return-section table td {
-  border-bottom: 1px solid #D7DADD;
   padding: 0.7rem;
   text-align: left;
   color: #72757E;
@@ -1218,10 +1230,15 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection .delivery-section table th,
 .detailscontainer .detailsrightsection .return-section table th {
-  border-bottom: 1px solid #D7DADD;
   font-size: 0.75rem;
   font-family: "Lato_regular", sans-serif;
-  color: #737582;
+  color: #787A80;
+}
+@media (max-width: 24rem) {
+  .detailscontainer .detailsrightsection .delivery-section table th,
+  .detailscontainer .detailsrightsection .return-section table th {
+    padding: 0.4rem;
+  }
 }
 .detailscontainer .detailsrightsection .delivery-section table td,
 .detailscontainer .detailsrightsection .return-section table td {
@@ -1242,7 +1259,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .sharesection a .icon-Twitter,
 .detailscontainer .detailsrightsection .sharesection a .icon-pinterest {
   font-size: 1.3rem;
-  color: #737582;
+  color: #787A80;
 }
 .detailscontainer .detailsrightsection .payment-options {
   margin-top: 2rem;

@@ -21,8 +21,7 @@ font-family:$lato_black;
     line-height: 3.5rem;
 }
 @include respond('xs') {
-    text-align: center;
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     line-height: 3rem;
 }
 }
@@ -34,9 +33,7 @@ font-size: 1rem;
 @include respond('lg') {
     font-size: 2rem;
 }
-@include respond('md') {
-    font-size: 1.8rem !important;
-}
+
 }
 h3,h3{
 font-size: 2rem;
@@ -50,15 +47,7 @@ h4,.h4{
 h5,.h5{
     font-size: 1rem;
     color: $secondary_color;
-    @include respond('lg') {
-        font-size: 1.6rem;
-    }
-    @include respond('md') {
-        font-size: 1.3rem;
-    }
-    @include respond('sm') {
-        font-size: 1rem;
-    }
+    
 }
 h6,.h6{
     font-size: 1.25rem;
@@ -72,9 +61,7 @@ p{
     font-size: 1.1rem;
     color: $gray_800;
     font-family: $lato_regular;
-    @include respond('lg') {
-        font-size: 1.2rem !important;
-    }
+    
     .deliveryhighlight{
     font-family: $lato_bold;
     }
@@ -160,12 +147,9 @@ a {
     margin-left: 1rem;
 }
 img{
-    max-width: 38.5rem;
+    max-width: 100%;
     width: 100%;
     height: auto;
-    @include respond('xl'){
-        max-width: 51.5rem;
-    }
 }
 [class^="icon-"], [class*=" icon-"] {
 font-size: 1.25rem;
@@ -236,16 +220,10 @@ font-size: 1.25rem;
     }
 }
 .b-radius-100{
-    width: 1.4rem;
-    height: 1.4rem;
-    max-width: 1.4rem;
-    max-height: 1.4rem;
-    @include respond('lg') {
-        max-width: 2.5rem;
-        max-height: 2.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
+    width: 1.5rem;
+    height: 1.5rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
 }
 .innercircleatt{
     width: 1rem;

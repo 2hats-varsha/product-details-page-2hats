@@ -210,33 +210,31 @@
                                 <span>12 Reviews</span>
                             </div>
                         </div>
-                         <div class="color-selection">
+                        <div class="color-selection">
                              <span>Color</span>
                              <div class="color-options flex flex-alignitem">
-                                <div class="color-option outercirclepink b-radius-100 relative active">
+                                <label class="flex pointer">
                                     <input type="radio" name="color" id="pink" value="pink" aria-label="pink" class="pink"/>
-                                    <label for="pink">
-                                        <span class="pink">pink
-                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="color-option outercirclepink b-radius-100 relative ">
+                                    <span class="circle pink"></span>
+                                </label>
+                                <label class="flex pointer">
                                     <input type="radio" name="color" id="blue" value="blue" aria-label="blue" class="blue"/>
-                                    <label for="blue">
-                                        <span class="blue">Blue
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="color-option outercirclepink b-radius-100 relative ">
+                                    
+                                        <span class="circle blue"></span>
+                                    
+                                </label>
+                                <label class="flex pointer">
                                     <input type="radio" name="color" id="yellow" value="yellow" aria-label="yellow" class="yellow"/>
-                                    <label for="yellow">
-                                        <span class="yellow">Yellow
-                                        </span>
-                                    </label>
-                                </div>
-                             </div>
-                         </div>
+                                    
+                                        <span class="circle yellow"></span>
+                                   
+                                </label>
+                            
+                            <div class="selected-color">
+                                <span id="selectedColor"></span>
+                              </div>
+                            </div>
+                        </div>
                         <div class="size-selection flex">
                             <div class="sizesection flex">
                                 <label for="size" class="size-label"
@@ -253,7 +251,7 @@
                             </div>
                             <div class="sizechart flex">
                                 <span class="icon-chart"></span>
-                                <span>Size chart</span>
+                                <span class="chart">Size chart</span>
                             </div>
                         </div>
                         <!-- Buttons -->
@@ -277,7 +275,7 @@
                                 aria-label="Add to Cart"
                             >
                                 <span class="icon-cart carticon"></span>
-                                Add to Cart
+                                Add to cart
                             </button>
                             <button
                                 class="btn favoritesection secondary-btn flex b-radius-minimal flex-alignitem flex-alignitem"
@@ -369,5 +367,6 @@
                 </div>
             </section>
         </main>
+        <script src="./js/functions.js"></script>
     </body>
 </html>

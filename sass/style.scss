@@ -31,6 +31,9 @@ body {
     @include respond("xl") {
         width: 82%;
     }
+    @include respond('xs'){
+        width: 90%;
+    }
 }
 // Flexbox Utility
 .flex {
@@ -184,6 +187,10 @@ header {
     margin-bottom: 20px;
     border-bottom: 2px solid $light_gray;
     padding-bottom: 1.2rem;
+    @include respond('xs'){
+        width:100%;
+        justify-content: space-between;
+    }
     .tab {
         color: $gray_600;
         padding: 12px 16px;
@@ -202,7 +209,7 @@ header {
         @include respond("xs") {
             margin-right: 0;
             font-size: 0.8rem;
-            padding: 12px 2px;
+            padding: 12px 12px;
         }
         &.active {
             border: 1px solid $primary-color;
@@ -220,9 +227,7 @@ header {
 // Product Details
 .detailscontainer {
     margin-top: 30px;
-    @include respond("xl") {
-        flex-direction: column;
-    }
+   
     @include respond("lg") {
         flex-direction: column;
     }
@@ -230,21 +235,20 @@ header {
         width: 48%;
         position: relative;
         @include respond("xl") {
-            width: 100%;
             margin-top: 2rem;
         }
-        
+        @include respond("lg") {
+            width: 100%;
+        }
+        @include respond('md'){
+            margin-top: 0rem;
+        }
         .image-gallery {
             position: relative;
             .productimage {
                 width: 100%;
                 height: auto;
                 border-radius: $border-radius;
-            
-                @include respond("lg") {
-                    max-width: 42rem !important;
-                    width: 100%;
-                }
             }
             .img-navigation {
                 position: absolute;
@@ -257,8 +261,7 @@ header {
                 z-index: 0;
                 @include respond("xs") {
                     top: 36%;
-                    width: 97%;
-                }
+                    }
                 .arrow {
                     background-color: $white;
                     color: $white;
@@ -286,9 +289,11 @@ header {
                 }
                 @include respond("lg") {
                     width: 100%;
+                    margin-top: 1.4rem;
                 }
                 @include respond("sm") {
                     gap: 0.4rem;
+                    margin-top: .4rem;
                 }
                 @include respond("xs") {
                     gap: 0.8rem;
@@ -302,16 +307,20 @@ header {
                     cursor: pointer;
                     border: 2px solid transparent;
                     @include respond("xl") {
-                        width: 7.4rem;
-                        height: 7rem;
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                    @include respond('lg'){
+                        width: 8rem;
+                        height: 8rem;
                     }
                     @include respond("md") {
                         width: 6.4rem;
                         height: 6rem;
                     }
                     @include respond("sm") {
-                        width: 4rem;
-                        height: 4rem;
+                        width: 5rem;
+                        height: 5rem;
                     }
                     @include respond("xs") {
                         width: 3rem;
@@ -339,10 +348,12 @@ header {
                             transition: opacity 0.3s ease-in-out;
                             border-radius: 4px;
                             z-index: 1;
-                            height: 6.8rem;
                         }
                         span{
                             font-size: 1.875rem;
+                            @include respond('xs'){
+                            font-size: 1.5rem;
+                            }
                         }
                     }
                     .icon-pause {
@@ -354,8 +365,12 @@ header {
                         font-size: 2rem;
                         z-index: 2;
                         @include respond("xl") {
-                            top: 36px;
-                            left: 40px;
+                            top: 23px;
+                            left: 23px;
+                        }
+                        @include respond('lg'){
+                            top: 48px;
+                            left: 48px;
                         }
                         @include respond("md") {
                             top: 31px;
@@ -366,9 +381,8 @@ header {
                             left: 14px;
                         }
                         @include respond("xs") {
-                            top: 12px;
-                            left: 7px;
-                            font-size: 1.5rem;
+                            top: 13px;
+                            left: 11px;
                         }
                     }
                 }
@@ -381,7 +395,6 @@ header {
     .detailsrightsection {
         width: 43%;
         @include respond("xl") {
-            width: 100%;
             margin-top: 2rem;
         }
         @include respond("lg") {
@@ -395,26 +408,33 @@ header {
             justify-content: space-between;
             margin-bottom: 20px;
             @include respond("xs") {
-                flex-direction: column;
+                // flex-direction: column;
                 align-items: flex-end;
                 width: 100%;
             }
             .price-section {
                 @include respond("xs") {
                     margin-bottom: 1rem;
-                    width: 100%;
+                    width: 14rem;
                 }
                 .price {
                     font-size: 1.5rem;
                     font-family: $lato-bold;
                     color: $danger;
+                    @include respond("xs") {
+                        margin-left: 0;
+                    }
                 }
+
                 .old-price {
                     text-decoration: line-through;
                     margin-left: 12px;
                     font-family: $lato_regular;
                     color: $gray_700;
                     font-size: 1.125rem;
+                    @include respond("xs") {
+                        margin-left: 0;
+                    }
                 }
                 .discount {
                     font-family: $lato_bold;
@@ -424,6 +444,9 @@ header {
                     border-radius: $border-radius;
                     font-weight: bold;
                     color: $white;
+                    @include respond("xs") {
+                        margin-left: 0;
+                    }
                 }
             }
             .reviews {
@@ -448,78 +471,42 @@ header {
                 font-size: 0.875rem;
             }
             .color-options {
-                justify-content: flex-start !important;
+                gap: 10px;
                 margin-top: 1rem;
-                .color-option{
-                    border: 1px solid $gray_400;
-                    border-radius: 50%;
-                    margin-right: .5rem;
-                
-                    input[type='radio'] {
-                        border-radius: 50%;
-                        appearance: none;
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        position: absolute;
-                        top: 1px;
-                        left: -2px;
-                        right: -2px;
-                        bottom: 7px;
-                    }   
+                justify-content: flex-start;
+                label{
+                    align-items: center;
                     
-                
-                    input.pink[type='radio']:checked {
-                        position: absolute;
-                            top: 0px;
-                            left: -2px;
-                            right: -2px;
-                            bottom: 7px;
-                            width: 1rem;
-                            background-color: $pink;
-                            height: 1rem;
-                        
-                    }
-                    input.blue[type='radio']:checked {
-                        position: absolute;
-                            top: 0px;
-                            left: -2px;
-                            right: -2px;
-                            bottom: 7px;
-                            width: 1rem;
-                            background-color: $blue_light;
-                            height: 1rem;
-                        
-                    }
-                    input.yellow[type='radio']:checked {
-                        position: absolute;
-                            top: 0px;
-                            left: -2px;
-                            right: -2px;
-                            bottom: 7px;
-                            width: 1rem;
-                            background-color: $yellow_color;
-                            height: 1rem;
-                        
-                    }
-                    span{
-                        display: none;
-                    }
-                    input.pink[type="radio"]:checked + label span {
-                        color: $gray; 
-                        display: block;
-                        transform: translateX(106px);
-                    }
-                    input.blue[type="radio"]:checked + label span {
-                        color: $gray; 
-                        display: block;
-                        transform: translateX(72px);
-                    }
-                    input.yellow[type="radio"]:checked + label span {
-                        color: $gray; 
-                        display: block;
-                        transform: translateX(41px);
-                    }
                 }
+                input[type="radio"] {
+                    display: none;
+                  }
+                  .circle {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid $white;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 0 5px $gray_400;
+                  }
+                  
+                  .circle.pink {
+                    background-color: #f4c2c2;
+                  }
+                  
+                  .circle.blue {
+                    background-color: #b2d8f4;
+                  }
+                  
+                  .circle.yellow {
+                    background-color: #ffe066;
+                  }
+                  
+                  input[type="radio"]:checked + .circle {
+                    border-color: #008080; 
+                    box-shadow: 1px 1px 1px $white;
+                  }
             }
             text-transform: capitalize;
             color: $gray_800;
@@ -532,7 +519,10 @@ header {
             align-items: end;
             @include respond("lg") {
                 width: 100%;
+            }
+            @include respond("xs") {
                 flex-direction: column;
+
             }
             .sizesection {
                 flex-direction: column;
@@ -548,11 +538,11 @@ header {
             }
             select {
                 margin-top: 0.25rem;
-                width: 22rem;
+                width: 21.75rem;
                 border-radius: $border-radius;
                 border: 1px solid $gray_400;
                 font-size: 14px;
-                padding: .75rem 1rem;
+                padding: .85rem 1rem;
                 background: transparent;
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -566,21 +556,36 @@ header {
                     width: 16rem;
                 }
                 @include respond("lg") {
-                    width: 100%;
+                    width: 28rem;
                 }
-                
+                @include respond('sm'){
+                    width: 18rem;
+                }
+                @include respond("xs") {
+                    width: 100%;
+    
+                }
             }
-            
-            
             .sizechart {
                 font-family: $lato-bold;
                 margin-top: 10px;
-                font-size: 14px;
                 color: $gray_800;
                 align-items: center;
                 cursor: pointer;
-                span {
-                    margin-left: 0.6rem;
+                @include respond('lg'){
+                    width: 6rem;
+                }
+                @include respond('xs'){
+                    width: 5.4rem;
+                }
+                .chart {
+                    margin-left: 0.4rem;
+                    font-size: 0.875rem;
+                    @include respond("lg") {
+                       margin-left: 0;
+                    }
+                }
+                .icon-chart{
                     font-size: 1rem;
                 }
             }
@@ -607,10 +612,20 @@ header {
                 @include respond("xl") {
                     width: 100% !important;
                     padding: .8rem;
+                    height: auto;
                 }
+                @include respond('lg'){
+                    width: 12% !important;
+                    padding: 0.8rem;
+                    height: 1rem;
+                }
+                
                 @include respond("md") {
                     width: 100% !important;
                     padding: 1rem;
+                }
+                @include respond('xs'){
+                    padding: .75rem 1rem;
                 }
 
                 input {
@@ -641,6 +656,9 @@ header {
                 }
                 @include respond("lg") {
                     padding: 0.8rem 4rem;
+                    margin-top: 0;
+                    width: 80%;
+                    margin-left: 2rem;
                 }
                 @include respond("md") {
                     width: 100%;
@@ -705,6 +723,7 @@ header {
             p{
                 font-family: $lato_regular;
                 font-size: 0.875rem;
+                color: $gray_800;
             }
             ul {
                 list-style: disc;
@@ -722,7 +741,8 @@ header {
             
             table {
                 width: 100%;
-                border-collapse: collapse;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $gray_400;
                 text-align: left;
                 thead {
                     font-family: $lato_regular;
@@ -735,7 +755,7 @@ header {
                 }
                 th,
                 td {
-                    border-bottom: 1px solid $gray_400;
+                   
                     padding: .7rem;
                     text-align: left;
                     color: $gray;
@@ -746,10 +766,13 @@ header {
                     }
                 }
                 th {
-                    border-bottom: 1px solid $gray_400;
                     font-size: 0.75rem;
                     font-family: $lato_regular;
                     color: $gray_600;
+                    @include respond('xs')
+                    {
+                        padding: .4rem;
+                    }
                 }
                 td {
                     font-size: 0.875rem;
