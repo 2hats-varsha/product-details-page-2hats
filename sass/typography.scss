@@ -112,6 +112,31 @@ a {
     cursor: pointer;
     outline: none;
   }
+  table{
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray_400;
+    text-align: left;
+
+  }
+  tr{
+border-bottom: 1px solid $gray_400;
+  }
+  th,
+  td {
+                   
+    padding: .7rem;
+    text-align: left;
+    color: $gray;
+    font-size: 0.75rem;
+    font-family:$lato_regular;
+    @include respond("xl") {
+        padding: 0.8rem;
+    }
+    @include respond("xs") {
+        padding-left: 0rem;
+    }
+}
   .btn {
     font-size: 1rem;
     font-weight: bold;

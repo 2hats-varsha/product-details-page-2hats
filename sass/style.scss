@@ -103,7 +103,11 @@ header {
                                 color: $primary-color;
                             }
                             &:hover {
-                                border-bottom: 2px solid $primary-color;
+                                a {
+                                    color: $primary-color;
+                                    font-family: $Raleway_semi_bold;
+                                }
+                                // border-bottom: 2px solid $primary-color;
                             }
                         }
                         li.active {
@@ -134,7 +138,6 @@ header {
                         .searchbtn {
                             padding-right: 0;
                             padding-bottom: .2rem;
-                           
                             .icon-Search {
                                 font-size: 1.2rem;
                                 color: $primary-color;
@@ -198,7 +201,6 @@ header {
         width:100%;
         justify-content: space-between;
     }
-    
     .tab {
         color: $gray_600;
         padding: 12px 16px;
@@ -213,8 +215,7 @@ header {
         @include respond("sm") {
             font-size: 0.9rem;
             padding: 12px 16px;
-        margin-right: 0px;
-            
+            margin-right: 0px;
         }
         @include respond("xs") {
             margin-right: 0;
@@ -237,7 +238,6 @@ header {
 // Product Details
 .detailscontainer {
     margin-top: 30px;
-   
     @include respond("lg") {
         flex-direction: column;
     }
@@ -425,7 +425,6 @@ header {
             justify-content: space-between;
             margin-bottom: 20px;
             @include respond("xs") {
-                // flex-direction: column;
                 align-items: flex-end;
                 width: 100%;
             }
@@ -442,7 +441,6 @@ header {
                         margin-left: 0;
                     }
                 }
-
                 .old-price {
                     text-decoration: line-through;
                     margin-left: 12px;
@@ -507,19 +505,15 @@ header {
                     transition: all 0.3s ease;
                     box-shadow: 0 0 5px $gray_400;
                   }
-                  
                   .circle.pink {
                     background-color: #f4c2c2;
                   }
-                  
                   .circle.blue {
                     background-color: #b2d8f4;
                   }
-                  
                   .circle.yellow {
                     background-color: #ffe066;
                   }
-                  
                   input[type="radio"]:checked + .circle {
                     border-color: #008080; 
                     box-shadow: 1px 1px 1px $white;
@@ -528,18 +522,18 @@ header {
             text-transform: capitalize;
             color: $gray_800;
             font-size: 1.3rem;
-            font-family: $lato_regular;
+            font-family: $lato_regular; 
         }
         .size-selection {
             margin-bottom: 1.4rem;
             margin-top: 1.4rem;
             align-items: end;
+            position: relative !important;
             @include respond("lg") {
                 width: 100%;
             }
             @include respond("xs") {
                 flex-direction: column;
-
             }
             .sizesection {
                 flex-direction: column;
@@ -580,7 +574,6 @@ header {
                 }
                 @include respond("xs") {
                     width: 100%;
-    
                 }
             }
             .sizechart {
@@ -610,6 +603,63 @@ header {
                 }
             }
         }
+        #popup {
+            width: 120px;
+            border: 1px solid $gray_600;
+            border-radius: 4px;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
+          .title-size{
+            text-align: left;
+            font-family: $lato_regular;
+            font-size: 1.2rem;
+          }
+          .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            width: 42rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            @include respond('md'){
+            padding: 2rem;
+            width: 34rem;
+            }
+            @include respond('sm'){
+                width: 27rem;
+            }
+            @include respond('xs'){
+                width: 19rem;
+        padding: 1rem;
+            }
+          }
+          
+          .close {
+            position: absolute;
+            top: -7px;
+            right: -2px;
+            font-size: 20px;
+            cursor: pointer;
+          }
+          .size-chart-table{
+            border-bottom: none;
+            margin-top: 1rem;
+            @include respond('md'){
+                width: 100%;
+            }
+            th,td {
+                border-bottom: 1px solid $light-gray;
+            }
+
+          }
         .buttons {
             width: 100%;
             margin-bottom: 1rem;
@@ -650,7 +700,6 @@ header {
                 @include respond('xs'){
                     padding: .75rem 1rem;
                 }
-
                 input {
                     width: 4rem;
                     border: 1px solid transparent;
@@ -660,7 +709,6 @@ header {
                         width: 100% !important;
                     }
                 }
-                
             }
             .add-to-cart {
                 width: 15.25rem;
@@ -696,7 +744,6 @@ header {
                 @include respond("xs") {
                     padding: .9rem 0 !important;
                 }
-                
                 .carticon {
                     margin-right: 0.4rem;
                 }
@@ -760,35 +807,12 @@ header {
                     }
                 }
             }
-            
             table {
-                width: 100%;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid $gray_400;
-                text-align: left;
                 thead {
                     font-family: $lato_regular;
                     color: $gray_700;
                     font-size: 0.75rem;
                     text-transform: uppercase;
-                }
-                tr{
-
-                }
-                th,
-                td {
-                   
-                    padding: .7rem;
-                    text-align: left;
-                    color: $gray;
-                    font-size: 0.75rem;
-                    font-family:$lato_regular;
-                    @include respond("xl") {
-                        padding: 0.8rem;
-                    }
-                    @include respond("xs") {
-                        padding-left: 0rem;
-                    }
                 }
                 th {
                     font-size: 0.75rem;
