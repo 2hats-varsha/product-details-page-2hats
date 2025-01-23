@@ -477,6 +477,9 @@ header {
                     font-family: $lato_regular;
                     font-size: 0.9rem;
                 }
+                .rating-star{
+
+                }
             }
         }
         .color-selection {
@@ -818,8 +821,7 @@ header {
                     font-size: 0.75rem;
                     font-family: $lato_regular;
                     color: $gray_600;
-                    @include respond('xs')
-                    {
+                    @include respond('xs'){
                         padding: .4rem;
                     }
                 }
