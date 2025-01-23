@@ -17,8 +17,8 @@ font-family:$lato_black;
     line-height: 5rem;
 }
 @include respond('sm') {        
-    font-size: 3rem ;
-    line-height: 3.5rem;
+    font-size: 2.8rem;
+    line-height: 3rem;
 }
 @include respond('xs') {
     font-size: 2.5rem;
