@@ -572,6 +572,10 @@ header {
                 &:focus {
                     outline: none;
                 }
+                &:has(option:checked:first-child)
+                {
+                    color: $gray;
+                }
                 @include respond("xl") {
                     width: 16rem;
                 }
