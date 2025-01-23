@@ -597,7 +597,7 @@ header .container .row .hamburger .third-line {
   }
 }
 .tabs .tab {
-  color: #787A80;
+  color: #74767B;
   padding: 12px 16px;
   font-family: "Lato_bold", sans-serif;
   border: 2px solid transparent;
@@ -631,7 +631,7 @@ header .container .row .hamburger .third-line {
   right: 0.1rem;
   font-size: 0.8rem;
   font-family: "Raleway_bold", sans-serif;
-  color: #787A80;
+  color: #74767B;
 }
 
 .detailscontainer {
@@ -1081,7 +1081,7 @@ header .container .row .hamburger .third-line {
 }
 .detailscontainer .detailsrightsection #popup {
   width: 120px;
-  border: 1px solid #787A80;
+  border: 1px solid #74767B;
   border-radius: 4px;
   display: none;
   position: fixed;
@@ -1335,7 +1335,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .return-section table th {
   font-size: 0.75rem;
   font-family: "Lato_regular", sans-serif;
-  color: #787A80;
+  color: #74767B;
 }
 @media (max-width: 24rem) {
   .detailscontainer .detailsrightsection .delivery-section table th,
@@ -1362,7 +1362,7 @@ header .container .row .hamburger .third-line {
 .detailscontainer .detailsrightsection .sharesection a .icon-Twitter,
 .detailscontainer .detailsrightsection .sharesection a .icon-pinterest {
   font-size: 1.3rem;
-  color: #787A80;
+  color: #74767B;
 }
 .detailscontainer .detailsrightsection .payment-options {
   margin-top: 2rem;
