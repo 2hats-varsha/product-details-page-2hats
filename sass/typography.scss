@@ -275,5 +275,8 @@ font-size: 1.25rem;
 }
 .active{
     color: $primary-color !important;
-  
+}
+.overlay {
+    opacity: 0.5;
+    cursor: pointer;
 }
