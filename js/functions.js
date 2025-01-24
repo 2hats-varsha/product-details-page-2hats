@@ -31,7 +31,7 @@ searchInput.select();
     
    
 // slider
-const images = ["./assets/images/product.webp","./assets/images/imagepart2.webp","./assets/images/imagepart3.webp","./assets/images/imagepart4.webp","./assets/images/imagepart2.jpg","./assets/images/product.webp","./assets/images/imagepart2.webp","./assets/images/imagepart3.webp","./assets/images/imagepart4.webp","./assets/images/imagepart2.jpg"];
+const images = ["./assets/images/product.webp","./assets/images/imagepart2.webp","./assets/images/imagepart3.webp","./assets/images/imagepart4.webp","./assets/images/imagepart2.webp","./assets/images/product.webp","./assets/images/imagepart2.webp","./assets/images/imagepart3.webp","./assets/images/imagepart4.webp","./assets/images/imagepart2.webp"];
 
 const mainImage = document.getElementById('main-image');
 const thumbnails = document.querySelectorAll('.thumbnail');
