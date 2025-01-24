@@ -196,7 +196,6 @@ header {
     }
 }
 .tabs {
-    display: flex;
     margin-bottom: 20px;
     border-bottom: 2px solid $light_gray;
     padding-bottom: 1.2rem;
@@ -268,7 +267,6 @@ header {
                 top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                display: flex;
                 justify-content: space-between;
                 width: 88%;
                 z-index: 0;
@@ -300,10 +298,22 @@ header {
                     }
                 }
             }
+            .thumbnails-container {
+                overflow: scroll;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                ::-webkit-scrollbar {
+                    display: none;
+                    -ms-overflow-style: none;  
+                    scrollbar-width: none; 
+                }
+            }
             .thumbnails {
-                display: flex;
+                flex-shrink: 0;
+                scroll-snap-align: start;
                 justify-content: space-between;
                 margin-top: 1rem;
+                gap: 20px;
                 @include respond("xl") {
                     gap: 1.4rem; 
                 }

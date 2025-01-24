@@ -104,7 +104,7 @@
         <main class="container">
             <section class="mainsection">
                 <h1 class="h1">Basic hooded sweatshirt in pink</h1>
-                <div class="tabs">
+                <div class="tabs flex">
                     <a
                         href="#"
                         class="tab active"
@@ -139,69 +139,58 @@
                                 height="600"
                                 width="600"                            
                         />
-                            <div class="img-navigation">
+                            <div class="img-navigation flex">
                                 <a
                                     href="#"
                                     class="arrow left flex"
-                                    aria-label="Previous Image" onclick="prevButton()"
+                                    aria-label="Previous Image" 
                                     ><span class="icon-left-arrow"></span
                                 ></a>
                                 <a
                                     href="#"
                                     class="arrow right flex"
-                                    aria-label="Next Image"  onclick="nextButton()"
+                                    aria-label="Next Image"  
                                     ><span class="icon-right-arrow"></span
                                 ></a>
                             </div>
-                            <div class="thumbnails">
-                                <a href="#" class="thumbnail selected"  aria-label="Product"
-                                    ><img
-                                        src="./assets/images/product.webp"
-                                        alt="Product Thumbnail"
-                                        loading="lazy"
-                                        height="104"
-                                        width="104" onclick="changethumbnailImage(0)"
-                                /></a>
-                                <a href="#" class="thumbnail"  aria-label="Product-image" 
-                                    ><img
-                                        src="./assets/images/imagepart2.webp"
-                                        alt="Product Thumbnail"
-                                        loading="lazy"
-                                        height="104"
-                                        width="104"
-                                        onclick="changethumbnailImage(1)"
-                                /></a>
-                                <a href="#" class="thumbnail" aria-label="Product-image" 
-                                    ><img 
-                                        src="./assets/images/imagepart3.webp"
-                                        alt="Product Thumbnail"
-                                        loading="lazy"
-                                        height="104"
-                                        width="104" 
-                                        onclick="changethumbnailImage(2)"
-                                /></a>
-                                <a href="#" class="thumbnail" aria-label="Product-image" 
-                                    ><img
-                                        src="./assets/images/imagepart4.webp"
-                                        alt="Product Thumbnail"
-                                        loading="lazy"
-                                        height="104"
-                                        width="104"
-                                        onclick="changethumbnailImage(3)"
-                                /></a>
-                                <a href="#" class="thumbnail last-thumbnail" aria-label="Product-image" >
-                                    <img
-                                        src="./assets/images/imagepart2.webp"
-                                        alt="Product Thumbnail with Pause Icon"
-                                        class="relative"
-                                        loading="lazy"
-                                        height="104"
-                                        width="104"
-                                        onclick="changethumbnailImage(4)"
-                                    />
-                                    <span class="icon-pause absolute"></span>
-                                </a>
-                            </div>
+                           <div class="thumbnails-container flex">
+                               <div class="thumbnails flex">
+                                   <a href="#" class="thumbnail selected" aria-label="Product" onclick="changethumbnailImage(0)">
+                                       <img src="./assets/images/product.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(1)">
+                                       <img src="./assets/images/imagepart2.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(2)">
+                                       <img src="./assets/images/imagepart3.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(3)">
+                                       <img src="./assets/images/imagepart4.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail last-thumbnail" aria-label="Product-image" onclick="changethumbnailImage(4)">
+                                       <img src="./assets/images/imagepart2.webp" alt="Product Thumbnail with Pause Icon" loading="lazy" height="104" width="104" />
+                                       <span class="icon-pause absolute"></span>
+                                   </a>
+                               <!-- </div>
+                               <div class="thumbnails flex"> -->
+                                   <a href="#" class="thumbnail selected" aria-label="Product" onclick="changethumbnailImage(5)">
+                                       <img src="./assets/images/product.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(6)">
+                                       <img src="./assets/images/imagepart2.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(7)">
+                                       <img src="./assets/images/imagepart3.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail" aria-label="Product-image" onclick="changethumbnailImage(8)">
+                                       <img src="./assets/images/imagepart4.webp" alt="Product Thumbnail" loading="lazy" height="104" width="104" />
+                                   </a>
+                                   <a href="#" class="thumbnail last-thumbnail" aria-label="Product-image" onclick="changethumbnailImage(9)">
+                                       <img src="./assets/images/imagepart2.webp" alt="Product Thumbnail with Pause Icon" loading="lazy" height="104" width="104" />
+                                       <span class="icon-pause absolute"></span>
+                                   </a>
+                               </div>
+                           </div>
                         </div>
                     </div>
                     <div class="detailsrightsection">
