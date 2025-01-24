@@ -60,17 +60,14 @@ const changethumbnailImage= (index)=>{
     updateGallery(index)
 }
 thumbnails.forEach((image,i)=>{
-    debugger
     image.addEventListener('click',(e)=>{
         e.preventDefault();
         updateGallery(i);
-       
     })
 })
 thumbnails[thumbnails.length - 1].addEventListener('click', () => {
     updateGallery(images.length - 1)
 })
-
 nextArrow.addEventListener('click', (e) => {
     e.preventDefault();
     nextIndex = currentIndex + 1;
@@ -80,9 +77,7 @@ nextArrow.addEventListener('click', (e) => {
     updateGallery(nextIndex);
     thumbnailsContainer.scrollTo({ left: nextIndex * thumbnails[0].offsetWidth, behavior: 'smooth' })
 })
-
 prevArrow.addEventListener('click', (e) => {
-    debugger
     e.preventDefault();
    let  prevIndex = currentIndex - 1;
     if(prevIndex < 0){
@@ -90,7 +85,6 @@ prevArrow.addEventListener('click', (e) => {
     }
     updateGallery(prevIndex);
     thumbnailsContainer.scrollTo({left:prevIndex * thumbnails[0].offsetWidth, behavior: 'smooth'})
-
 })
 thumbnails.forEach((image, i) => {
     image.addEventListener('click', (e) => {
