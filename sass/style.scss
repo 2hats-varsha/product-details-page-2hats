@@ -199,6 +199,7 @@ header {
     margin-bottom: 20px;
     border-bottom: 2px solid $light_gray;
     padding-bottom: 1.2rem;
+    justify-content: unset;
     @include respond('sm'){
         width:100%;
         justify-content: space-between;
@@ -588,7 +589,7 @@ header {
                     width: 16rem;
                 }
                 @include respond("lg") {
-                    width: 28rem;
+                    width: 24rem;
                 }
                 @include respond('sm'){
                     width: 15rem;
@@ -694,6 +695,7 @@ header {
             @include respond("lg") {
                 justify-content: flex-start;
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
             .quantity-section {
                 width: 5rem;
@@ -750,7 +752,6 @@ header {
                     padding: 0.8rem 4rem;
                     margin-top: 0;
                     width: 80%;
-                    margin-left: 2rem;
                 }
                 @include respond("md") {
                     width: 100%;
