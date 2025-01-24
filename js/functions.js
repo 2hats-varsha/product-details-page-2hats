@@ -12,7 +12,6 @@ sizeChartButton.addEventListener("click", () => {
   modal.style.display = "flex";
 });
 closeModalButton.addEventListener("click", () => {
-    debugger
   modal.style.display = "none";
 });
 window.addEventListener("click", (event) => {
