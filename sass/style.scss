@@ -120,13 +120,15 @@ header {
             }
             .col-8 {
                 .rightnavitem {
+                    width: 31rem;
                     @include respond("lg") {
                         display: none;
                     }
                     .searchitem {
                         border-bottom: 2px solid $dark_variant;
+                        margin-right: 1.8rem;
                         #search {
-                            width: 16.5rem;
+                            width: 17.5rem;
                             background-color: transparent;
                             font-size: .875rem;
                             &::placeholder {
@@ -137,7 +139,7 @@ header {
                             }
                     &:focus {
                         outline: none;
-                    }
+                            }
                         }
                         .searchbtn {
                             padding-right: 0;
@@ -148,8 +150,18 @@ header {
                             }
                         }
                     }
-                    button {
-                        padding: 0.5rem 0 0.5rem 2.2rem;
+                    .button-corner {
+                        width: 11rem;
+                        button {
+                            &.account-user,&.icon-heart,&.icon-Empty-Cart{
+                                padding: 1rem;
+                            }
+                            &:hover{
+                                background-color: #a8ebec;
+                                border-radius: 100%;
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -215,6 +227,9 @@ header {
         text-transform: capitalize;
         background-color: #fff;
         font-size: 1rem;
+        &:hover{
+            background-color: #dddddd;
+        }
         @include transition(background-color, 0.3s);
         @include respond("sm") {
             font-size: 0.9rem;
@@ -298,6 +313,14 @@ header {
                     span{
                         font-size: 1.2rem;
                     }
+                    &.left:hover{
+                        background-color: #ddd;
+                       
+                    }
+                    &.right:hover{
+                        background-color: #ddd;
+                       
+                    }
                 }
             }
             .thumbnails-container {
@@ -315,7 +338,9 @@ header {
                 scroll-snap-align: start;
                 justify-content: space-between;
                 margin-top: 1rem;
-                gap: 20px;
+                // gap: 20px;
+                gap: 24px;
+
                 @include respond("xl") {
                     gap: 1.4rem; 
                 }
